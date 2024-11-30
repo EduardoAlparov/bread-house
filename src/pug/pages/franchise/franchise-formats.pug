@@ -1,0 +1,72 @@
+-
+  const formats = [
+    {
+      id: "franchise-format-01",
+      class: "franchise-format--dark",
+      title: "Полный цикл",
+      tooltip: "Пекарня с производством",
+      list: [
+        ["Площадь", "от 125 м2"],
+        ["Инвестиции", "от 1,95 млн руб"],
+        ["Срок открытия", "35 дней"],
+        ["Срок окупаемости", "6 месяцев"],
+        ["Доходность", "3 600 000 руб/год"],
+      ]
+    },
+    {
+      id: "franchise-format-02",
+      class: "franchise-format--light",
+      title: "Торговая точка",
+      tooltip: "Точка продаж",
+      list: [
+        ["Площадь", "от 125 м2"],
+        ["Инвестиции", "от 1,95 млн руб"],
+        ["Срок открытия", "35 дней"],
+        ["Срок окупаемости", "6 месяцев"],
+        ["Доходность", "3 600 000 руб/год"],
+      ]
+    },
+  ]
+
+section.section.franchise-formats
+  .franchise-formats__site-container
+    .franchise-formats__body.js-formats-swiper
+      .franchise-formats__grid
+        .franchise-formats__left
+          h2.franchise-formats__title.section__title
+            | Форматы
+            | сотрудничества
+            | по&nbsp;франшизе
+
+          p.franchise-formats__text
+            | 3 бизнеса в одной франшизе:
+            br
+            |пекарня, кулинария, кофейня
+
+          a.franchise-formats__link.link-icon(href="#")
+            | Рассчитать доходность будущей пекарни
+            +icon-multi('calc')
+
+        .franchise-formats__right
+          .franchise-formats__swiper.swiper
+            ul.franchise-formats__swiper-wrapper.swiper-wrapper
+              each format in formats
+                li.franchise-formats__swiper-slide.swiper-slide.franchise-format(class=format.class, id=format.id)
+                  .franchise-format__body
+                    .franchise-format__top
+                      p.franchise-format__title=format.title
+                      .franchise-format__tooltip=format.tooltip
+
+                    ul.franchise-format__list
+                      each list in format.list
+                        li.franchise-format__list-item
+                          p.franchise-format__key=list[0]
+                          p.franchise-format__value=list[1]
+
+      .franchise-formats__controls
+        .franchise-formats__swiper-control
+          .double-btns
+            button.double-btns__btn.double-btns__btn--prev(type="button")
+              +icon-multi('prev')
+            button.double-btns__btn.double-btns__btn--next(type="button")
+              +icon-multi('prev')

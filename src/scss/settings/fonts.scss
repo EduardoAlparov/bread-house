@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "CoFo Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("CoFo Sans Regular"),
+        url("../../assets/fonts/cofo-sans.ttf") format("ttf"),
+        url("../../assets/fonts/cofo-sans.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "CoFo Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: local("CoFo Sans Medium"),
+        url("../../assets/fonts/cofo-sans-medium.ttf") format("ttf"),
+        url("../../assets/fonts/cofo-sans-medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "CoFo Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("CoFo Sans Bold"),
+        url("../../assets/fonts/cofo-sans-bold.ttf") format("ttf"),
+        url("../../assets/fonts/cofo-sans-bold.woff2") format("woff2");
+}

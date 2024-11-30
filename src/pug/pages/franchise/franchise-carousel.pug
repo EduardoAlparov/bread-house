@@ -1,0 +1,87 @@
+-
+  const carousel = [
+    {
+      title: "Лучшие локации",
+      text: "Умная система подбора локации для уверенной торговли",
+      img: "franchise-carousel/card-1.jpg"
+    },
+    {
+      title: "Устойчивая бизнес-модель",
+      text: "Проверенная в кризисные периоды",
+      img: "franchise-carousel/card-2.jpg"
+    },
+    {
+      title: "Поддержка франчайзи",
+      text: "Полное сопровождение процессов",
+      img: "franchise-carousel/card-3.jpg"
+    },
+    {
+      title: "Обучение персонала",
+      text: "Стандарты, расписание, стажировки",
+      img: "franchise-carousel/card-4.jpg"
+    },
+    {
+      title: "Инструменты планирования",
+      text: "Центр поддержки производства и продаж для партнеров",
+      img: "franchise-carousel/card-5.jpg"
+    },
+    {
+      title: "Сообщество франчайзи",
+      text: "Растем и развиваемся вместе! Мероприятия для обмена опытом",
+      img: "franchise-carousel/card-6.jpg"
+    },
+    {
+      title: "Лучшие локации",
+      text: "Умная система подбора локации для уверенной торговли",
+      img: "franchise-carousel/card-1.jpg"
+    },
+    {
+      title: "Устойчивая бизнес-модель",
+      text: "Проверенная в кризисные периоды",
+      img: "franchise-carousel/card-2.jpg"
+    },
+    {
+      title: "Поддержка франчайзи",
+      text: "Полное сопровождение процессов",
+      img: "franchise-carousel/card-3.jpg"
+    },
+    {
+      title: "Обучение персонала",
+      text: "Стандарты, расписание, стажировки",
+      img: "franchise-carousel/card-4.jpg"
+    },
+    {
+      title: "Инструменты планирования",
+      text: "Центр поддержки производства и продаж для партнеров",
+      img: "franchise-carousel/card-5.jpg"
+    },
+    {
+      title: "Сообщество франчайзи",
+      text: "Растем и развиваемся вместе! Мероприятия для обмена опытом",
+      img: "franchise-carousel/card-6.jpg"
+    },
+  ]
+
+section.section.franchise-carousel
+  .franchise-carousel__site-container
+    .franchise-carousel__body.js-franchise-carousel-swiper
+      .franchise-carousel__swiper.swiper
+        ul.franchise-carousel__swiper-wrapper.swiper-wrapper
+          each item in carousel
+            li.franchise-carousel__swiper-slide.swiper-slide
+              .franchise-carousel__image
+                +picture(item.img)
+              p.franchise-carousel__title=item.title
+              p.franchise-carousel__text=item.text
+
+      .franchise-carousel__row
+        a.franchise-carousel__link.link-icon.link-icon--grey(href="#")
+          | Напишите нам
+          +icon-multi('pencil')
+
+        .franchise-carousel__swiper-controls
+          .double-btns
+            button.double-btns__btn.double-btns__btn--prev(type="button")
+              +icon-multi('prev')
+            button.double-btns__btn.double-btns__btn--next(type="button")
+              +icon-multi('prev')

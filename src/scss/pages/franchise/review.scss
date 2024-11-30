@@ -1,0 +1,141 @@
+.review {
+    display: grid;
+    place-items: stretch;
+
+    max-width: 34.5rem;
+    aspect-ratio: 0.8625 / 1;
+
+    &__image,
+    &__body {
+        position: relative;
+
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        border-radius: 3.5rem;
+        overflow: hidden;
+    }
+
+
+    &__image {
+        z-index: 100;
+
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+
+        transform: translate(1px, 1px);
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__body {
+        z-index: 200;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 100%;
+        padding: 3.2rem;
+
+        background-color: #F5F5F7;
+
+        transition-property: transform, background;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+
+    &__text {
+        width: 10ch;
+
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 109%;
+        letter-spacing: -0.02em;
+    }
+
+    &__author,
+    &__author-col {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    &__author {
+        position: relative;
+
+        align-items: center;
+
+        img {
+            display: block;
+
+            width: 8.5rem;
+            height: 8.5rem;
+            flex-shrink: 0;
+
+            border-radius: 100%;
+
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::before {
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+
+            display: block;
+            width: 4rem;
+            height: 4rem;
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M32.1641%2010.5003C33.8307%2012.3337%2034.8307%2014.3337%2034.8307%2017.667C34.8307%2023.5003%2030.6641%2028.667%2024.8307%2031.3337L23.3307%2029.167C28.8307%2026.167%2029.9974%2022.3337%2030.3307%2019.8337C29.4974%2020.3337%2028.3307%2020.5003%2027.1641%2020.3337C24.1641%2020.0003%2021.8307%2017.667%2021.8307%2014.5003C21.8307%2013.0003%2022.4974%2011.5003%2023.4974%2010.3337C24.6641%209.16699%2025.9974%208.66699%2027.6641%208.66699C29.4974%208.66699%2031.1641%209.50033%2032.1641%2010.5003ZM15.4974%2010.5003C17.1641%2012.3337%2018.1641%2014.3337%2018.1641%2017.667C18.1641%2023.5003%2013.9974%2028.667%208.16406%2031.3337L6.66406%2029.167C12.1641%2026.167%2013.3307%2022.3337%2013.6641%2019.8337C12.8307%2020.3337%2011.6641%2020.5003%2010.4974%2020.3337C7.4974%2020.0003%205.16406%2017.5003%205.16406%2014.5003C5.16406%2013.0003%205.83073%2011.5003%206.83073%2010.3337C7.9974%209.16699%209.33073%208.66699%2010.9974%208.66699C12.8307%208.66699%2014.4974%209.50033%2015.4974%2010.5003Z%22%20fill%3D%22%23ECCD75%22%2F%3E%0A%3C%2Fsvg%3E');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            content: "";
+        }
+    }
+
+    &__author-col {
+        flex-direction: column;
+    }
+
+    &__author-name {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 66.7%;
+        letter-spacing: -0.02em;
+    }
+
+    &__author-location {
+        color: var(--Grey2, #9799A6);
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 80%;
+        letter-spacing: -0.04em;
+    }
+
+    &:hover {
+        .review__body {
+            transform: translateY(8.5rem) rotate(-7deg);
+
+            background-color: var(--Pale-yellow, #F5E8CE);
+        }
+    }
+}

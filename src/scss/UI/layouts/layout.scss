@@ -1,0 +1,64 @@
+[class*="__site-container"] {
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding-inline: var(--content-padding);
+
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem),
+                var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem),
+                var(--content-padding));
+    }
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+    font-size: 10px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+
+    @include breakpointMF(desktop) {
+        font-size: clamp(4px, 0.5vw, 20px);
+    }
+
+    @include aspectRatio(widthDesktop) {
+        font-size: clamp(4.2px, 0.52vw, 10px);
+    }
+
+    @include breakpointHeightSmallMobile() {
+        font-size: 8px;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 8px;
+    }
+
+    @include noHighlight();
+}
+
+body {
+    color: var(--Text, #1A1B1C);
+    background: var(--White, #FFF);
+    font: var(--font-body);
+}
+
+.section {
+
+    &:not(:first-child) {
+        margin-top: 12rem;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    &__title {
+        @extend .text-h1;
+    }
+}

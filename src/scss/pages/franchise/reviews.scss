@@ -1,0 +1,21 @@
+.reviews {
+    &__body {
+        padding-top: 1.5rem;
+    }
+
+    &__swiper.swiper {
+        margin-inline: calc(var(--content-padding) * -1) 0;
+        padding-inline: var(--content-padding) 0;
+    }
+
+    &__swiper-wrapper {
+        padding-bottom: 12.5rem;
+    }
+
+    &__swiper-controls {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 5rem;
+    }
+}

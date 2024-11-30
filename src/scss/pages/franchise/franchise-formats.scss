@@ -1,0 +1,51 @@
+.franchise-formats {
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__grid {
+        display: flex;
+        align-items: stretch;
+        gap: 28rem;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5rem;
+
+        flex: 0 0 58rem;
+    }
+
+    &__text {
+        letter-spacing: -0.03em;
+
+        @include font(3rem, 133.3%, 500);
+    }
+
+    &__right {
+        flex: 1 1 100%;
+
+
+    }
+
+    &__swiper {
+        &.swiper {
+            margin-right: -100%;
+            padding-right: 100%;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+    }
+
+    &__swiper-control {
+        margin-inline: 23rem -23rem;
+    }
+}

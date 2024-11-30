@@ -1,0 +1,90 @@
+.page-footer {
+    padding-block: 7.5rem 3.6rem;
+
+    &__site-container {
+        display: grid;
+
+        grid-template-areas: "pf_logo pf_menus"
+            "pf_bottom pf_bottom";
+        grid-template-columns: max-content 1fr;
+        gap: 5.4rem 8.6rem;
+    }
+
+    &__logo {
+        grid-area: pf_logo;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__menus {
+        grid-area: pf_menus;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        white-space: nowrap;
+
+        @extend .text-20;
+    }
+
+    &__bottom {
+        grid-area: pf_bottom;
+        display: flex;
+        align-items: center;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        flex: 1 1 auto;
+    }
+
+    &__copyright {
+        flex-basis: 75rem;
+        color: #909090;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+    }
+
+    &__policy {
+        color: #DE7D57;
+        text-align: center;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        // text-decoration-line: underline;
+        // text-decoration-style: solid;
+        // text-decoration-skip-ink: none;
+        // text-decoration-thickness: auto;
+        // text-underline-offset: auto;
+        // text-underline-position: from-font;
+    }
+
+    &__dev {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+
+        img {
+            width: 3.5rem;
+            height: 5.1rem;
+        }
+    }
+}

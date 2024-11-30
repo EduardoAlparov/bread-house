@@ -1,0 +1,82 @@
+.link-icon {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: max-content;
+    padding: 3.3rem 7.2rem;
+
+    color: var(--White, #fff);
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+
+    background: var(--Grafiit-main, #303030);
+    border-radius: 2.5rem;
+
+    @include font(2.4rem, 100%, 500);
+
+    .icon {}
+
+    .icon-tg {
+        width: 2rem;
+        height: 1.7rem;
+        fill: var(--White, #fff);
+    }
+
+
+    .icon-yt {
+        width: 3.1rem;
+        height: 2.1rem;
+        fill: var(--White, #fff);
+    }
+
+    .icon-vk-big {
+        width: 3.6rem;
+        height: 2.1rem;
+        fill: var(--White, #fff);
+    }
+
+    .icon-calc {
+        width: 1.8rem;
+        height: 2.2rem;
+
+        fill: var(--White, #fff);
+    }
+
+    .icon-link {
+        width: 1rem;
+        height: 1rem;
+
+        stroke: var(--White, #fff);
+    }
+
+    .icon-pencil {
+        width: 1.7rem;
+        height: 1.6rem;
+        fill: var(--Grafiit-main, #303030);
+    }
+
+    &.link-icon--grey {
+        background-color: #EAEAEF;
+
+        color: var(--Grafiit-main, #303030);
+    }
+
+    &.link-icon--dark-blue {
+        background-color: #4888F7;
+
+        color: var(--White, #fff);
+    }
+
+    &.link-icon--dark-red {
+        background-color: #DE5757;
+
+        color: var(--White, #fff);
+    }
+
+    &.link-icon--light-blue {
+        background-color: #57AADE;
+
+        color: var(--White, #fff);
+    }
+}

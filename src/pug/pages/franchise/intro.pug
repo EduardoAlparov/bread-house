@@ -1,0 +1,139 @@
+-
+  const introList1 = [
+    {
+      text: "Сопровождаем открытие",
+      img: "intro-list/1.png",
+      class: "intro-list__item--active intro-list__item--coffee-color",
+      video: false,
+    },
+    {
+      text: "Пусто",
+      img: "intro-list/2.png",
+      class: "intro-list__item--empty intro-list__item--orange-color",
+      video: false,
+    },
+  ];
+
+-
+  const introList2 = [
+    {
+      text: "Пусто",
+      img: "intro-list/3.png",
+      class: "intro-list__item--empty intro-list__item--grafite-color",
+      video: false,
+    },
+    {
+      text: "Ведем к прибыли",
+      img: "intro-list/4.png",
+      class: "intro-list__item--active intro-list__item--yellow-color",
+      video: false,
+    },
+    {
+      text: "",
+      img: "intro-list/poster.png",
+      class: "intro-list__item--active",
+      video: true,
+    },
+  ];
+
+-
+  const introList3 = [
+    {
+      text: "Ориентируемся на партнера",
+      img: "intro-list/5.png",
+      class: "intro-list__item--active intro-list__item--bordo-color",
+      video: false,
+    },
+    {
+      text: "Пусто",
+      img: "intro-list/6.png",
+      class: "intro-list__item--empty intro-list__item--pale-color",
+      video: false,
+    },
+  ];
+
+section.section.intro
+  .intro__body
+    .intro__site-container
+      .intro__info
+        .intro__tooltip С франшизой
+        h1.intro__title
+          | Откройте пекарню
+          br
+          | по нашему рецепту
+        a.intro__link.link-icon(href="#")
+          | Стать партнером
+          +icon-multi('link')
+
+      .intro__list
+        .intro-list
+          ul.intro-list__column
+            each item in introList1
+              if item.video
+                li
+                  a.intro-list__item(class=item.class)
+                    .intro-list__video
+                      button
+                        +icon-multi('play')
+                      p
+                        | Посмотрите видео
+                        br
+                        | о наших ценностях
+                        br
+                        | и бизнес-процессах
+
+                    +picture(item.img, 'alt')
+              else
+                li
+                  a.intro-list__item(class=item.class)
+                    p=item.text
+
+                    +picture(item.img, 'alt')
+          ul.intro-list__column
+            each item in introList2
+              if item.video
+                li
+                  a.intro-list__item(class=item.class)
+                    .intro-list__video
+                      button
+                        +icon-multi('play')
+                      p
+                        | Посмотрите видео
+                        br
+                        | о наших ценностях
+                        br
+                        | и бизнес-процессах
+
+                      +picture(item.img, 'alt')
+              else
+                li
+                  a.intro-list__item(class=item.class)
+                    p=item.text
+
+                    +picture(item.img, 'alt')
+          ul.intro-list__column
+            each item in introList3
+              if item.video
+                li
+                  a.intro-list__item(class=item.class)
+                    .intro-list__video
+                      button
+                        +icon-multi('play')
+                      p
+                        | Посмотрите видео
+                        br
+                        | о наших ценностях
+                        br
+                        | и бизнес-процессах
+
+                    +picture(item.img, 'alt')
+              else
+                li
+                  a.intro-list__item(class=item.class)
+                    p=item.text
+
+                    +picture(item.img, 'alt')
+
+      a.intro__scroll(href="#scroll-section")
+        +icon-multi('mouse')
+        span листайте вниз

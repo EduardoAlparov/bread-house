@@ -1,0 +1,60 @@
+-
+  const menus = [
+    [
+      "Достижения",
+      "Благотворительность",
+      "Карьера",
+      "СМИ о нас",
+      "Франшиза",
+      "3 бизнеса в одной франшизе"
+    ],
+    [
+      "Компания",
+      "О нас",
+      "Производство",
+      "Блог компании"
+    ],
+    [
+      "Онлайн-экскурси",
+      "Обучение",
+      "Демо-день",
+      "Маркетингкит"
+    ],
+    [
+      "Точки продаж",
+      "Отдел открытия и комплектации",
+      "Отдел сопровождения"
+    ],
+    [
+      "Контакты",
+      'Продажа франшизы'
+    ],
+  ];
+
+footer.page-footer
+  .page-footer__site-container
+    .page-footer__logo
+      a.logo(href="/")
+        +icon-multi('logo')
+        if logoTooltip
+          span.logo__tooltip= logoTooltip
+      a.page-footer__details.page-footer__link(href="#") Реквизиты компании
+
+    .page-footer__menus
+      each menu in menus
+        ul.page-footer__menu
+          each item in menu
+            li
+              a.page-footer__link(href="#")=item
+
+    .page-footer__bottom
+      p.page-footer__copyright
+        | © 2024 Использование любых материалов с данного ресурса возможно только после письменного согласия владельца авторских прав
+      .page-footer__row
+        a.page-footer__policy(href="#") Политика конфиденциальности
+        a.page-footer__dev(href="" target="_blank")
+          span
+            | Создание сайта
+            br
+            | Mark Weber
+          +picture('dev.png', 'alt')

@@ -1,0 +1,31 @@
+-
+  const menu = [
+    {
+      text: "Инвестиции",
+      href: "#"
+    },
+    {
+      text: "Онлайн экскурсия",
+      href: "#"
+    },
+    {
+      text: "Партнеры",
+      href: "#"
+    },
+    {
+      text: "Блог",
+      href: "#"
+    },
+  ];
+
+header.page-header
+  nav.page-header__site-container
+    a.page-header__logo.logo(href="/")
+      +icon-multi('logo')
+      if logoTooltip
+        span.logo__tooltip= logoTooltip
+
+    ul.page-header__menu.menu
+      each item in menu
+        li.menu__item
+          a.menu__link(href=item.href)=item.text

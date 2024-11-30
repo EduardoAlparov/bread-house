@@ -1,0 +1,84 @@
+.franchise-format {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    max-width: 60rem;
+    padding: 6.2rem 5rem 6.2rem 7.2rem;
+
+    color: var(--White, #fff);
+
+    background-color: var(--Grafiit-main, #303030);
+    border-radius: 3.5rem;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 7.5rem;
+
+        flex-grow: 1;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    &__title {
+        @extend .text-50;
+    }
+
+    &__tooltip {
+        width: max-content;
+        transform: rotate(-3deg);
+        padding: 1.6rem 1.8rem;
+
+        color: var(--Grafiit-main, #303030);
+        text-align: center;
+        white-space: nowrap;
+
+        border-radius: 2.4rem;
+        background: #FFF;
+
+        @extend .text-24;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.5rem 4.5rem;
+    }
+
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        width: min-content;
+    }
+
+    &__key {
+        color: rgba(255, 255, 255, 0.50);
+        white-space: nowrap;
+        @extend .text-24;
+    }
+
+    &__value {
+        white-space: nowrap;
+        @extend .text-36;
+    }
+
+    &.franchise-format--light {
+        color: var(--Grafiit-main, #303030);
+
+        background-color: var(--Pale-yellow, #F5E8CE);
+
+        .franchise-format__key {
+            color: rgba(48, 48, 48, 0.50);
+        }
+    }
+}

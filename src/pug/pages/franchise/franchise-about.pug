@@ -1,0 +1,47 @@
+-
+  const abouts = [
+    {
+      class: "franchise-about__item--biggest",
+      text: "Средний чистый доход франчайзи за 2023",
+      numbers: "3 600 000 руб",
+      img: "franchise-about/img.jpg"
+    },
+    {
+      class: "franchise-about__item--big-horizontal franchise-about__item--pale",
+      text: "Среднемесячный оборот пекарни 2023",
+      numbers: "1 300 000 руб",
+      img: false
+    },
+    {
+      class: "franchise-about__item--small",
+      text: "Прогноз роста выручки на 2024",
+      numbers: "+ 23%",
+      img: false
+    },
+    {
+      class: "franchise-about__item--small",
+      text: "Открытых пекарен в России и странах СНГ",
+      numbers: "450 +",
+      img: false
+    },
+    {
+      class: "franchise-about__item--big-vertical",
+      text: "Динамика роста рынка от года к году",
+      numbers: "+ 15%",
+      img: false
+    },
+  ];
+
+section.section.franchise-about
+  .franchise-about__site-container
+    .franchise-about__heading.section__heading
+      h2.section__title О франшизе коротко
+
+    ul.franchise-about__body
+      each item in abouts
+        li.franchise-about__item(class=item.class)
+          p.franchise-about__text= item.text
+          p.franchise-about__numbers= item.numbers
+          if item.img
+            .franchise-about__image
+              +picture(item.img, 'alt')

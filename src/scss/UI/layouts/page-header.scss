@@ -1,0 +1,27 @@
+.page-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 2000;
+
+    width: 100%;
+    padding-top: 5.8rem;
+
+
+    &__site-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin-right: 25rem;
+    }
+
+    &__menu {
+        margin-right: auto;
+    }
+}

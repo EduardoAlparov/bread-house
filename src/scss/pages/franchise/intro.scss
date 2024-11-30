@@ -1,0 +1,110 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    height: 100vh;
+    height: 100dvh;
+    padding: 1.5rem;
+
+    &__body {
+        position: relative;
+
+        flex-grow: 1;
+        overflow: hidden;
+
+        background-color: var(--color-bg, #EFF2F6);
+        border-radius: 3.5rem;
+    }
+
+    &__site-container {
+        display: grid;
+        grid-template-areas: "in_info in_list";
+        grid-template-columns: 103.6rem 1fr;
+        place-items: end stretch;
+
+        height: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+
+        grid-area: in_info;
+        padding-bottom: 5.8rem;
+    }
+
+    &__tooltip {
+        min-width: 20rem;
+        transform: rotate(-3deg);
+        padding: 2.4rem 2.5rem;
+
+        background-color: #ECCD75;
+        border-radius: 50rem;
+
+        color: #57453A;
+        letter-spacing: -0.02em;
+        text-align: center;
+        white-space: nowrap;
+
+        @include font(2.4rem, 100%, 500);
+    }
+
+    &__title {
+        @extend .text-h1;
+    }
+
+    &__list {
+        grid-area: in_list;
+        align-self: stretch;
+        position: relative;
+
+        &>.intro-list {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        left: 50%;
+        bottom: 5.8rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        transform: translateX(-50%);
+
+        &>svg {
+            width: 22.963px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+
+        &>span {
+            color: #D7D7D9;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 220%;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+
+            transition-property: color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease- out;
+        }
+
+        &:hover {
+            &>span {
+                color: var(--Grafiit-main, #303030);
+            }
+        }
+    }
+}
