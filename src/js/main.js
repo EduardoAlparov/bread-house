@@ -7,6 +7,7 @@ import initModal from './modules/initModal';
 import reviewsSwiper from './modules/reviewsSwiper';
 import franchiseCarousel from './modules/franchiseCarousel';
 import formatsSwiper from './modules/formatsSwiper';
+import faqsDropdowns from './modules/faqsDropdowns';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -17,4 +18,5 @@ documenReady(() => {
   reviewsSwiper();
   franchiseCarousel();
   formatsSwiper();
+  faqsDropdowns();
 });

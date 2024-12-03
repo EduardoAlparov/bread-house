@@ -123,11 +123,19 @@
 
 .text-30 {
     @include font(1.6rem, 120%, 400);
-    letter-spacing: -0.005em;
 
     @include breakpointMF(tablet) {
         @include font(3rem, 120%, 500);
-        letter-spacing: -0.033em;
+        letter-spacing: -0.02em;
+    }
+}
+
+.text-32 {
+    @include font(1.6rem, 120%, 400);
+
+    @include breakpointMF(tablet) {
+        @include font(3.2rem, 131.25%, 500);
+        letter-spacing: -0.02em;
     }
 }
 
@@ -164,7 +172,7 @@
     @include font(3rem, 120%, 6 00);
 
     @include breakpointMF(tablet) {
-        @include font(7.5rem, 106.6%, 500);
+        @include font(7.2rem, 106.6%, 500);
         letter-spacing: -0.03em;
     }
 }

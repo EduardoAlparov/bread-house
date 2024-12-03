@@ -1,0 +1,80 @@
+-
+  const elements = [
+    {
+      title: 'Академия',
+      text: `Виртуальная система обучения для новых партнёров,
+        менеджеров и линейного персонала пекарни.`,
+      img: 'elements/img-1.jpg'
+    },
+    {
+      title: 'Сообщество',
+      text: `Корпоративная система взаимодействия партнёров и
+        управляющей компании.`,
+      img: 'elements/img-2.jpg'
+    },
+    {
+      title: 'ERP система Мой Кассир',
+      text: `Мы предоставляем полноценную систему учета,
+        которая поможет легко и эффективно управлять пекарней.`,
+      img: 'elements/img-3.jpg'
+    },
+    {
+      title: 'Планы производства с планшетом пекаря',
+      text: `Текст пояснительный в одну или даже две строки.`,
+      img: 'elements/img-4.jpg'
+    },
+    {
+      title: 'Маркетинг',
+      text: `Все технологии ведения бизнеса проверяются на практике
+        и только после этого передаются партнёрам.`,
+      img: 'elements/img-5.jpg'
+    },
+    {
+      title: 'База знаний',
+      text: `Весь наш опыт по ведению бизнеса  – все это собрано в
+        едином портале. `,
+      img: 'elements/img-6.jpg'
+    },
+    {
+      title: 'HR BP',
+      text: `Текст пояснительный в одну или даже две строки.`,
+      img: 'elements/img-7.jpg'
+    },
+    {
+      title: 'Видеоконтроль',
+      text: `Текст пояснительный в одну или даже две строки.`,
+      img: 'elements/img-8.jpg'
+    },
+    {
+      title: 'Касса',
+      text: `Текст пояснительный в одну или даже две строки.`,
+      img: 'elements/img-9.jpg'
+    },
+  ];
+
+section.section.elements-section
+  .elements-section__site-container
+    .elements-section__heading.section__heading
+      h2.events-section__title.section__title
+        | 9 элементов инструментов
+        br
+        | успеха франшизы
+      p.events-section__subtitle.section__subtitle
+        | Единое окно эффективного управления пекарней
+
+    ul.elements-section__body
+      each item in elements
+        li.elements-section__item.elements-item
+          .elements-item__image
+            +picture(item.img, 'image')
+          .elements-item__body
+            .elements-item__title=item.title
+            .elements-item__text=item.text
+
+    .elements-section__bottom
+      a.elements-section__download(href="#", download)
+        span
+          | Скачать&nbsp;пакет&nbsp;материалов
+          br
+          | для&nbsp;открытия&nbsp;франшизы
+        +icon-multi('download')

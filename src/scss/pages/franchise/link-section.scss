@@ -1,0 +1,61 @@
+.link-section {
+    &__site-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__body {
+        position: relative;
+
+        display: flex;
+
+        width: 100%;
+        max-width: 120rem;
+        padding-block: 6.5rem;
+        padding-inline: 10rem;
+        overflow: hidden;
+
+        background: #F5F5F7;
+        border-radius: 3.5rem;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+
+        flex: 0 0 44.1rem;
+    }
+
+    &__text {
+        letter-spacing: -0.02em;
+        @include font(4rem, 125%, 500);
+    }
+
+    &__link.elements-section__download {
+        min-width: 40rem;
+
+        background: #FFF;
+        border-width: 0;
+    }
+
+    &__image {
+        position: absolute;
+        right: 5rem;
+        bottom: 0;
+
+        height: 104%;
+        aspect-ratio: 1.265 / 1;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

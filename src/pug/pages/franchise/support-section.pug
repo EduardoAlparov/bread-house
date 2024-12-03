@@ -1,0 +1,70 @@
+-
+  const supportTeam = [
+    {
+      img: 'support/img-1.png',
+      role: 'Консультант по внедрению',
+      roleClass: 'support-item__role--orange',
+      slogan: 'Рассчитает окупаемость\u00A0и покажет\u00A0выгоды франшизы'
+    },
+    {
+      img: 'support/img-2.png',
+      role: 'Менеджер успеха',
+      roleClass: 'support-item__role--brown',
+      slogan:  `Найдет место и\u00A0обеспечит  оборудованием`
+    },
+    {
+      img: 'support/img-3.png',
+      role: 'HR менеджер',
+      roleClass: 'support-item__role--red',
+      slogan: 'Поможет с наймом персонала, проведет\u00A0обучение'
+    },
+    {
+      img: 'support/img-1.png',
+      role: 'Менеджер',
+      roleClass: 'support-item__role--coral',
+      slogan: 'Подскажет как привлечь клиентов в\u00A0новую пекарню'
+    },
+    {
+      img: 'support/img-2.png',
+      role: 'Менеджер',
+      roleClass: 'support-item__role--pale',
+      slogan: 'Проведет обучение персонала'
+    },
+  ]
+
+section.section.support-section
+  .support-section__site-container
+    .support-section__heading.section__heading
+      h2.events-section__title.section__title Не оставим один на один с бизнесом
+      p.events-section__subtitle.section__subtitle
+        | помогаем с фин.моделью на этапе заявки до обучения персонала, которые работают руками
+
+    ul.support-section__list
+      each item in supportTeam
+        li.support-section__item.support-item
+          .support-item__image
+            +picture(item.img, '')
+          .support-item__role(class=item.roleClass)=item.role
+          p.support-item__slogan=item.slogan
+
+
+    .support-section__promo.support-promo
+      .support-promo__body
+        .support-promo__left
+          .support-promo__tooltip Чат поддержки
+          .support-promo__title Отвечаем за&nbsp;5&nbsp;минут
+          .support-promo__list-wrapper
+            ul.support-promo__list
+              li.support-promo__list-image
+                +picture('support/img-2.png', '')
+              li.support-promo__list-image
+                +picture('support/img-3.png', '')
+              li.support-promo__list-image.support-promo__list-image--numbers + 15
+            p.support-promo__list-text Помогают менеджеры поддержки
+
+        a.support-promo__link.link-icon.link-icon--white(href="#")
+          | Получить демо-день
+          +icon-multi('link')
+
+      .support-promo__image
+        +picture('support/promo.png', '')

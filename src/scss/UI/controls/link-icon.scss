@@ -1,6 +1,7 @@
 .link-icon {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1.5rem;
 
     width: max-content;
@@ -16,6 +17,12 @@
     @include font(2.4rem, 100%, 500);
 
     .icon {}
+
+    .icon-event {
+        width: 2rem;
+        height: 2.1rem;
+        fill: var(--Grafiit-main, #303030);
+    }
 
     .icon-tg {
         width: 2rem;
@@ -36,6 +43,12 @@
         fill: var(--White, #fff);
     }
 
+    .icon-vk-small {
+        width: 2.5rem;
+        height: 1.4rem;
+        fill: var(--White, #fff);
+    }
+
     .icon-calc {
         width: 1.8rem;
         height: 2.2rem;
@@ -53,6 +66,12 @@
     .icon-pencil {
         width: 1.7rem;
         height: 1.6rem;
+        fill: var(--Grafiit-main, #303030);
+    }
+
+    .icon-online {
+        width: 2.2rem;
+        height: 2.2rem;
         fill: var(--Grafiit-main, #303030);
     }
 
@@ -78,5 +97,29 @@
         background-color: #57AADE;
 
         color: var(--White, #fff);
+    }
+
+    &.link-icon--white {
+        background-color: #FFF;
+
+        color: var(--Grafiit-main, #303030);
+
+        .icon-link {
+            transform: rotate(225deg);
+
+            stroke: var(--Grafiit-main, #303030);
+        }
+    }
+
+    &.link-icon--outlined {
+        background-color: transparent;
+        border: 1px solid var(--Grafiit-main, #303030);
+
+        color: var(--Grafiit-main, #303030);
+
+        .icon-link {
+            transform: translateY(10%);
+            stroke: var(--Grafiit-main, #303030);
+        }
     }
 }

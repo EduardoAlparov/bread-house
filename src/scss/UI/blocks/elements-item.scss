@@ -1,0 +1,40 @@
+.elements-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 3.5rem;
+
+    color: #FFF;
+
+    &__image {
+        position: absolute;
+        inset: -1px;
+        z-index: 100;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 200;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        height: 100%;
+
+        padding: 7rem 6.7rem;
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.02em;
+        @include font(3.2rem, 109%, 500);
+    }
+
+    &__text {
+        letter-spacing: -0.02em;
+        @include font(2.4rem, 125%, 500);
+    }
+}

@@ -1,5 +1,6 @@
 # GULP сборка
 
+<details>
 ## Основные возможности и используемые технологии
 
 * Система сборки [Gulp](https://gulpjs.com/)
@@ -59,4 +60,9 @@ npm run build:prod
 1. [Pixel-perfect](readme/pixel-pefect.md)
 1. [Кроссбраузерность](readme/crossbrowser.md)
 1. [Работа с GIT](readme/git.md)
+</details>
 
+# Ссылки на верстку
+# - общие:
+## Страница - [Главная.](https://eduardoalparov.github.io/bread-house/)
+## Страница - [Франшиза.](https://eduardoalparov.github.io/bread-house/franchise.html)

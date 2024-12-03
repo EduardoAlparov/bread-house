@@ -1,0 +1,113 @@
+-
+  const stats = [
+    {
+      class: 'stats-section__item--small stats-section__item--outlines',
+      numbers: '50 %',
+      text: 'Партнеров с нами с самого основания',
+      image: false,
+      icon: false,
+    },
+    {
+      class: 'stats-section__item--higher stats-section__item--image',
+      numbers: '130 к',
+      text: 'Гостей сети ежедневно',
+      image: true,
+      icon: false,
+    },
+    {
+      class: 'stats-section__item--small stats-section__item--beige',
+      numbers: '130 к',
+      text: 'Партнеров',
+      image: false,
+      icon: false,
+    },
+    {
+      class: 'stats-section__item--wider stats-section__item--grey',
+      numbers: '400',
+      text: 'Франчайзинговых точек в РФ и странах СНГ',
+      image: false,
+      icon: false,
+    },
+    {
+      class: 'stats-section__item--small stats-section__item--outlines',
+      numbers: '700',
+      text: 'ТКК',
+      image: false,
+      icon: false,
+    },
+    {
+      class: 'stats-section__item--wider stats-section__item--brown',
+      numbers: '< 1 млн руб',
+      text: 'в месяц зарабатывают 70% парнеров Дома Хлеба',
+      image: false,
+      icon: false,
+      diagram: true,
+    },
+    {
+      class: 'stats-section__item--higher stats-section__item--outlines',
+      numbers: '60 млн',
+      text: 'Выручка собственно сети ежемесячно',
+      image: false,
+      icon: false,
+    },
+    {
+      class: 'stats-section__item--higher stats-section__item--grey',
+      numbers: '7%',
+      text: 'Средний прирост выручки франчайзинговой точки',
+      image: false,
+      icon: true,
+    },
+    {
+      class: 'stats-section__item--small stats-section__item--outlines',
+      numbers: '50',
+      text: 'Пекарен - собственная сеть',
+      image: false,
+      icon: false,
+    },
+    {
+      class: 'stats-section__item--small stats-section__item--outlines',
+      numbers: '6',
+      text: 'месяцев окупаемость',
+      image: false,
+      icon: false,
+    },
+  ];
+
+section.section.stats-section
+  .stats-section__site-container
+    .stats-section__heading
+      h2.events-section__title.section__title
+        | 300 000 руб средняя прибыль
+        br
+        | пекарни ежемесячно
+
+
+    ul.stats-section__body
+      each stat in stats
+        if stat.image
+          li.stats-section__item(class=stat.class)
+            .stats-section__image
+              +picture('franchise-carousel/card-10.jpg', '')
+            p.stats-section__numbers=stat.numbers
+            p.stats-section__text=stat.text
+        else if stat.icon
+          li.stats-section__item(class=stat.class)
+            .stats-section__icon
+              +icon-multi('stat')
+            p.stats-section__numbers=stat.numbers
+            p.stats-section__text=stat.text
+        else if stat.diagram
+          li.stats-section__item(class=stat.class)
+            p.stats-section__numbers=stat.numbers
+            p.stats-section__text=stat.text
+            .stats-section__diagram
+              | 70%
+        else
+          li.stats-section__item(class=stat.class)
+            p.stats-section__numbers=stat.numbers
+            p.stats-section__text=stat.text
+
+    .stats-section__bottom.elements-section__bottom
+      a.link-icon.link-icon--outlined(href="#")
+        | Узнать про лизинг
+        +icon-multi('link')

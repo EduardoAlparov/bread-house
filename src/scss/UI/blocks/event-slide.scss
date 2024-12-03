@@ -1,0 +1,70 @@
+.event-slide {
+    color: #FFF;
+
+    border-radius: 3.5rem;
+    overflow: hidden;
+
+    &__image {
+        position: absolute;
+        inset: -1px;
+        z-index: 100;
+
+        &::before {
+            position: absolute;
+            inset: -1px;
+            z-index: 150;
+
+            background: linear-gradient(0deg, rgba(48, 48, 48, 0.60) 0%, rgba(48, 48, 48, 0.60) 100%);
+            content: "";
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 200;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6.4rem;
+
+        padding-block: 31.8rem 5.2rem;
+        padding-inline: 8.5rem;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        max-width: 109.4rem;
+    }
+
+    &__date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: max-content;
+        height: 3.5rem;
+        transform: rotate(-3deg);
+        padding: 1.6rem 1.8rem;
+
+        color: var(--Grafiit-main, #303030);
+        text-align: center;
+        letter-spacing: -0.02em;
+
+        background: #FDE696;
+        border-radius: 2.4rem;
+
+        @include font(1.8rem, 89%, 500);
+    }
+
+    &__text {
+        @extend .text-h1;
+    }
+
+    &__link {
+        margin-left: auto;
+    }
+}

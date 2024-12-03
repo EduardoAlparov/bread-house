@@ -1,0 +1,61 @@
+.elements-section {
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2.8rem;
+    }
+
+    &__item {
+        min-height: 45rem;
+
+        &:first-child {
+            color: var(--Grafiit-main, #303030);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 7.5rem;
+    }
+
+    &__download {
+        display: grid;
+        place-content: center;
+        place-items: center;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        width: max-content;
+        width: 42.5rem;
+        padding: 1.6rem 2.4rem;
+
+        border-radius: 2.5rem;
+        border: 1px solid var(--Grafiit-main, #303030);
+
+        span {
+            display: inline;
+
+            color: var(--Grafiit-main, #303030);
+            letter-spacing: -0.04em;
+            text-align: center;
+
+            @include font(2.4rem, 112.5%, 500);
+        }
+
+        .icon {
+            width: 1.5rem;
+            height: 1.75rem;
+
+            fill: var(--Grafiit-main, #303030);
+        }
+
+        .icon-tg-blue {
+            width: 2rem;
+            height: 1.7rem;
+        }
+    }
+}

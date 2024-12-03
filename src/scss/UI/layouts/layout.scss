@@ -55,10 +55,15 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 2.5rem;
         margin-bottom: 5rem;
     }
 
     &__title {
         @extend .text-h1;
+    }
+
+    &__subtitle {
+        @extend .text-30;
     }
 }

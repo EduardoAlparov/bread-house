@@ -1,0 +1,24 @@
+section.section.online-tour
+  .online-tour__site-container
+    .online-tour__body
+      .online-tour__info
+        h2.online-tour__title.section__title
+          | Запишитесь&nbsp;на онлайн-экскурсию прямо&nbsp;сейчас
+        p.online-tour__text
+          | Возможность побывать на производстве. Заглянуть
+          | в&nbsp;торговый зал и разобрать все процессы от запуска
+          | пекарни до стабильного заработка.
+        a.online-tour__link.link-icon.link-icon--grey(href="#")
+          | Записаться на онлайн экскурсию
+          +icon-multi('online')
+
+      .online-tour__videos
+        .online-tour__big-videos
+          +picture('franchise-carousel/card-8.jpg', 'alt')
+          video(mute, autoplay, loop )
+            source(src="assets/images/video.mp4" type="video/mp4")
+
+        .online-tour__small-videos
+          +picture('faq-author.jpg', 'author')
+          video(mute, autoplay, loop )
+            source(src="assets/images/video.mp4" type="video/mp4")

@@ -1,0 +1,30 @@
+mixin Input-holder( type = 'text', placeholder ='', name = 'input-name', required = false, isLabel = false, label = 'Заголовок', value = '')
+  if isLabel
+    .input-holder.input-holder--with-label&attributes(attributes)
+      input.input-holder__input(
+        type=type,
+        name=name,
+        required=required,
+        placeholder=placeholder,
+        value=value
+      )
+      span.input-holder__label=label
+
+      i.input-holder__error
+
+  else
+    .input-holder&attributes(attributes)
+      input.input-holder__input(
+        type=type,
+        name=name,
+        required=required,
+        placeholder=placeholder,
+        value=value
+      )
+
+      i.input-holder__error
+
+mixin Textarea-holder(placeholder ='', name = 'textarea-name')
+  .input-holder&attributes(attributes)
+    textarea.input-holder__input(name=name, placeholder=placeholder)
+    i.input-holder__error

@@ -1,0 +1,104 @@
+.input-holder {
+    position: relative;
+
+    height: 8.5rem;
+
+    @include breakpoint(laptop) {
+        height: 8.5rem;
+    }
+
+    &:has(textarea) {
+        height: 12rem;
+
+        @include breakpoint(laptop) {
+            height: 20rem;
+        }
+    }
+
+    &>input {
+        width: 100%;
+        height: 100%;
+        padding: 3rem 4rem;
+
+        color: var(--Grafiit-main, #303030);
+
+        background: #FFF;
+        border-radius: 2.5rem;
+        border: 1px solid #EEE;
+
+        letter-spacing: -0.02em;
+        @include font(2rem, 125%, 400);
+
+        @include breakpoint(laptop) {
+            padding: var(--gap-l, 1.6rem) var(--gap-xxl, 2.4rem);
+        }
+
+        &:valid {
+            &~.input-holder__label {
+                opacity: 1;
+            }
+        }
+    }
+
+    &>textarea {
+        height: 100%;
+        padding: 2rem var(--gap-l, 3.2rem);
+
+        color: var(--Grafiit-main, #303030);
+
+        background: var(--Gray-20, #F5F5F5);
+        border-radius: 2.5rem;
+        resize: none;
+
+        letter-spacing: -0.02em;
+        @include font(2rem, 125%, 400);
+    }
+
+    &>input {
+        @include placeholder {
+            color: #909090;
+        }
+    }
+
+    &>textarea {
+        @include placeholder {
+            color: #909090;
+        }
+    }
+
+    &__error {
+        position: absolute;
+        display: none;
+    }
+
+    &__label {
+        position: absolute;
+        top: 1.2rem;
+        left: 4rem;
+
+        color: var(--Grafiit-main, #303030);
+        letter-spacing: -0.02em;
+        @include font(1.4rem, 120%, 500);
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+
+        @include breakpoint(laptop) {
+            top: 0.6rem;
+            left: var(--gap-xxl, 2.4rem);
+        }
+    }
+
+
+    &.input-holder--white {
+
+        &>textarea,
+        &>input {
+            background: var(--Gray-10, #FFF);
+        }
+    }
+}

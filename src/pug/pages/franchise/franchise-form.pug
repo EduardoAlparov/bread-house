@@ -1,0 +1,47 @@
+section.section.franchise-form
+  .franchise-form__site-container
+    .franchise-form__body
+      .franchise-form__left
+        h2.franchise-form__title.section__title
+          | Откройте бизнес
+          | по&nbsp;франшизе&nbsp;с
+          | пекарней Дом Хлеба
+        ol.franchise-form__list
+          li.franchise-form__list-item
+            | Отправим пароль от личного кабинета
+          li.franchise-form__list-item
+            | Пришлем полный пакет документов по франшизе
+          li.franchise-form__list-item
+            | Дарим скидку на первый взнос при покупке франшизы до 30.06.2024
+
+      form.franchise-form__right(action="")
+        .franchise-form__top
+          .franchise-form__inputs
+            +Input-holder('text','Имя','franchise-name',true,true,'Имя')(class="franchise-form__input")
+            +Input-holder('text','Город','franchise-city',true,true,'Город')(class="franchise-form__input")
+            +Input-holder('tel','Телефон','franchise-phone',true,true,'Телефон')(class="franchise-form__input")
+            +Input-holder('email','Электронная почта','franchise-email',true,true,'Электронная почта')(class="franchise-form__input")
+          .franchise-form__center
+            .franchise-form__submit
+              button.franchise-form__button.link-icon(type="submit")
+                | Стать партнером
+                +icon-multi('link')
+              p.franchise-form__agreement
+                | Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;
+                a(href="http://" target="_blank" rel="noopener noreferrer") Платформой
+
+            .franchise-form__divider или
+
+            a.franchise-form__button.link-icon.link-icon--dark-blue(href="#")
+              | Зарегистрироваться через VK ID
+              +icon-multi('vk-big')
+
+        .franchise-form__bottom
+          p.franchise-form__text Или свяжитесь с нами через мессенджер:
+          ul.franchise-form__socials
+            li.franchise-form__socials-item
+              a.franchise-form__social.social.social--wa(href="#")
+                +icon-multi('soc-wa')
+            li.franchise-form__socials-item
+              a.franchise-form__social.social.social--tg(href="#")
+                +icon-multi('soc-tg')
