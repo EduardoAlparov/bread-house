@@ -1,0 +1,54 @@
+section.section.main-about
+  .main-about__site-container
+    .main-about__body
+      .main-about__info
+        h2.main-about__title Дом Хлеба - пекарня
+
+        .main-about__desc
+          p
+            | На данный момент мы открыли более
+            | 500 пекарен в России и СНГ.
+          p
+            | Мы являемся не только теоретиками,
+            | но&nbsp;и активно развиваем собственную
+            | сеть пекарен.
+          p
+            | На данный момент у нас 50 точек,
+            | 5&nbsp;фабрик,  кондитерское производство
+            | и&nbsp;планы открыть 100 собственных точек
+            | в&nbsp;ближайшие 2 года.
+
+      .main-about__grid
+        .main-about__grid-item.main-about__grid-item--half
+          a.main-about__grid-link.about-link.about-link--grey(href="#")
+            .about-link__image
+              +picture('main-about/img-1.png', '')
+            .about-link__info
+              p.about-link__title
+                | Найти пекарню на&nbsp;карте
+              .about-link__button.link-icon.link-icon--outlined
+                | Найти
+                +icon-multi('link')
+        .main-about__grid-item.main-about__grid-item--half
+          a.main-about__grid-link.about-link.about-link--grey(href="#")
+            .about-link__image
+              +picture('main-about/img-2.png', '')
+            .about-link__info
+              p.about-link__title
+                | Работай с нами в&nbsp;команде
+              .about-link__button.link-icon.link-icon--outlined
+                | Карьера
+                +icon-multi('link')
+        .main-about__grid-item.main-about__grid-item--full
+          a.main-about__grid-link.about-link.about-link--beige(href="#")
+            .about-link__image
+              +picture('main-about/img-3.png', '')
+            .about-link__info
+              p.about-link__title
+                | Франшиза
+              p.about-link__text
+                | Пришлем пароль от личного кабинета, зафиксируем скидку
+                | на паушальный взнос
+              .about-link__button.link-icon.link-icon--outlined
+                | Узнать подробнее
+                +icon-multi('link')

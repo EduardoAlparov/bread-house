@@ -1,0 +1,13 @@
+section.section.simple-section
+  .simple-section__site-container
+    a.simple-section__video-link.video-link(href="#")
+      .video-link__video
+        video.lazy(autoplay, poster='./assets/images/simple-sections/vid-1.png')
+          source(type='video/mp4' srcset="./assets/images/simple-sections/video-1.mp4")
+
+      .video-link__body
+        p.video-link__text Печём с заботой по-домашнему
+
+        .video-link__button.link-icon.link-icon--white
+          | Посмотреть производство
+          +icon-multi('link')(class="icon-no-rotate")

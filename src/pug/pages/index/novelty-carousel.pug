@@ -1,0 +1,28 @@
+-
+  const novelties = [
+    {
+      id: "novelties-01",
+      class: "franchise-format--dark",
+      title: "Пирог песочный с вишней",
+      tooltip: "Пекарня с производством",
+    },
+  ]
+
+section.section.franchise-formats
+  .franchise-formats__site-container
+    .franchise-formats__body.js-formats-swiper
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--bigger
+          h2.franchise-formats__title.section__title
+            | Ищите эти новинки
+            | в наших пекарнях
+
+          a.franchise-formats__link.link-icon(href="#")
+            | Найти пекарню рядом с домом
+            +icon-multi('link')
+
+        .franchise-formats__right
+          .franchise-formats__swiper.swiper
+            ul.franchise-formats__swiper-wrapper.swiper-wrapper
+              each item in novelties
+                li.franchise-formats__swiper-slide.swiper-slide.novelty(id=item.id)

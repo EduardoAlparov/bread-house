@@ -18,6 +18,10 @@
         gap: 5rem;
 
         flex: 0 0 58rem;
+
+        &.franchise-formats__left--bigger {
+          flex: 0 0 62rem;
+        }
     }
 
     &__text {

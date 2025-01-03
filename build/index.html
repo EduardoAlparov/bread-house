@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание сайта">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -15,134 +15,246 @@
     <title>Главная | Дом хлеба</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.1">
   </head>
-  <body class="page-home">
+  <body class="page-home page-main">
     <div class="page-wrapper">
-
       <header class="page-header">
-        <nav class="page-header__site-container">
-          <a class="page-header__logo logo" href="/">
+        <nav class="page-header__site-container"><a class="page-header__logo logo" href="/">
             <svg class="icon icon-logo">
               <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
-            </svg>
-          </a>
+            </svg></a>
           <ul class="page-header__menu menu">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Инвестиции</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Онлайн экскурсия</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Партнеры</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Блог</a>
-            </li>
+            <li class="menu__item"><a class="menu__link" href="#">Инвестиции</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Онлайн экскурсия</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Партнеры</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
           </ul>
         </nav>
       </header>
-
       <main class="page-main main">
-        <section class="intro">
-          <div class="site-container">
-            <picture>
-              <source type="image/webp" srcset="assets/images/test/test-image.webp" alt="test">
-              <img src="assets/images/test/test-image.jpg" alt="test">
-            </picture>
+        <section class="hero">
+          <div class="hero__slider-wrapper">
+            <div class="hero__swiper swiper">
+              <ul class="hero__swipper-wrapper swiper-wrapper">
+                <li class="hero__swiper-slide swiper-slide hero-slide">
+                  <div class="hero-slide__image">
+                    <video class="lazy" data-poster="./assets/images/hero/img.png">
+                      <source type="video/mp4" srcset="assets/images/hero/video.mp4">
+                    </video>
+                  </div>
+                  <div class="hero-slide__body">
+                    <div class="hero-slide__article">
+                      <h1 class="hero-slide__title">Открой свой Дом Хлеба</h1>
+                      <p class="hero-slide__text">Быстрый старт от 30 дней. Подходит для первого бизнеса.</p><a class="hero-slide__link link-icon link-icon--white" href="#">Стать партнером
+                        <svg class="icon icon-link">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="hero__swiper-slide swiper-slide hero-slide">
+                  <div class="hero-slide__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/hero/img.webp" alt=""><img src="./assets/images/hero/img.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="hero-slide__body">
+                    <div class="hero-slide__article">
+                      <h1 class="hero-slide__title">Открой свой Дом Хлеба</h1>
+                      <p class="hero-slide__text">Быстрый старт от 30 дней. Подходит для первого бизнеса.</p><a class="hero-slide__link link-icon link-icon--white" href="#">Стать партнером
+                        <svg class="icon icon-link">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="hero__swiper-control">
+                <div class="double-btns">
+                  <button class="double-btns__btn double-btns__btn--prev" type="button">
+                    <svg class="icon icon-prev">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                    </svg>
+                  </button>
+                  <button class="double-btns__btn double-btns__btn--next" type="button">
+                    <svg class="icon icon-prev">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__stats-line hero__site-container hero-stats">
+            <div class="hero-stats__wrapper">
+              <ul class="hero-stats__list">
+                <li class="hero-stats__item">10 лет на рынке</li>
+                <li class="hero-stats__item">450 пекарен по всей РФ</li>
+                <li class="hero-stats__item">50% партнеров с нами с самого начала</li>
+                <li class="hero-stats__item">700 ТКК</li>
+                <li class="hero-stats__item">400 франчайзинговых точек в РФ</li>
+                <li class="hero-stats__item">100 партнеров</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="section main-about">
+          <div class="main-about__site-container">
+            <div class="main-about__body">
+              <div class="main-about__info">
+                <h2 class="main-about__title">Дом Хлеба - пекарня</h2>
+                <div class="main-about__desc">
+                  <p>
+                    На данный момент мы открыли более
+                    500 пекарен в России и СНГ.
+                  </p>
+                  <p>
+                    Мы являемся не только теоретиками,
+                    но&nbsp;и активно развиваем собственную
+                    сеть пекарен.
+                  </p>
+                  <p>
+                    На данный момент у нас 50 точек,
+                    5&nbsp;фабрик,  кондитерское производство
+                    и&nbsp;планы открыть 100 собственных точек
+                    в&nbsp;ближайшие 2 года.
+                  </p>
+                </div>
+              </div>
+              <div class="main-about__grid">
+                <div class="main-about__grid-item main-about__grid-item--half"><a class="main-about__grid-link about-link about-link--grey" href="#">
+                    <div class="about-link__image">
+                      <picture>
+                        <source type="image/webp" srcset="assets/images/main-about/img-1.webp" alt=""/><img src="assets/images/main-about/img-1.png" alt=""/>
+                      </picture>
+                    </div>
+                    <div class="about-link__info">
+                      <p class="about-link__title">Найти пекарню на&nbsp;карте</p>
+                      <div class="about-link__button link-icon link-icon--outlined">Найти
+                        <svg class="icon icon-link">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                        </svg>
+                      </div>
+                    </div></a></div>
+                <div class="main-about__grid-item main-about__grid-item--half"><a class="main-about__grid-link about-link about-link--grey" href="#">
+                    <div class="about-link__image">
+                      <picture>
+                        <source type="image/webp" srcset="assets/images/main-about/img-2.webp" alt=""/><img src="assets/images/main-about/img-2.png" alt=""/>
+                      </picture>
+                    </div>
+                    <div class="about-link__info">
+                      <p class="about-link__title">Работай с нами в&nbsp;команде</p>
+                      <div class="about-link__button link-icon link-icon--outlined">Карьера
+                        <svg class="icon icon-link">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                        </svg>
+                      </div>
+                    </div></a></div>
+                <div class="main-about__grid-item main-about__grid-item--full"><a class="main-about__grid-link about-link about-link--beige" href="#">
+                    <div class="about-link__image">
+                      <picture>
+                        <source type="image/webp" srcset="assets/images/main-about/img-3.webp" alt=""/><img src="assets/images/main-about/img-3.png" alt=""/>
+                      </picture>
+                    </div>
+                    <div class="about-link__info">
+                      <p class="about-link__title">Франшиза</p>
+                      <p class="about-link__text">
+                        Пришлем пароль от личного кабинета, зафиксируем скидку
+                        на паушальный взнос
+                      </p>
+                      <div class="about-link__button link-icon link-icon--outlined">Узнать подробнее
+                        <svg class="icon icon-link">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                        </svg>
+                      </div>
+                    </div></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section simple-section">
+          <div class="simple-section__site-container"><a class="simple-section__video-link video-link" href="#">
+              <div class="video-link__video">
+                <video class="lazy" autoplay poster="./assets/images/simple-sections/vid-1.png">
+                  <source type="video/mp4" srcset="./assets/images/simple-sections/video-1.mp4">
+                </video>
+              </div>
+              <div class="video-link__body">
+                <p class="video-link__text">Печём с заботой по-домашнему</p>
+                <div class="video-link__button link-icon link-icon--white">Посмотреть производство
+                  <svg class="icon icon-link icon-no-rotate">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </div>
+              </div></a></div>
+        </section>
+        <section class="section franchise-formats">
+          <div class="franchise-formats__site-container">
+            <div class="franchise-formats__body js-formats-swiper">
+              <div class="franchise-formats__grid">
+                <div class="franchise-formats__left franchise-formats__left--bigger">
+                  <h2 class="franchise-formats__title section__title">
+                    Ищите эти новинки
+                    в наших пекарнях
+                  </h2><a class="franchise-formats__link link-icon" href="#">Найти пекарню рядом с домом
+                    <svg class="icon icon-link">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                    </svg></a>
+                </div>
+                <div class="franchise-formats__right">
+                  <div class="franchise-formats__swiper swiper">
+                    <ul class="franchise-formats__swiper-wrapper swiper-wrapper">
+                      <li class="franchise-formats__swiper-slide swiper-slide novelty" id="novelties-01"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
-
       <footer class="page-footer">
         <div class="page-footer__site-container">
-          <div class="page-footer__logo">
-            <a class="logo" href="/">
+          <div class="page-footer__logo"><a class="logo" href="/">
               <svg class="icon icon-logo">
                 <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
-              </svg>
-            </a>
-            <a class="page-footer__details page-footer__link" href="#">Реквизиты компании</a>
-          </div>
+              </svg></a><a class="page-footer__details page-footer__link" href="#">Реквизиты компании</a></div>
           <div class="page-footer__menus">
             <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Достижения</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Благотворительность</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Карьера</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">СМИ о нас</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Франшиза</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">3 бизнеса в одной франшизе</a>
-              </li>
+              <li><a class="page-footer__link" href="#">Достижения</a></li>
+              <li><a class="page-footer__link" href="#">Благотворительность</a></li>
+              <li><a class="page-footer__link" href="#">Карьера</a></li>
+              <li><a class="page-footer__link" href="#">СМИ о нас</a></li>
+              <li><a class="page-footer__link" href="#">Франшиза</a></li>
+              <li><a class="page-footer__link" href="#">3 бизнеса в одной франшизе</a></li>
             </ul>
             <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Компания</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">О нас</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Производство</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Блог компании</a>
-              </li>
+              <li><a class="page-footer__link" href="#">Компания</a></li>
+              <li><a class="page-footer__link" href="#">О нас</a></li>
+              <li><a class="page-footer__link" href="#">Производство</a></li>
+              <li><a class="page-footer__link" href="#">Блог компании</a></li>
             </ul>
             <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Онлайн-экскурси</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Обучение</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Демо-день</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Маркетингкит</a>
-              </li>
+              <li><a class="page-footer__link" href="#">Онлайн-экскурси</a></li>
+              <li><a class="page-footer__link" href="#">Обучение</a></li>
+              <li><a class="page-footer__link" href="#">Демо-день</a></li>
+              <li><a class="page-footer__link" href="#">Маркетингкит</a></li>
             </ul>
             <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Точки продаж</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Отдел открытия и комплектации</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Отдел сопровождения</a>
-              </li>
+              <li><a class="page-footer__link" href="#">Точки продаж</a></li>
+              <li><a class="page-footer__link" href="#">Отдел открытия и комплектации</a></li>
+              <li><a class="page-footer__link" href="#">Отдел сопровождения</a></li>
             </ul>
             <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Контакты</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Продажа франшизы</a>
-              </li>
+              <li><a class="page-footer__link" href="#">Контакты</a></li>
+              <li><a class="page-footer__link" href="#">Продажа франшизы</a></li>
             </ul>
           </div>
           <div class="page-footer__bottom">
             <p class="page-footer__copyright">© 2024 Использование любых материалов с данного ресурса возможно только после письменного согласия владельца авторских прав</p>
-            <div class="page-footer__row">
-              <a class="page-footer__policy" href="#">Политика конфиденциальности</a>
-              <a class="page-footer__dev" href="" target="_blank"><span>Создание сайта<br>Mark Weber</span>
+            <div class="page-footer__row"><a class="page-footer__policy" href="#">Политика конфиденциальности</a><a class="page-footer__dev" href="" target="_blank"><span>Создание сайта<br>Mark Weber</span>
                 <picture>
-                  <source type="image/webp" srcset="assets/images/dev.webp" alt="alt">
-                  <img src="assets/images/dev.png" alt="alt">
-                </picture>
-              </a>
-            </div>
+                  <source type="image/webp" srcset="assets/images/dev.webp" alt="alt"/><img src="assets/images/dev.png" alt="alt"/>
+                </picture></a></div>
           </div>
         </div>
       </footer>
@@ -150,13 +262,11 @@
     <div class="modal">
       <div class="modal__container" data-target="modal">
         <div class="modal__content">
-          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
-          </button>
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span></button>
           <div class="modal__legend">Поздравляем вы открыли модалку!</div>
         </div>
       </div>
     </div>
-
   </body>
   <script src="assets/js/main.js?v=0.0.0.1"></script>
   <script src="assets/js/backend.js?v=0.0.0.1"></script>

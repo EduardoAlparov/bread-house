@@ -25,3 +25,15 @@
         margin-right: auto;
     }
 }
+
+.page-main {
+  .page-header {
+    color: var(--White, #fff);
+  }
+
+  .page-header__logo {
+    .icon {
+      fill: var(--White, #fff)
+    }
+  }
+}

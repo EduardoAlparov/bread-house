@@ -1,0 +1,39 @@
+.hero {
+  padding-block: 1rem;
+
+  &__slider-wrapper {
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  &__swiper {
+    &.swiper {
+    }
+  }
+
+  &__swipper-wrapper {
+    &.swiper-wrapper {
+    }
+  }
+
+  &__swiper-slide {
+
+    &.hero-slide {
+      min-height: 81.5rem;
+
+    }
+  }
+
+  &__swiper-control {
+    position: absolute;
+    bottom: 7rem;
+    right: 6rem;
+    z-index: 300;
+  }
+
+  &__stats-line {
+    width: calc(100% - (2 * 1.5rem));
+    margin-top: 1.5rem;
+  }
+}

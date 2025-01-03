@@ -105,9 +105,12 @@
         color: var(--Grafiit-main, #303030);
 
         .icon-link {
-            transform: rotate(225deg);
 
-            stroke: var(--Grafiit-main, #303030);
+          stroke: var(--Grafiit-main, #303030);
+
+          &:not(.icon-no-rotate) {
+              transform: rotate(225deg);
+            }
         }
     }
 
