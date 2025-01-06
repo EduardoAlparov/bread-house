@@ -7,16 +7,31 @@ export default () => {
     formats.forEach((format) => {
         const s = format.querySelector('.franchise-formats__swiper.swiper');
 
-        new Swiper(s, {
-            modules: [ Navigation ],
-            slidesPerView: 'auto',
-            spaceBetween: 50,
-            speed: 700,
+        if(format.dataset.slide) {
+            new Swiper(s, {
+                modules: [ Navigation ],
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                speed: 1000,
 
-            navigation: {
-                nextEl: format.querySelector('.double-btns__btn--next'),
-                prevEl: format.querySelector('.double-btns__btn--prev'),
-            },
-        })
+                navigation: {
+                    nextEl: format.querySelector('.double-btns__btn--next'),
+                    prevEl: format.querySelector('.double-btns__btn--prev'),
+                },
+            })
+
+        } else {
+            new Swiper(s, {
+                modules: [ Navigation ],
+                slidesPerView: 'auto',
+                spaceBetween: 50,
+                speed: 700,
+
+                navigation: {
+                    nextEl: format.querySelector('.double-btns__btn--next'),
+                    prevEl: format.querySelector('.double-btns__btn--prev'),
+                },
+            })
+        }
     })
 }

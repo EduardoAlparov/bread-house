@@ -20,7 +20,8 @@
         flex: 0 0 58rem;
 
         &.franchise-formats__left--bigger {
-          flex: 0 0 62rem;
+            flex: 0 0 62rem;
+            justify-content: space-between;
         }
     }
 
@@ -31,9 +32,7 @@
     }
 
     &__right {
-        flex: 1 1 100%;
-
-
+        flex: 0 1 100%;
     }
 
     &__swiper {
@@ -51,5 +50,10 @@
 
     &__swiper-control {
         margin-inline: 23rem -23rem;
+    }
+
+    &__double-btns {
+        margin-top: 5rem;
+        margin-left: 11.6rem;
     }
 }

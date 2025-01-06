@@ -9,6 +9,8 @@ import franchiseCarousel from './modules/franchiseCarousel';
 import formatsSwiper from './modules/formatsSwiper';
 import faqsDropdowns from './modules/faqsDropdowns';
 
+import standartsSwiper from './modules/standartsSwiper';
+
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
 
@@ -19,4 +21,7 @@ documenReady(() => {
   franchiseCarousel();
   formatsSwiper();
   faqsDropdowns();
+
+  standartsSwiper();
+
 });

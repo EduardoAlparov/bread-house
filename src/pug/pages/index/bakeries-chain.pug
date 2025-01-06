@@ -1,0 +1,29 @@
+section.section.main-about
+  .main-about__site-container
+    .main-about__body
+      .main-about__info.main-about__info--wider
+        h2.main-about__title Собственная сеть пекарен
+
+        .main-about__desc
+          p
+            | какой-то хороший текст в одну или может
+            | даже в две строки какой-то хороший текст
+            | в одну или может даже в две строки
+
+        ul.main-about__list
+          li 50 пекарен
+          li 4 города
+
+        a.main-about__link.link-icon(href="#")
+          | Сделать предзаказ выпечки
+          +icon-multi('link')
+
+      .main-about__grid.main-about__grid--smaller
+        .main-about__grid-item.main-about__grid-item--full
+          .main-about__novelty.novelty
+            .novelty__image
+              +picture('bakery.png')
+            .novelty__inner
+              .novelty__button.link-icon.link-icon--white
+                | Найти пекарню на карте
+                +icon-multi('link')(class="icon-no-rotate")

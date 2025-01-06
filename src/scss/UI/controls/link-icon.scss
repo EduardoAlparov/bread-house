@@ -69,6 +69,12 @@
         fill: var(--Grafiit-main, #303030);
     }
 
+    .icon-vac {
+        width: 2rem;
+        height: 2.1rem;
+        fill: var(--Grafiit-main, #303030);
+    }
+
     .icon-online {
         width: 2.2rem;
         height: 2.2rem;
@@ -106,10 +112,10 @@
 
         .icon-link {
 
-          stroke: var(--Grafiit-main, #303030);
+            stroke: var(--Grafiit-main, #303030);
 
-          &:not(.icon-no-rotate) {
-              transform: rotate(225deg);
+            &:not(.icon-no-rotate) {
+                transform: rotate(225deg);
             }
         }
     }

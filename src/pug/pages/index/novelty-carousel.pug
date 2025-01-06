@@ -1,28 +1,56 @@
 -
-  const novelties = [
-    {
-      id: "novelties-01",
-      class: "franchise-format--dark",
-      title: "Пирог песочный с вишней",
-      tooltip: "Пекарня с производством",
-    },
-  ]
+    const novelties = [
+        {
+            id: "novelties-01",
+            img: "novetly/img-1.png",
+            title: "Пирог песочный с вишней",
+        },
+        {
+            id: "novelties-02",
+            img: "novetly/img-2.png",
+            title: "Пирог песочный с творогом",
+        },
+        {
+            id: "novelties-03",
+            img: "novetly/img-3.png",
+            title: "Пирог песочный с вишней",
+        },
+        {
+            id: "novelties-04",
+            img: "novetly/img-2.png",
+            title: "Пирог песочный с творогом",
+        },
+    ]
 
 section.section.franchise-formats
-  .franchise-formats__site-container
-    .franchise-formats__body.js-formats-swiper
-      .franchise-formats__grid
-        .franchise-formats__left.franchise-formats__left--bigger
-          h2.franchise-formats__title.section__title
-            | Ищите эти новинки
-            | в наших пекарнях
+    .franchise-formats__site-container
+        .franchise-formats__body.js-formats-swiper(data-slide="3")
+            .franchise-formats__grid
+                .franchise-formats__left.franchise-formats__left--bigger
+                    h2.franchise-formats__title.section__title
+                        | Ищите эти новинки
+                        | в наших пекарнях
 
-          a.franchise-formats__link.link-icon(href="#")
-            | Найти пекарню рядом с домом
-            +icon-multi('link')
+                    a.franchise-formats__link.link-icon(href="#")
+                        | Найти пекарню рядом с домом
+                        +icon-multi('link')
 
-        .franchise-formats__right
-          .franchise-formats__swiper.swiper
-            ul.franchise-formats__swiper-wrapper.swiper-wrapper
-              each item in novelties
-                li.franchise-formats__swiper-slide.swiper-slide.novelty(id=item.id)
+                .franchise-formats__right
+                    .franchise-formats__swiper.swiper
+                        ul.franchise-formats__swiper-wrapper.swiper-wrapper
+                            each item in novelties
+                                li.franchise-formats__swiper-slide.swiper-slide.novelty(id=item.id)
+                                    .novelty__image
+                                        +picture(item.img)
+                                    .novelty__inner
+                                        p.novelty__name= item.title
+                                        a.novelty__link(href="#") Прочитать отзыв
+
+            .franchise-formats__grid
+                .franchise-formats__left.franchise-formats__left--bigger
+                .franchise-formats__right
+                    .franchise-formats__double-btns.double-btns
+                        button.double-btns__btn.double-btns__btn--prev(type="button")
+                            +icon-multi('prev')
+                        button.double-btns__btn.double-btns__btn--next(type="button")
+                            +icon-multi('prev')

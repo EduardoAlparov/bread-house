@@ -66,3 +66,4 @@ npm run build:prod
 # - общие:
 ## Страница - [Главная.](https://eduardoalparov.github.io/bread-house/)
 ## Страница - [Франшиза.](https://eduardoalparov.github.io/bread-house/franchise.html)
+## Страница - [О нас.](https://eduardoalparov.github.io/bread-house/about.html)

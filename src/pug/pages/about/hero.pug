@@ -1,0 +1,40 @@
+-
+  const heroStats = [
+    '10 лет на рынке',
+    '450 пекарен по всей РФ',
+    '50% партнеров с нами с самого начала',
+    '700 ТКК',
+    '400 франчайзинговых точек в РФ',
+    '100 партнеров'
+  ]
+
+section.hero
+  .hero__slider-wrapper
+    .hero__swiper.swiper
+      ul.hero__swipper-wrapper.swiper-wrapper
+        li.hero__swiper-slide.swiper-slide.hero-slide
+          .hero-slide__image
+            +picture('hero/about.jpg')
+
+          .hero-slide__body
+            .hero-slide__article.hero-slide__article--mw
+              h1.hero-slide__title
+                | Лучшая франшиза
+                | по версии Awards
+              p.hero-slide__text
+                | История о том, как мы развивались от&nbsp;года
+                | к&nbsp;году и совершенствовали производство
+
+      .hero__swiper-control.hero__tooltip
+        .hero__tooltip-icon
+        .hero__tooltip-text Закрыл бизнес в кризис
+        .hero__tooltip-bigtext
+          | и сразу открыл
+          br
+          | антикризисный
+
+  .hero__stats-line.hero__site-container.hero-stats
+    .hero-stats__wrapper
+      ul.hero-stats__list
+        each item in heroStats
+          li.hero-stats__item=item
