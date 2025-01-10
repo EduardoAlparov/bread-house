@@ -13,6 +13,7 @@
 
     background: var(--Grafiit-main, #303030);
     border-radius: 2.5rem;
+    cursor: pointer;
 
     @include font(2.4rem, 100%, 500);
 
@@ -75,6 +76,7 @@
         fill: var(--Grafiit-main, #303030);
     }
 
+    .icon-chat,
     .icon-online {
         width: 2.2rem;
         height: 2.2rem;

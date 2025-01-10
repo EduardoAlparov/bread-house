@@ -1,0 +1,61 @@
+-
+  const approaches = [
+    {
+      id: "approach-01",
+      img: "approach/img-1.png",
+      date: '13.06.2024',
+      text: `Конференция по развитию
+        стратегии бизнеса`,
+    },
+    {
+      id: "approach-02",
+      img: "approach/img-2.png",
+      date: '25.02.2024',
+      text: `Сертификация продукции в Самаре`,
+    },
+    {
+      id: "approach-01",
+      img: "approach/img-1.png",
+      date: '13.06.2024',
+      text: `Конференция по развитию
+        стратегии бизнеса`,
+    },
+  ]
+
+section.section.franchise-formats
+  .franchise-formats__site-container
+    .franchise-formats__body.js-formats-swiper
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--smaller
+          h2.franchise-formats__title.section__title
+            | Наш подход
+            br
+            | к партнерству
+
+          p.franchise-formats__text
+            | какой-то хороший текст в одну или
+            | может даже в две строки
+
+        .franchise-formats__right
+          .franchise-formats__swiper.swiper
+            ul.franchise-formats__swiper-wrapper.swiper-wrapper
+              each item in approaches
+                li.franchise-formats__swiper-slide.swiper-slide.franchise-formats__approach
+                  a.approach(id=item.id)
+                    .approach__info
+                      .approach__date=item.date
+                      p.approach__text=item.text
+
+                    .approach__image
+                      +picture(item.img)
+
+
+
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--bigger
+        .franchise-formats__right
+          .franchise-formats__double-btns.double-btns
+            button.double-btns__btn.double-btns__btn--prev(type="button")
+              +icon-multi('prev')
+            button.double-btns__btn.double-btns__btn--next(type="button")
+              +icon-multi('prev')

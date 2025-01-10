@@ -1,0 +1,29 @@
+-
+  const awards = [
+    {
+      img: 'awards/img-1.png',
+      href: './assets/images/awards/img-1.png'
+    },
+    {
+      img: 'awards/img-2.png',
+      href: './assets/images/awards/img-2.png'
+    },
+    {
+      img: 'awards/img-1.png',
+      href: './assets/images/awards/img-1.png'
+    },
+    {
+      img: 'awards/img-2.png',
+      href: './assets/images/awards/img-2.png'
+    },
+  ]
+
+section.section.awards
+  .awards__site-container
+    .awards__body
+      h2.awards__title То, чем Мы гордимся
+      ul.awards__list
+        each item in awards
+          li.awards__item
+            a.awards__link(href=item.href, data-fancybox="awards")
+              +picture(item.img)

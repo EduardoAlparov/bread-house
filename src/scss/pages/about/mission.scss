@@ -1,0 +1,14 @@
+.mission {
+    &__title {
+        margin-bottom: 7.5rem;
+    }
+
+    &__slider-wrapper {
+        max-width: 150rem;
+        margin-inline: auto;
+    }
+
+    &__swiper.swiper {
+        overflow: visible;
+    }
+}

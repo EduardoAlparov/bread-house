@@ -1,0 +1,134 @@
+.chronology {
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    &__nav-btn {
+
+        &:first-child {
+            background: var(--Grafiit-main, #303030);
+            opacity: 1;
+            color: #FFF;
+        }
+
+        &.chronology__nav-btn--active {
+            background: var(--Grafiit-main, #303030);
+            opacity: 1;
+            color: #FFF;
+        }
+    }
+
+    &__list-wrapper {
+        margin-top: 5rem;
+    }
+
+    &__link-wrapper {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 5rem;
+    }
+
+    &__list {
+        display: grid;
+        gap: 3rem;
+
+        grid-template-rows: repeat(2, calc(69rem / 2));
+        grid-template-columns: repeat(5, 0.2fr);
+    }
+
+    &__item {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+
+        overflow: hidden;
+        padding: 4.2rem 3rem;
+
+        background-color: #F8E8CE;
+        border-radius: 3rem;
+
+        &.chronology__item--photo {
+            color: var(--White, #fff);
+
+            &::after {
+                position: absolute;
+                inset: -1px;
+                z-index: 150;
+
+                background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 25.76%, #303030 100%);
+                content: "";
+            }
+        }
+
+        &.chronology__item--image {
+            justify-content: flex-start;
+
+            color: var(--Grafiit-main, #303030);
+        }
+
+        &.chronology__item--big {
+            grid-column: span 2;
+
+            .chronology__item-text {
+                max-width: 40rem;
+            }
+        }
+
+        &.chronology__item--vertical {
+            grid-row: span 2;
+        }
+
+        &.chronology__item--red {
+            &::after {
+                background: linear-gradient(180deg, rgba(177, 82, 80, 0.00) 10.3%, #B15250 77.58%);
+            }
+        }
+    }
+
+    &__item-photo {
+        position: absolute;
+        inset: -1px;
+        z-index: 100;
+    }
+
+    &__item-image {
+        position: absolute;
+        bottom: 4rem;
+        left: 4rem;
+        right: 4rem;
+    }
+
+    &__item-info {
+        position: relative;
+        z-index: 200;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    &__item-title {
+        @include font(3.2rem, 109.375%, 500);
+
+        width: min-content;
+
+        text-align: center;
+        letter-spacing: -0.02em;
+    }
+
+    &__item-text {
+        @include font(2rem, 109.375%, 500);
+
+        text-align: center;
+        text-wrap: balance;
+        letter-spacing: -0.02em;
+    }
+}

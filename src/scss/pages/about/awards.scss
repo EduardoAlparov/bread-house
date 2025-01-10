@@ -1,0 +1,53 @@
+.awards {
+    &__body {
+        padding: 9.2rem 14.8rem;
+
+        background-color: var(--color-bg-2, #F5F5F7);
+        border-radius: 3.5rem;
+    }
+
+    &__title {
+        @extend .text-h1;
+
+        margin-bottom: 7.5rem;
+
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
+
+    &__item {
+        flex: 0 0 calc(100% / 4 - (2.5rem * 3 / 4));
+        aspect-ratio: 1;
+
+        background-color: var(--White, #fff);
+        border-radius: 3rem;
+    }
+
+    &__link {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}

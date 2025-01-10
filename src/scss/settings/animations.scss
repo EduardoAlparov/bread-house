@@ -1,0 +1,12 @@
+.js-animation-trigger {
+    &._from-bottom {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+}
+
+._from-bottom {
+    transition-duration: 0.5s;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+}

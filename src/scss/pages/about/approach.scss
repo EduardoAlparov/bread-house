@@ -1,0 +1,80 @@
+.approach {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 4rem 5.7rem;
+
+    border-radius: 3rem;
+
+    color: #FFF;
+
+    &::before {
+        position: absolute;
+        inset: -1px;
+        z-index: 100;
+
+        background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 26.9%, #303030 100%);
+        content: "";
+    }
+
+    &__info {
+        position: relative;
+        z-index: 200;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        flex-shrink: 0;
+    }
+
+    &__date {
+
+        display: grid;
+        place-items: center;
+
+        width: min-content;
+        height: 35px;
+        padding: 1.6rem 1.8rem;
+        transform: rotate(-3deg);
+
+        background: #FDE696;
+        border-radius: 2.4rem;
+
+        color: var(--Grafiit-main, #303030);
+        text-align: center;
+        white-space: nowrap;
+        letter-spacing: -0.02em;
+
+        @include font(1.8rem, 89%, 500);
+    }
+
+    &__text {
+        letter-spacing: -0.02em;
+
+        @include font(3.2rem, 125%, 500);
+    }
+
+    &__image {
+        position: absolute;
+        inset: -1px;
+        z-index: 50;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
