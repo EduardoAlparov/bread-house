@@ -1,0 +1,38 @@
+section.section.store-widget
+  .store-widget__site-container
+    .store-widget__body
+      h2.store-widget__title
+        | Наша главная цель -
+        br
+        | свежая выпечка в каждый дом
+      .store-widget__inner
+        .store-widget__pic-holder
+          +picture('store-widget/render.png')
+
+          .store-widget__popup-item(style="top:70%; left:20%")
+            .store-widget__popup-inner
+              button.store-widget__plus(type="button")
+                +icon-multi('plus')
+
+              .store-widget__image-wrapper
+                .store-widget__image
+                  +picture('store-widget/popup.jpg')
+                p.store-widget__text
+                  | Условия которые должны
+                  | быть в  пекарне. Влажность,
+                  | температура воздуха
+                  | в помещении, зонирование.
+
+          .store-widget__popup-item.store-widget__popup-item--reverse(style="top:70%; left:80%")
+            .store-widget__popup-inner
+              button.store-widget__plus(type="button")
+                +icon-multi('plus')
+
+              .store-widget__image-wrapper
+                .store-widget__image
+                  +picture('store-widget/popup.jpg')
+                p.store-widget__text
+                  | Условия которые должны
+                  | быть в  пекарне. Влажность,
+                  | температура воздуха
+                  | в помещении, зонирование.

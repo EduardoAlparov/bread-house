@@ -1,0 +1,47 @@
+section.section.mission
+  .mission__site-container
+    h2.mission__title.locations__title.js-animation-trigger._from-bottom
+      | Наша миссия
+
+  .mission__slider-wrapper
+    .mission__swiper.swiper.js-big-swiper
+      ul.mission__swiper-wrapper.swiper-wrapper
+        li.mission__swiper-slide.swiper-slide.mission-slide.mission-slide--with-image
+          .mission-slide__image
+            +picture('mission/img-0.jpg')
+          .mission-slide__body
+            .mission-slide__top
+              span.mission-slide__number 01
+              h3.mission-slide__title
+                | Планирование производства
+            p.mission-slide__text
+              | с планшетом пекаря
+
+        li.mission__swiper-slide.swiper-slide.mission-slide.mission-slide--with-image
+          .mission-slide__image
+            +picture('mission/img-2.jpg')
+          .mission-slide__body
+            .mission-slide__top
+              span.mission-slide__number 02
+              h3.mission-slide__title
+                | Подбор производственного оборудования
+            p.mission-slide__text
+              | по индивидуальным техническим параметрам
+
+        li.mission__swiper-slide.swiper-slide.mission-slide.mission-slide--with-image
+          .mission-slide__image
+            +picture('mission/img-3.jpg')
+          .mission-slide__body
+            .mission-slide__top
+              span.mission-slide__number 03
+              h3.mission-slide__title
+                | ERP система
+            p.mission-slide__text
+              | полноценная система учета, которая поможет легко и эффективно управлять пекарней.
+
+      .mission__swiper-controls
+        .mission__double-btns.double-btns
+          button.double-btns__btn.double-btns__btn--prev(type="button")
+            +icon-multi('prev')
+          button.double-btns__btn.double-btns__btn--next(type="button")
+            +icon-multi('prev')

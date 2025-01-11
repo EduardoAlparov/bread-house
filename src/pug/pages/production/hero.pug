@@ -1,0 +1,19 @@
+section.hero
+  .hero__slider-wrapper
+    .hero__swiper.swiper
+      ul.hero__swipper-wrapper.swiper-wrapper
+        li.hero__swiper-slide.swiper-slide.hero-slide
+          .hero-slide__image
+            +picture('hero/production.jpg')
+
+          .hero-slide__body
+            .hero-slide__article.hero-slide__article--mw
+              h1.hero-slide__title
+                | Наше&nbsp;производство
+
+              p.hero-slide__text
+                | Посмотрите видео с&nbsp;камеры в одной из пекарен
+
+              a.hero-slide__link.link-icon.link-icon--white(href="#")
+                | Прямой эфир
+                +icon-multi('link')(class="icon-no-rotate")

@@ -11,4 +11,10 @@
     &__swiper.swiper {
         overflow: visible;
     }
+
+    &__swiper-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 7.5rem;
+    }
 }
