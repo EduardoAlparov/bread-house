@@ -1,0 +1,28 @@
+section.section.main-about
+  .main-about__site-container
+    .main-about__body
+      .main-about__info.main-about__info--biggest
+        h2.main-about__title
+          | Подробнее
+          | про&nbsp;IT&nbsp;решения
+          | и&nbsp;ERP&nbsp;систему
+
+        .main-about__desc
+          p
+            | Мы предоставляем полноценную систему учета, которая
+            | поможет легко и эффективно управлять пекарней.
+          p
+            | С ее помощью удастся повлиять на основные процессы предприятия
+            | даже в том случае, если предприниматель  находится в другом городе.
+
+      .main-about__grid
+        .main-about__grid-item.main-about__grid-item--full
+          .main-about__image
+            +picture('qr-back.png')
+
+            .main-about__qr-code.qr-code
+              img.qr-code__image(src="./assets/images/qr.png", alt="alt")
+              p.qr-code__text
+                | Сканируй QR код, чтобы
+                | посмотреть пример отчета
+                | о результатах продаж

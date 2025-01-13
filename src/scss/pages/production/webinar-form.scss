@@ -1,0 +1,41 @@
+.webinar-form {
+  &__body {
+    display: flex;
+    gap: 11rem;
+
+    padding: 8.5rem;
+
+    background: var(--Pale-yellow, #F5E8CE);
+    border-radius: 3.5rem;
+  }
+
+  &__video {
+    &.socials-section__video {
+      aspect-ratio: 1.3 / 1;
+      flex: 1 1 84rem;
+
+      &::after {
+        position: absolute;
+        inset: -1px;
+
+        background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 48.8%, #303030 100%);
+        content: "";
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 8rem;
+
+    flex: 1 1 calc(100% -  84rem - 11rem);
+  }
+
+  &__title {
+    @extend .text-h1;
+  }
+}

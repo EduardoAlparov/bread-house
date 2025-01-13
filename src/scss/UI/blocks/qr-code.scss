@@ -1,0 +1,22 @@
+.qr-code {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+
+  padding: 2.5rem;
+  padding-right: 3.6rem;
+
+  background: #FFF;
+  border-radius: 3rem;
+
+  &__image {
+    width: 10rem;
+    aspect-ratio: 1;
+  }
+
+  &__text {
+    width: 25rem;
+    letter-spacing: -0.012em;
+    @include font(2rem, 130%, 500);
+  }
+}

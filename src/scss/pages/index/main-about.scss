@@ -16,6 +16,11 @@
         &.main-about__info--wider {
             flex: 0 1 56rem;
         }
+
+        &.main-about__info--biggest {
+            flex: 0 1 65rem;
+            justify-content: space-between;
+        }
     }
 
     &__title {
@@ -45,6 +50,11 @@
         &.main-about__grid--smaller {
             gap: 0;
             flex: 0 1 89rem;
+        }
+
+        &:has(.main-about__image) {
+          gap: 0;
+          max-width: 90rem;
         }
     }
 
@@ -112,4 +122,35 @@
             }
         }
     }
+
+    &__image {
+      position: relative;
+
+      width: 100%;
+      max-width: 90rem;
+      aspect-ratio: 1.5 / 1;
+      overflow: hidden;
+
+      border-radius: 3.5rem;
+
+      &>picture img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: block;
+        width: 100%;
+
+        object-fit: cover;
+        object-position: center;
+      }
+  }
+
+  &__qr-code {
+    position: absolute;
+    left: 5rem;
+    bottom: 4.5rem;
+    z-index: 100;
+  }
 }

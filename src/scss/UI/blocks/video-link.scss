@@ -27,8 +27,12 @@
     }
 
     &__text {
-        max-width: 12ch;
-        @extend .text-h1;
+      max-width: 12ch;
+      @extend .text-h1;
+
+      &.video-link__text--bigger {
+        max-width: 18ch;
+      }
     }
 
     &__image,
@@ -64,6 +68,19 @@
             flex-direction: row;
             align-items: flex-end;
         }
+    }
+
+    &__desc {
+      max-width: 72rem;
+
+      &>p {
+        @include font(3rem, 133.3%, 500);
+        letter-spacing: -0.03em;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
     }
 
     &.video-link--no-video {

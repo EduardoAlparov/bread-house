@@ -1,0 +1,31 @@
+section.section.webinar-form
+  .webinar-form__site-container
+    .webinar-form__body
+      .webinar-form__video.socials-section__video
+        button(type="button")
+          +icon-multi('play-big')
+
+        video(mute)
+          source(src="./assets/images/video.mp4" type="video/mp4")
+
+        .socials-section__video-caption
+          h6 Вебинар технолога
+          p демо-версия
+
+      form.webinar-form__form(action="")
+        h2.webinar-form__title Запишитесь сейчас на&nbsp;ближайший вебинар
+
+        .franchise-form__top
+          .franchise-form__inputs
+            +Input-holder('text','Имя','franchise-name',true,true,'Имя')(class="franchise-form__input")
+            +Input-holder('text','Город','franchise-city',true,true,'Город')(class="franchise-form__input")
+            +Input-holder('tel','Телефон','franchise-phone',true,true,'Телефон')(class="franchise-form__input")
+            +Input-holder('email','Электронная почта','franchise-email',true,true,'Электронная почта')(class="franchise-form__input")
+          .franchise-form__center
+            .franchise-form__submit
+              button.franchise-form__button.link-icon(type="submit")
+                | Записаться на вебинар
+                +icon-multi('link')
+              p.franchise-form__agreement
+                | Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;
+                a(href="http://" target="_blank" rel="noopener noreferrer") Платформой

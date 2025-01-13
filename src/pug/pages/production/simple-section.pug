@@ -1,0 +1,20 @@
+section.section.simple-section
+  .simple-section__site-container
+    a.simple-section__video-link.video-link(href="#")
+      .video-link__video
+        +picture('simple-sections/img.png')
+
+      .video-link__body
+        p.video-link__text.video-link__text--bigger Посмотрите как устроено наше производство
+
+        .video-link__desc
+          p
+            | Приглашаем посмотреть как устроено наше
+            | производство в формате онлайн-экскурсии.
+          p
+            | Рассказываем о процессе приготовления выпечки,
+            | стандарты обслуживания, вкладки и пр.
+
+        .video-link__button.link-icon.link-icon--white
+          | Записаться на оналйн-экскурсию
+          +icon-multi('link')(class="icon-no-rotate")

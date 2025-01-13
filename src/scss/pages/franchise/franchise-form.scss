@@ -70,8 +70,6 @@
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
-
-
     }
 
     &__center,
@@ -105,7 +103,7 @@
     &__agreement {
         display: inline-block;
 
-        text-align: center;
+        // text-align: center;
         color: #909090;
         letter-spacing: -0.04em;
         @include font(1.6rem, 150%, 400);
