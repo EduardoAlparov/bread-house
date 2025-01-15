@@ -26,22 +26,22 @@
     }
 
     .icon-tg {
-        width: 2rem;
-        height: 1.7rem;
-        fill: var(--White, #fff);
+        width: 3rem;
+        height: 2.4rem;
+        fill: #57AADE;
     }
 
 
     .icon-yt {
-        width: 3.1rem;
-        height: 2.1rem;
-        fill: var(--White, #fff);
+        width: 3.7rem;
+        height: 2.5rem;
+        fill: #DE5757;
     }
 
     .icon-vk-big {
-        width: 3.6rem;
-        height: 2.1rem;
-        fill: var(--White, #fff);
+        width: 4.5rem;
+        height: 2.5rem;
+        fill: #4888F7;
     }
 
     .icon-vk-small {
@@ -90,21 +90,24 @@
     }
 
     &.link-icon--dark-blue {
-        background-color: #4888F7;
+      background-color: transparent;
+      border: 1px solid var(--Grafiit-main, #303030);
 
-        color: var(--White, #fff);
+      color: #606060;
     }
 
     &.link-icon--dark-red {
-        background-color: #DE5757;
+      background-color: transparent;
+      border: 1px solid var(--Grafiit-main, #303030);
 
-        color: var(--White, #fff);
+      color: #606060;
     }
 
     &.link-icon--light-blue {
-        background-color: #57AADE;
+      background-color: transparent;
+      border: 1px solid var(--Grafiit-main, #303030);
 
-        color: var(--White, #fff);
+      color: #606060;
     }
 
     &.link-icon--white {

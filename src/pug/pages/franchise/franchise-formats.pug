@@ -2,6 +2,7 @@
   const formats = [
     {
       id: "franchise-format-01",
+      image: "franchise-format/image-1.png",
       class: "franchise-format--dark",
       title: "Полный цикл",
       tooltip: "Пекарня с производством",
@@ -15,6 +16,7 @@
     },
     {
       id: "franchise-format-02",
+      image: "franchise-format/image-2.png",
       class: "franchise-format--light",
       title: "Торговая точка",
       tooltip: "Точка продаж",
@@ -43,7 +45,7 @@ section.section.franchise-formats
             br
             |пекарня, кулинария, кофейня
 
-          a.franchise-formats__link.link-icon(href="#")
+          a.franchise-formats__link.franchise-formats__link--mta.link-icon(href="#")
             | Рассчитать доходность будущей пекарни
             +icon-multi('calc')
 
@@ -52,6 +54,8 @@ section.section.franchise-formats
             ul.franchise-formats__swiper-wrapper.swiper-wrapper
               each format in formats
                 li.franchise-formats__swiper-slide.swiper-slide.franchise-format(class=format.class, id=format.id)
+                  .franchise-format__image
+                    +picture(format.image)
                   .franchise-format__body
                     .franchise-format__top
                       p.franchise-format__title=format.title

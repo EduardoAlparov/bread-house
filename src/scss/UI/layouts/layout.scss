@@ -46,7 +46,6 @@ body {
 }
 
 .section {
-
     &:not(:first-child) {
         margin-top: 12rem;
     }
@@ -61,9 +60,20 @@ body {
 
     &__title {
         @extend .text-h1;
+
+        &.section__title--tac {
+          text-align: center;
+        }
     }
 
     &__subtitle {
         @extend .text-30;
     }
+}
+
+
+.page-promo {
+  .section--promo-offset {
+    padding-top: calc(var(--promo-height) + 3rem);
+  }
 }

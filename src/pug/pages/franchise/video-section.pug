@@ -1,0 +1,44 @@
+-
+  const chronoList = [
+    {
+      data: "chrono-2023",
+      text: "2023",
+    },
+    {
+      data: "chrono-2024",
+      text: "2024",
+    },
+  ];
+
+
+section.section.elements-section
+  .elements-section__site-container
+    .elements-section__heading.section__heading
+      h2.events-section__title.section__title
+        | Яркие проекты наших франчайзи
+      p.events-section__subtitle.section__subtitle
+        | какой-то хороший текст в одну или может даже в две строки какой-то
+        | хороший текст в одну или может даже в две строки
+
+    .elements-section__inner-wrapper.js-switchable-windows
+      .elements-section__nav-wrapper.chronology__nav-wrapper
+        .chronology__nav
+          each item, index in chronoList
+            if index == 0
+              button.chronology__nav-btn.chronology__nav-btn--active.tab-btn.js-tab-btn(type="button", data-chrono=item.data)=item.text
+            else
+              button.chronology__nav-btn.tab-btn.js-tab-btn(type="button", data-chrono=item.data)=item.text
+
+
+      .elements-section__videos
+        .elements-section__video-wrapper.socials-section__video#chrono-2023(data-switch-window)
+          button(type="button", data-play-video)
+            +icon-multi('play-big')
+          video(mute)
+            source(src="./assets/images/video.mp4" type="video/mp4")
+
+        .elements-section__video-wrapper.socials-section__video.display-none#chrono-2024(data-switch-window)
+          button(type="button", data-play-video)
+            +icon-multi('play-big')
+          video(mute)
+            source(src="./assets/images/video.mp4" type="video/mp4")

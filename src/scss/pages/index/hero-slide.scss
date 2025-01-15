@@ -77,4 +77,20 @@
             }
         }
     }
+
+    &.hero-slide--grey {
+        color: var(--Grafiit-main, #303030);
+
+        .hero-slide__image {
+            background-color: var(--color-bg-2, #F5F5F7);
+
+            &::after {
+                content: none;
+            }
+        }
+
+        .hero-slide__article {
+            max-width: 80rem;
+        }
+    }
 }

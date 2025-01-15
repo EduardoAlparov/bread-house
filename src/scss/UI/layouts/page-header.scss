@@ -7,14 +7,14 @@
     z-index: 2000;
 
     width: 100%;
-    padding-top: 5.8rem;
-
 
     &__site-container {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        padding-top: 5.8rem;
     }
 
     &__logo {
@@ -23,6 +23,44 @@
 
     &__menu {
         margin-right: auto;
+    }
+
+    &__promo {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 6.4rem;
+
+      width: calc(100% - (2 * 1.5rem));
+      margin-inline: auto;
+      margin-block: 1.5rem;
+      padding: 2.6rem;
+
+      background-color: #A10D29;
+      background-image: url('./../../assets/images/header-promo.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      border-radius: 50rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__promo-text {
+      @include font(3.2rem, 150%, 500);
+
+      color: #FFF;
+      letter-spacing: -0.024em;
+    }
+
+    &__promo-divider {
+      width: 0.5rem;
+      height: 0.5rem;
+
+      background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%225%22%20height%3D%226%22%20viewBox%3D%220%200%205%206%22%20fill%3D%22none%22%3E%0A%20%20%3Ccircle%20cx%3D%222.5%22%20cy%3D%223%22%20r%3D%222.5%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
     }
 }
 
@@ -35,5 +73,11 @@
     .icon {
       fill: var(--White, #fff)
     }
+  }
+}
+
+.page-promo {
+  .page-header__promo {
+    display: flex;
   }
 }

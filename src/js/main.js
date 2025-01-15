@@ -4,12 +4,15 @@ import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 
+import playVideo from './modules/playVideo';
+import setPromoHeight from './modules/setPromoHeight';
 import animationsTriggers from './modules/animationsTriggers';
 
 import reviewsSwiper from './modules/reviewsSwiper';
 import franchiseCarousel from './modules/franchiseCarousel';
 import formatsSwiper from './modules/formatsSwiper';
 import faqsDropdowns from './modules/faqsDropdowns';
+import tabsToggle from './modules/tabsToggle';
 
 import standartsSwiper from './modules/standartsSwiper';
 import bigSwiper from './modules/bigSwiper';
@@ -20,12 +23,15 @@ documenReady(() => {
   lazyIMages();
   initModal();
 
+  playVideo();
+  setPromoHeight();
   animationsTriggers();
 
   reviewsSwiper();
   franchiseCarousel();
   formatsSwiper();
   faqsDropdowns();
+  tabsToggle();
 
   standartsSwiper();
   bigSwiper();

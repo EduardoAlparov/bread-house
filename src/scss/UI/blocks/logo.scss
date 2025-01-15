@@ -10,7 +10,9 @@
     }
 
     &__tooltip {
-        display: block;
+        display: grid;
+        place-items: center;
+        place-content: center;
 
         flex-shrink: 0;
         width: min-content;

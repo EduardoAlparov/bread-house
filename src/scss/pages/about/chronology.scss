@@ -7,13 +7,6 @@
     }
 
     &__nav-btn {
-
-        &:first-child {
-            background: var(--Grafiit-main, #303030);
-            opacity: 1;
-            color: #FFF;
-        }
-
         &.chronology__nav-btn--active {
             background: var(--Grafiit-main, #303030);
             opacity: 1;

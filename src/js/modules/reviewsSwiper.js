@@ -8,7 +8,8 @@ export default () => {
         new Swiper(review, {
             modules: [ Navigation ],
             slidesPerView: 5,
-            speed: 700,
+            spaceBetween: 20,
+            speed: 1000,
 
             navigation: {
                 nextEl: review.querySelector('.double-btns__btn--next'),

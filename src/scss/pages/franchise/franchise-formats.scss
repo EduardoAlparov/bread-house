@@ -35,6 +35,12 @@
         @include font(3rem, 133.3%, 500);
     }
 
+    &__link {
+      &.franchise-formats__link--mta {
+        margin-top: auto;
+      }
+    }
+
     &__right {
         flex: 0 1 100%;
     }

@@ -58,4 +58,16 @@
             height: 1.7rem;
         }
     }
+
+    &__inner-wrapper {
+      margin-top: -2.5rem;
+    }
+
+    &__video-wrapper {
+      margin-top: 5rem;
+
+      &.socials-section__video {
+        aspect-ratio: 2.784 / 1;
+      }
+    }
 }
