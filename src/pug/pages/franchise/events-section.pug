@@ -5,12 +5,25 @@ section.section.events-section
       p.events-section__subtitle.section__subtitle
         | Ознакомьтесь с тем, что происходит в Доме хлеба прямо сейчас
 
-    .events-section__body
+    .events-section__body.js-events-swiper
       .events-section__swiper.swiper
         ul.events-section__swiper-wrapper.swiper-wrapper
-          li.events-section__swiper-slide.swiper-slide.event-slide
+          li.events-section__swiper-slide.swiper-slide.event-slide(id="event-01")
             .event-slide__image
               +picture('franchise-carousel/slide.jpg', '')
+
+            .event-slide__body
+              .event-slide__info
+                .event-slide__date 13.06.2024 в 10:00
+                h3.event-slide__text Бизнес-завтрак с Андреем Герасимовым в Самаре
+
+              a.event-slide__link.link-icon.link-icon--white(href="#")
+                | Зарегистрироваться на событие
+                +icon-multi('event')
+          li.events-section__swiper-slide.swiper-slide.event-slide(id="event-02")
+            .event-slide__image
+              video(autoplay loop muted)
+                source(src="./assets/images/video.mp4" type="video/mp4")
 
             .event-slide__body
               .event-slide__info
@@ -23,7 +36,7 @@ section.section.events-section
 
         .events-section__control-panel
           .events-section__pagination
-            button.events-section__button(type="button") Вебинар по масштабированию
-            button.events-section__button.events-section__button--active(type="button") Бизнес-завтрак
-            button.events-section__button(type="button") Вебинар по масштабированию
-            button.events-section__button(type="button") Бизнес-завтрак
+            button.events-section__button(type="button" data-event-pagination="event-01")
+              | Вебинар по масштабированию
+            button.events-section__button(type="button" data-event-pagination="event-02")
+              | Бизнес-завтрак

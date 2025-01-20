@@ -1,53 +1,53 @@
 -
-    const franchiseStandarts = [
-        {
-            class: 'franchise-standart--red',
-            number: '01',
-            title: 'Сопровождаем открытие',
-            text: 'Открытие пекарни — важное событие, требующее тщательной подготовки и правильного сопровождения.'
-        },
-        {
-            class: 'franchise-standart--yellow',
-            number: '02',
-            title: 'Ведем к\u00A0прибыли',
-            text: 'Работа под известным брендом позволит быстрее привлечь клиентов, поскольку репутация нашей компании уже известна на рынке.'
-        },
-        {
-            class: 'franchise-standart--orange',
-            number: '03',
-            title: 'Ориентируемся на\u00A0партнера',
-            text: 'Работа под известным брендом позволит быстрее привлечь клиентов, поскольку репутация нашей компании уже известна на рынке.'
-        },
-    ];
+  const franchiseStandarts = [
+    {
+      class: 'franchise-standart--red',
+      number: '01',
+      title: 'Сопровождаем открытие',
+      text: 'Открытие пекарни — важное событие, требующее тщательной подготовки и правильного сопровождения.'
+    },
+    {
+      class: 'franchise-standart--yellow',
+      number: '02',
+      title: 'Ведем к\u00A0прибыли',
+      text: 'Работа под известным брендом позволит быстрее привлечь клиентов, поскольку репутация нашей компании уже известна на рынке.'
+    },
+    {
+      class: 'franchise-standart--orange',
+      number: '03',
+      title: 'Ориентируемся на\u00A0партнера',
+      text: 'Работа под известным брендом позволит быстрее привлечь клиентов, поскольку репутация нашей компании уже известна на рынке.'
+    },
+  ];
 
 section.section.franchise-standarts
-    .franchise-standarts__site-container
-        .franchise-standarts__heading.elements-section__heading.section__heading
-            h2.events-section__title.section__title
-                | Создаем стандарты франчайзингового бизнеса
-            p.events-section__subtitle.section__subtitle
-                | и технические ноу-хау для решения его задач
+  .franchise-standarts__site-container
+    .franchise-standarts__heading.elements-section__heading.section__heading
+      h2.events-section__title.section__title
+        | Создаем стандарты франчайзингового бизнеса
+      p.events-section__subtitle.section__subtitle
+        | и технические ноу-хау для решения его задач
 
-    .franchise-standarts__body.js-franchise-standarts-swiper
-        .franchise-standarts__swiper.swiper
-            ul.franchise-standarts__swiper-wrapper.swiper-wrapper
-                each item in franchiseStandarts
-                    li.franchise-standarts__swiper-slide.swiper-slide.franchise-standart(class=item.class)
-                        span.franchise-standart__number=item.number
-                        .franchise-standart__desc
-                            p.franchise-standart__title=item.title
-                            p.franchise-standart__text=item.text
+  .franchise-standarts__body.js-franchise-standarts-swiper
+    .franchise-standarts__swiper.swiper
+      ul.franchise-standarts__swiper-wrapper.swiper-wrapper
+        each item in franchiseStandarts
+          li.franchise-standarts__swiper-slide.swiper-slide.franchise-standart(class=item.class)
+            span.franchise-standart__number=item.number
+            .franchise-standart__desc
+              p.franchise-standart__title=item.title
+              p.franchise-standart__text=item.text
 
-        .franchise-standarts__double-btns.double-btns
-            button.double-btns__btn.double-btns__btn--prev(type="button")
-                +icon-multi('prev')
-            button.double-btns__btn.double-btns__btn--next(type="button")
-                +icon-multi('prev')
+    .franchise-standarts__double-btns.double-btns
+      button.double-btns__btn.double-btns__btn--prev(type="button")
+        +icon-multi('prev')
+      button.double-btns__btn.double-btns__btn--next(type="button")
+        +icon-multi('prev')
 
-        .franchise-standarts__links
-            a.franchise-standarts__link.link-icon(href="#")
-                | Стать партнером
-                +icon-multi('link')
-            a.franchise-standarts__link.link-icon.link-icon--outlined
-                | Купить готовую пекарню
-                +icon-multi('link')
+    .franchise-standarts__links
+      a.franchise-standarts__link.link-icon(href="#")
+        | Стать партнером
+        +icon-multi('link')
+      a.franchise-standarts__link.link-icon.link-icon--outlined
+        | Купить готовую пекарню
+        +icon-multi('link')

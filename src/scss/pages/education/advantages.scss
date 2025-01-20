@@ -1,0 +1,32 @@
+.advantages {
+  &__list {
+    display: flex;
+    align-items: stretch;
+    gap: 2.2rem;
+  }
+
+  &__item {
+    flex-basis: 34.5rem;
+
+    &.stats-section__item {
+      padding-block: 4.2rem;
+      padding-inline: 3.2rem;
+    }
+
+    &.stats-section__item--orange {
+      flex-grow: 1;
+    }
+
+    &>.stats-section__text {
+      max-width: 42rem;
+
+      letter-spacing: -0.02em;
+      @include font(1.8rem, 139%, 500);
+    }
+  }
+
+  &__link {
+    margin-top: 5rem;
+    margin-inline: auto;
+  }
+}

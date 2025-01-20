@@ -16,6 +16,8 @@ import tabsToggle from './modules/tabsToggle';
 
 import standartsSwiper from './modules/standartsSwiper';
 import bigSwiper from './modules/bigSwiper';
+import shortsSwiper from './modules/shortsSwiper';
+import eventsSwiper from './modules/eventsSwiper';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -35,4 +37,6 @@ documenReady(() => {
 
   standartsSwiper();
   bigSwiper();
+  shortsSwiper();
+  eventsSwiper();
 });

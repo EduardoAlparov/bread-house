@@ -1,0 +1,70 @@
+-
+  const shorts = [
+    {
+      id: "franchise-short-01",
+      src: "https://vk.com/video_ext.php?oid=-20629724&id=456241973&hash=5c19eb857534cea1"
+    },
+    {
+      id: "franchise-short-02",
+      src: "https://vk.com/video_ext.php?oid=-46638176&id=456239522&hash=f90b58fe7e1c5134"
+    },
+    {
+      id: "franchise-short-03",
+      src: "https://vk.com/video_ext.php?oid=-20629724&id=456241973&hash=5c19eb857534cea1"
+    },
+    {
+      id: "franchise-short-04",
+      src: "https://vk.com/video_ext.php?oid=-46638176&id=456239522&hash=f90b58fe7e1c5134"
+    },
+  ]
+
+section.section.franchise-formats
+  .franchise-formats__site-container
+    .franchise-formats__body.js-shorts-swiper
+      .franchise-formats__grid
+        .franchise-formats__left
+          .franchise-formats__quotation.format-quotation
+            h2.format-quotation__title
+              | Дом Хлеба -
+              br
+              | самый&nbsp;устойчивый
+              | бизнес в сфере
+              | общепита.
+            p.format-quotation__text
+              | С 2017 года развиваем собственную и франчайзинговую сеть с
+              | помощью С 2017 года развиваем собственную и франчайзинговую
+              | сеть с помощью  2017 года развиваем собственную и франчайзинговую
+              | сеть с помощью
+            .format-quotation__border
+
+          a.franchise-formats__link.franchise-formats__link--mta.link-icon(href="#")
+            | Стать партнером
+            +icon-multi('calc')
+
+        .franchise-formats__right.franchise-formats__right--shorts
+          .franchise-formats__swiper.swiper
+            ul.franchise-formats__swiper-wrapper.swiper-wrapper
+              each short in shorts
+                li.franchise-formats__swiper-slide.swiper-slide.franchise-short(id=short.id)
+                  .franchise-short__body
+                    .franchise-short__embed-video
+                      iframe(
+                        width="100%"
+                        height="100%"
+                        frameborder="0"
+                        allowfullscreen="1"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                        src=short.src
+                      )
+                    button.franchise-short__button(type="button")
+                      +icon-multi('play-big')
+
+      .franchise-formats__grid
+        .franchise-formats__left
+        .franchise-formats__right.franchise-formats__right--shorts
+          .franchise-formats__controls.franchise-formats__controls--left
+            .double-btns
+              button.double-btns__btn.double-btns__btn--prev(type="button")
+                +icon-multi('prev')
+              button.double-btns__btn.double-btns__btn--next(type="button")
+                +icon-multi('prev')

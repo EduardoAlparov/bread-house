@@ -20,6 +20,7 @@
         img {
           display: block;
           width: 100%;
+          min-height: 100%;
 
           object-fit: cover;
           object-position: center;
@@ -46,5 +47,37 @@
     &__text {
         letter-spacing: -0.02em;
         @include font(2.4rem, 125%, 500);
+    }
+
+    &__link {
+        min-width: 35rem;
+        margin-top: auto;
+
+        &.link-icon {
+            padding-inline: 2.4rem;
+        }
+    }
+
+    &.elements-item--big {
+      .elements-item__body {
+          gap: 3rem;
+          flex: 1 1 auto;
+
+          padding: 6.25rem 7.2rem;
+      }
+
+      .elements-item__title {
+          @include font(6.4rem, 109%, 500);
+          letter-spacing: -0.03em;
+      }
+
+      .elements-item__text {
+          @include font(3.2rem, 125%, 500);
+          letter-spacing: -0.03em;
+      }
+    }
+
+    &.elements-item--black-color {
+        color: var(--Grafiit-main, #303030);
     }
 }

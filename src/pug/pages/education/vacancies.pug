@@ -1,0 +1,51 @@
+-
+  const vacancies = [
+    {
+      id: "vacancy-01",
+      title: "Пекарь",
+      term: "2 дня"
+    },
+    {
+      id: "vacancy-02",
+      title: "Продавец кассир",
+      term: "3 дня"
+    },
+    {
+      id: "vacancy-03",
+      title: "Управляющий пекарнеЙ",
+      term: "2 дня"
+    }
+  ]
+
+section.section.franchise-formats
+  .franchise-formats__site-container
+    .franchise-formats__body.js-formats-swiper(data-slide="3")
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--bigger
+          h2.franchise-formats__title.section__title
+            | Самые
+            | востребованные
+            | вакансии&nbsp;в&nbsp;общепите
+
+
+        .franchise-formats__right
+          .franchise-formats__swiper.swiper
+            .franchise-formats__swiper-wrapper.swiper-wrapper
+              each item in vacancies
+                a.franchise-formats__swiper-slide.swiper-slide.vacancy(href="", id=item.id)
+                  .vacancy__inner
+                    p.vacancy__name= item.title
+                    p.vacancy__text Короткий текст об этом
+                  p.vacancy__term= item.term
+
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--bigger
+          a.franchise-formats__jump.link-icon.link-icon--outlined
+            | Смотреть все вакансии
+            +icon-multi('link')
+        .franchise-formats__right
+          .franchise-formats__double-btns.double-btns
+            button.double-btns__btn.double-btns__btn--prev(type="button")
+              +icon-multi('prev')
+            button.double-btns__btn.double-btns__btn--next(type="button")
+              +icon-multi('prev')

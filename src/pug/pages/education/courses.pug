@@ -1,0 +1,59 @@
+-
+  const courses = [
+    {
+      dark: true,
+      title: 'Процесс обучения',
+      text: `Оцените, насколько вам подходит формат проведения курса`,
+      img: 'elements/img-10.jpg',
+      linkText: 'Более 55 курсов'
+    },
+    {
+      title: 'Пройти тест',
+      text: `Подходит ли вам бизнес
+        по франшизе`,
+      img: 'elements/img-11.jpg',
+      linkText: 'Пройти тестирование'
+    },
+    {
+      title: 'Получить новые навыки',
+      text: `и ускорить карьеру`,
+      img: 'elements/img-12.jpg',
+      linkText: 'Связаться со мной'
+    },
+    {
+      title: 'Подобрать курс',
+      text: `индивидуально в зависимости
+        от необходимых знаний`,
+      img: 'elements/img-13.jpg',
+      linkText: 'Узнать подробнее'
+    },
+  ];
+
+section.section.courses.mission
+  .mission__site-container
+    h2.mission__title.locations__title.js-animation-trigger._from-bottom
+      | Курсы под любые задачи
+
+    .mission__courses
+      each item in courses
+        if item.dark
+          li.mission__course.elements-item.elements-item--big.elements-item--black-color
+            .elements-item__image
+              +picture(item.img, 'image')
+            .elements-item__body
+              .elements-item__title=item.title
+              .elements-item__text=item.text
+              a.elements-item__link.link-icon.link-icon--white(href="#")
+                =item.linkText
+                +icon-multi('link')(class="icon-no-rotate")
+
+        else
+          li.mission__course.elements-item.elements-item--big
+            .elements-item__image
+              +picture(item.img, 'image')
+            .elements-item__body
+              .elements-item__title=item.title
+              .elements-item__text=item.text
+              a.elements-item__link.link-icon.link-icon--white(href="#")
+                =item.linkText
+                +icon-multi('link')(class="icon-no-rotate")

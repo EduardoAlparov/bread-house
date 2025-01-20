@@ -1,0 +1,73 @@
+.partner-button {
+    position: fixed;
+    z-index: 3000;
+
+    bottom: 2rem;
+    right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+
+    width: max-content;
+
+    cursor: pointer;
+
+    &__inner-text {
+      position: absolute;
+      top: 50%;
+      right: 1px;
+
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: max-content;
+      height: 7.5rem;
+      padding: 1.7rem 10rem 1.7rem 3.4rem;
+      transform: translate(-5rem, -50%) scaleX(0);
+      transform-origin: right;
+
+      color: var(--White, #fff);
+      letter-spacing: -0.04em;
+      white-space: nowrap;
+
+      background: var(--Grafiit-main, #303030);
+      border-radius: 2.5rem;
+      opacity: 0;
+
+      transition-property: transform, opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+
+      @include font(2.4rem, 100%, 500);
+    }
+
+    &__inner-icon {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+      width: 10rem;
+      height: 7.5rem;
+      padding: 1.7rem 3.4rem;
+
+
+      background: var(--Grafiit-main, #303030);
+      border-radius: 2.5rem;
+
+      .icon-partner {
+        width: 4rem;
+        height: 4rem;
+
+        fill: var(--White, #fff);
+      }
+    }
+
+    &:hover {
+      .partner-button__inner-text {
+        transform: translate(0, -50%) scaleX(1);
+        opacity: 1;
+      }
+    }
+}

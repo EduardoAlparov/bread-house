@@ -17,4 +17,15 @@
         justify-content: center;
         margin-top: 7.5rem;
     }
+
+    &__courses {
+      display: grid;
+      grid-template-columns: repeat(2, 0.5fr);
+      grid-auto-rows: calc((60rem * 2 + 5rem) / 2);
+      gap: 5rem;
+    }
+
+    &__course {
+
+    }
 }

@@ -17,6 +17,17 @@
             background: linear-gradient(0deg, rgba(48, 48, 48, 0.60) 0%, rgba(48, 48, 48, 0.60) 100%);
             content: "";
         }
+
+        img,
+        video {
+          display: block;
+
+          min-width: 100%;
+          min-width: 100%;
+
+          object-fit: cover;
+          object-position: center;
+        }
     }
 
     &__body {
@@ -67,4 +78,21 @@
     &__link {
         margin-left: auto;
     }
+
+    &.events-section__swiper-slide {
+
+      .event-slide__link {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: linear;
+        opacity: 0;
+      }
+
+      &.swiper-slide-active {
+        .event-slide__link {
+          opacity: 1;
+        }
+      }
+    }
+
 }
