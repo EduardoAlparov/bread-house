@@ -10,15 +10,21 @@ export default () => {
         new Swiper(s, {
           modules: [ Navigation ],
           slidesPerView: 'auto',
-          width: '38rem',
-          spaceBetween: 25,
+          width: '16rem',
+          spaceBetween: 12,
           speed: 1000,
-          setWrapperSize: false,
 
           navigation: {
               nextEl: format.querySelector('.double-btns__btn--next'),
               prevEl: format.querySelector('.double-btns__btn--prev'),
           },
+
+          breakpoints: {
+            1024: {
+              width: '38rem',
+              spaceBetween: 25,
+            }
+          }
       })
     })
 }

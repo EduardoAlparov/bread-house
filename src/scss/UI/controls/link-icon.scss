@@ -1,146 +1,156 @@
 .link-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
 
-    width: max-content;
-    padding: 3.3rem 7.2rem;
+  width: max-content;
+  padding: 3.3rem 7.2rem;
 
-    color: var(--White, #fff);
-    letter-spacing: -0.04em;
-    white-space: nowrap;
+  color: var(--White, #fff);
+  letter-spacing: -0.04em;
+  white-space: nowrap;
 
-    background: var(--Grafiit-main, #303030);
-    border-radius: 2.5rem;
-    cursor: pointer;
+  background: var(--Grafiit-main, #303030);
+  border-radius: 2.5rem;
+  text-align: center;
+  cursor: pointer;
 
-    @include font(2.4rem, 100%, 500);
+  @include font(2.4rem, 100%, 500);
 
-    .icon {}
+  @include breakpoint(tablet) {
+    min-width: 27rem;
+    padding: 1.6rem 2.4rem;
 
-    .icon-event {
-        width: 2rem;
-        height: 2.1rem;
-        fill: var(--Grafiit-main, #303030);
-    }
+    border-radius: 1.7rem;
 
-    .icon-tg {
-        width: 3rem;
-        height: 2.4rem;
-        fill: #57AADE;
-    }
+    @include font(1.5rem, 160%, 500);
+  }
+
+  .icon {}
+
+  .icon-event {
+    width: 2rem;
+    height: 2.1rem;
+    fill: var(--Grafiit-main, #303030);
+  }
+
+  .icon-tg {
+    width: 3rem;
+    height: 2.4rem;
+    fill: #57AADE;
+  }
 
 
-    .icon-yt {
-        width: 3.7rem;
-        height: 2.5rem;
-        fill: #DE5757;
-    }
+  .icon-yt {
+    width: 3.7rem;
+    height: 2.5rem;
+    fill: #DE5757;
+  }
 
-    .icon-vk-big {
-        width: 4.5rem;
-        height: 2.5rem;
-        fill: #4888F7;
-    }
+  .icon-vk-big {
+    width: 4.5rem;
+    height: 2.5rem;
+    fill: #4888F7;
+  }
 
-    .icon-vk-small {
-        width: 2.5rem;
-        height: 1.4rem;
-        fill: var(--White, #fff);
-    }
+  .icon-vk-small {
+    width: 2.5rem;
+    height: 1.4rem;
+    fill: var(--White, #fff);
+  }
 
-    .icon-calc {
-        width: 1.8rem;
-        height: 2.2rem;
+  .icon-calc {
+    width: 1.8rem;
+    height: 2.2rem;
 
-        fill: var(--White, #fff);
-    }
+    fill: var(--White, #fff);
+  }
+
+  .icon-link {
+    width: 1rem;
+    height: 1rem;
+
+    stroke: var(--White, #fff);
+  }
+
+  .icon-partner {
+    width: 4rem;
+    height: 4rem;
+
+    fill: var(--White, #fff);
+  }
+
+  .icon-pencil {
+    width: 1.7rem;
+    height: 1.6rem;
+    fill: var(--Grafiit-main, #303030);
+  }
+
+  .icon-vac {
+    width: 2rem;
+    height: 2.1rem;
+    fill: var(--Grafiit-main, #303030);
+  }
+
+  .icon-chat,
+  .icon-online {
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: var(--Grafiit-main, #303030);
+  }
+
+  &.link-icon--grey {
+    background-color: #EAEAEF;
+
+    color: var(--Grafiit-main, #303030);
+  }
+
+  &.link-icon--dark-blue {
+    background-color: transparent;
+    border: 1px solid var(--Grafiit-main, #303030);
+
+    color: #606060;
+  }
+
+  &.link-icon--dark-red {
+    background-color: transparent;
+    border: 1px solid var(--Grafiit-main, #303030);
+
+    color: #606060;
+  }
+
+  &.link-icon--light-blue {
+    background-color: transparent;
+    border: 1px solid var(--Grafiit-main, #303030);
+
+    color: #606060;
+  }
+
+  &.link-icon--white {
+    background-color: #FFF;
+
+    color: var(--Grafiit-main, #303030);
 
     .icon-link {
-        width: 1rem;
-        height: 1rem;
 
-        stroke: var(--White, #fff);
+      stroke: var(--Grafiit-main, #303030);
+
+      &:not(.icon-no-rotate) {
+        transform: rotate(225deg);
+      }
     }
+  }
 
-    .icon-partner {
-        width: 4rem;
-        height: 4rem;
+  &.link-icon--outlined {
+    background-color: transparent;
+    border: 1px solid var(--Grafiit-main, #303030);
 
-        fill: var(--White, #fff);
+    color: var(--Grafiit-main, #303030);
+
+    .icon-link {
+      transform: translateY(10%);
+      stroke: var(--Grafiit-main, #303030);
     }
-
-    .icon-pencil {
-        width: 1.7rem;
-        height: 1.6rem;
-        fill: var(--Grafiit-main, #303030);
-    }
-
-    .icon-vac {
-        width: 2rem;
-        height: 2.1rem;
-        fill: var(--Grafiit-main, #303030);
-    }
-
-    .icon-chat,
-    .icon-online {
-        width: 2.2rem;
-        height: 2.2rem;
-        fill: var(--Grafiit-main, #303030);
-    }
-
-    &.link-icon--grey {
-        background-color: #EAEAEF;
-
-        color: var(--Grafiit-main, #303030);
-    }
-
-    &.link-icon--dark-blue {
-      background-color: transparent;
-      border: 1px solid var(--Grafiit-main, #303030);
-
-      color: #606060;
-    }
-
-    &.link-icon--dark-red {
-      background-color: transparent;
-      border: 1px solid var(--Grafiit-main, #303030);
-
-      color: #606060;
-    }
-
-    &.link-icon--light-blue {
-      background-color: transparent;
-      border: 1px solid var(--Grafiit-main, #303030);
-
-      color: #606060;
-    }
-
-    &.link-icon--white {
-        background-color: #FFF;
-
-        color: var(--Grafiit-main, #303030);
-
-        .icon-link {
-
-            stroke: var(--Grafiit-main, #303030);
-
-            &:not(.icon-no-rotate) {
-                transform: rotate(225deg);
-            }
-        }
-    }
-
-    &.link-icon--outlined {
-        background-color: transparent;
-        border: 1px solid var(--Grafiit-main, #303030);
-
-        color: var(--Grafiit-main, #303030);
-
-        .icon-link {
-            transform: translateY(10%);
-            stroke: var(--Grafiit-main, #303030);
-        }
-    }
+  }
 }

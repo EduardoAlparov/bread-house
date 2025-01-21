@@ -81,8 +81,7 @@ section.section.stats-section
         br
         | пекарни ежемесячно
 
-
-    ul.stats-section__body
+    ul.stats-section__body.stats-section__body--collapse
       each stat in stats
         if stat.image
           li.stats-section__item(class=stat.class)
@@ -106,6 +105,8 @@ section.section.stats-section
           li.stats-section__item(class=stat.class)
             p.stats-section__numbers=stat.numbers
             p.stats-section__text=stat.text
+
+    button.stats-section__expand.show-on-mobile(type="button") Показать еще
 
     .stats-section__bottom.elements-section__bottom
       a.link-icon.link-icon--outlined(href="#")

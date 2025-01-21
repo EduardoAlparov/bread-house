@@ -1,102 +1,153 @@
 .franchise-format {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  max-width: 60rem;
+  padding: 6.2rem 5rem 6.2rem 7.2rem;
+  overflow: hidden;
+
+  color: var(--White, #fff);
+
+  background-color: var(--Grafiit-main, #303030);
+  border-radius: 3.5rem;
+
+  @include breakpoint(tablet) {
+    max-width: 28rem;
+    padding: 3rem;
+
+    border-radius: 1.7rem;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 200;
+
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    gap: 7.5rem;
 
-    max-width: 60rem;
-    padding: 6.2rem 5rem 6.2rem 7.2rem;
+    flex-grow: 1;
 
-    color: var(--White, #fff);
-
-    background-color: var(--Grafiit-main, #303030);
-    border-radius: 3.5rem;
-
-    &__body {
-        position: relative;
-        z-index: 200;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 7.5rem;
-
-        flex-grow: 1;
+    @include breakpoint(tablet) {
+      gap: 3.5rem;
     }
+  }
 
-    &__top {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2.5rem;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.2rem;
     }
+  }
 
-    &__title {
-        @extend .text-50;
+  &__title {
+    @include font(5rem, 120%, 500);
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      max-width: min-content;
+      @include font(3.6rem, 110%, 500);
     }
+  }
 
-    &__tooltip {
-        width: max-content;
-        transform: rotate(-3deg);
-        padding: 1.6rem 1.8rem;
+  &__tooltip {
+    width: max-content;
+    transform: rotate(-3deg);
+    padding: 1.6rem 1.8rem;
 
-        color: var(--Grafiit-main, #303030);
-        text-align: center;
-        white-space: nowrap;
+    color: var(--Grafiit-main, #303030);
+    text-align: center;
+    white-space: nowrap;
 
-        border-radius: 2.4rem;
-        background: #FFF;
+    border-radius: 2.4rem;
+    background: #FFF;
 
-        @extend .text-24;
+    @include font(2.4rem, 66.7%, 500);
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      padding: 0.75rem 0.85rem;
+
+      border-radius: 1.2rem;
+
+      @include font(1.1rem, 68.4%, 500);
     }
+  }
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3.5rem 4.5rem;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem 4.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.6rem;
     }
+  }
 
-    &__list-item {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
 
-        width: min-content;
+    width: min-content;
+
+    @include breakpoint(tablet) {
+      gap: 0.75rem;
     }
+  }
 
-    &__key {
-        color: rgba(255, 255, 255, 0.50);
-        white-space: nowrap;
-        @extend .text-24;
+  &__key {
+    @include font(2.4rem, 66.7%, 500);
+
+    color: rgba(255, 255, 255, 0.50);
+    white-space: nowrap;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      @include font(1rem, 75.2%, 500);
     }
+  }
 
-    &__value {
-        white-space: nowrap;
-        @extend .text-36;
+  &__value {
+    @include font(3.6rem, 111.1%, 700);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+
+    @include breakpoint(tablet) {
+      @include font(1.6rem, 117.5%, 700);
     }
+  }
 
-    &__image {
-        position: absolute;
-        inset: -1px;
-        z-index: 100;
+  &__image {
+    position: absolute;
+    inset: -1px;
+    z-index: 100;
 
-        img {
-            display: block;
-            width: 100%;
-            max-width: unset;
-            min-height: 100%;
+    img {
+      display: block;
+      width: 100%;
+      max-width: unset;
+      min-height: 100%;
 
-            object-fit: cover;
-            object-position: center;
-        }
+      object-fit: cover;
+      object-position: center;
     }
+  }
 
-    &.franchise-format--light {
-        color: var(--Grafiit-main, #303030);
+  &.franchise-format--light {
+    color: var(--Grafiit-main, #303030);
 
-        background-color: var(--Pale-yellow, #F5E8CE);
+    background-color: var(--Pale-yellow, #F5E8CE);
 
-        .franchise-format__key {
-            color: rgba(48, 48, 48, 0.50);
-        }
+    .franchise-format__key {
+      color: rgba(48, 48, 48, 0.50);
     }
+  }
 }

@@ -9,6 +9,13 @@
   padding: 9rem 10rem;
   transform: rotate(-3deg);
 
+  @include breakpoint(tablet) {
+    gap: 1rem;
+
+    padding: 3rem;
+    padding-bottom: 4rem;
+  }
+
   &__border {
     position: absolute;
     inset: 0;
@@ -32,11 +39,16 @@
   }
 
   &__title {
-      @include font(4rem, 125%, 500);
+    @include font(4rem, 125%, 500);
 
-      max-width: 15ch;
+    max-width: 15ch;
 
-      letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      width: 24rem;
+      @include font(2.4rem, 125%, 500);
+    }
   }
 
   &__text {
@@ -44,6 +56,11 @@
 
     position: relative;
     letter-spacing: -0.03em;
+
+    @include breakpoint(tablet) {
+      width: 24rem;
+      @include font(1.6rem, 125%, 500);
+    }
 
     &::after {
       position: absolute;
@@ -59,7 +76,12 @@
       background-repeat: no-repeat;
       background-position: center;
       content: "";
-      pointer-events: none
+      pointer-events: none;
+
+      @include breakpoint(tablet) {
+        width: 1.7rem;
+        height: 1.3rem;
+      }
     }
   }
 }

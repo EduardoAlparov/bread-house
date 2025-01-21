@@ -8,7 +8,7 @@ section.section.online-tour
           | Возможность побывать на производстве. Заглянуть
           | в&nbsp;торговый зал и разобрать все процессы от запуска
           | пекарни до стабильного заработка.
-        a.online-tour__link.link-icon.link-icon--grey(href="#")
+        a.online-tour__link.link-icon.link-icon--grey.hide-on-mobile(href="#")
           | Записаться на онлайн экскурсию
           +icon-multi('online')
 
@@ -20,3 +20,9 @@ section.section.online-tour
 
         .online-tour__small-videos
           +picture('faq-author.jpg', 'author')
+
+      a.online-tour__link.link-icon.link-icon--grey.show-on-mobile(href="#")
+        | Записаться на
+        br
+        | онлайн экскурсию
+        +icon-multi('online')

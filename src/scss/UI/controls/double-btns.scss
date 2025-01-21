@@ -1,37 +1,53 @@
 .double-btns {
-    display: flex;
-    align-items: stretch;
-    gap: 0.6rem;
+  display: flex;
+  align-items: stretch;
+  gap: 0.6rem;
 
-    width: max-content;
-    padding: 0.8rem;
+  width: max-content;
+  padding: 0.8rem;
 
-    background: #EAEAEF;
-    border-radius: 50rem;
+  background: #EAEAEF;
+  border-radius: 50rem;
 
-    &__btn {
-        display: grid;
-        place-items: center;
-        place-content: center;
+  @include breakpoint(tablet) {
+    gap: 0.45rem;
 
-        flex-shrink: 0;
-        width: 6rem;
-        height: 6rem;
+    padding: 0.6rem;
+  }
 
-        background: #FFF;
-        border-radius: 100%;
+  &__btn {
+    display: grid;
+    place-items: center;
+    place-content: center;
 
-        .icon {
-            width: 1.6rem;
-            height: 1.7rem;
+    flex-shrink: 0;
+    width: 6rem;
+    height: 6rem;
 
-            stroke: var(--Grafiit-main, #303030);
-        }
+    background: #FFF;
+    border-radius: 100%;
 
-        &.double-btns__btn--next {
-            .icon {
-                transform: rotate(180deg);
-            }
-        }
+    @include breakpoint(tablet) {
+      width: 4.5rem;
+      height: 4.5rem;
     }
+
+    .icon {
+      width: 1.6rem;
+      height: 1.7rem;
+
+      stroke: var(--Grafiit-main, #303030);
+
+      @include breakpoint(tablet) {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
+
+    &.double-btns__btn--next {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

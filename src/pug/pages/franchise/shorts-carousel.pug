@@ -26,7 +26,6 @@ section.section.franchise-formats
           .franchise-formats__quotation.format-quotation
             h2.format-quotation__title
               | Дом Хлеба -
-              br
               | самый&nbsp;устойчивый
               | бизнес в сфере
               | общепита.
@@ -37,7 +36,7 @@ section.section.franchise-formats
               | сеть с помощью
             .format-quotation__border
 
-          a.franchise-formats__link.franchise-formats__link--mta.link-icon(href="#")
+          a.franchise-formats__link.franchise-formats__link--mta.link-icon.hide-on-mobile(href="#")
             | Стать партнером
             +icon-multi('calc')
 
@@ -59,7 +58,7 @@ section.section.franchise-formats
                     button.franchise-short__button(type="button")
                       +icon-multi('play-big')
 
-      .franchise-formats__grid
+      .franchise-formats__grid.franchise-formats__grid--no-gap
         .franchise-formats__left
         .franchise-formats__right.franchise-formats__right--shorts
           .franchise-formats__controls.franchise-formats__controls--left

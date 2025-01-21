@@ -1,103 +1,176 @@
 .franchise-formats {
-    &__body {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    &__grid {
-        display: flex;
-        align-items: stretch;
-        gap: 28rem;
+  &__grid {
+    display: flex;
+    align-items: stretch;
+    gap: 28rem;
 
-        &:has(.franchise-formats__double-btns) {
-          margin-top: 2.5rem;
-        }
-
-        &:has(.franchise-formats__right--shorts) {
-          gap: 10rem;
-        }
-    }
-
-    &__left {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 5rem;
-
-        flex: 0 0 58rem;
-
-        &.franchise-formats__left--bigger {
-            flex: 0 0 62rem;
-            justify-content: space-between;
-        }
-
-        &.franchise-formats__left--smaller {
-            flex: 0 0 54rem;
-        }
-
-        &:has(.franchise-formats__jump) {
-          flex: 0 0 66rem;
-        }
-    }
-
-    &__text {
-        letter-spacing: -0.03em;
-
-        @include font(3rem, 133.3%, 500);
-    }
-
-    &__link {
-      &.franchise-formats__link--mta {
-        margin-top: auto;
-      }
-    }
-
-    &__right {
-        flex: 0 1 100%;
-    }
-
-    &__swiper {
-        &.swiper {
-            margin-right: -100%;
-            padding-right: 100%;
-        }
-    }
-
-    &__swiper-slide {
-      &.franchise-short {
-        max-width: 38rem;
-      }
-    }
-
-    &__controls {
-        display: flex;
-        justify-content: center;
-        margin-top: 5rem;
-
-        &.franchise-formats__controls--left {
-            justify-content: unset;
-            margin-left: 11.6rem;
-        }
-    }
-
-    &__swiper-control {
-        margin-inline: 23rem -23rem;
-    }
-
-    &__double-btns {
+    &:has(.franchise-formats__double-btns) {
       margin-top: 2.5rem;
-        margin-left: 11.6rem;
     }
 
-    &__approach {
-        max-width: 54rem;
-        aspect-ratio: 1.25 / 1;
-    }
+    &:has(.franchise-formats__right--shorts) {
+      gap: 10rem;
 
-    &__quotation {
-      & + .franchise-formats__link {
-        width: 100%;
+      @include breakpoint(tablet) {
+        gap: 2.5rem;
       }
     }
+
+    &.franchise-formats__grid--no-gap {
+      @include breakpoint(tablet) {
+        gap: 0;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5rem;
+
+    flex: 0 0 58rem;
+
+    @include breakpoint(tablet) {
+      align-items: center;
+      gap: 1.5rem;
+      flex: 1 1 auto;
+    }
+
+    &.franchise-formats__left--bigger {
+      flex: 0 0 62rem;
+      justify-content: space-between;
+
+
+      @include breakpoint(tablet) {
+        flex: 1 1 auto;
+      }
+    }
+
+    &.franchise-formats__left--smaller {
+      flex: 0 0 54rem;
+
+      @include breakpoint(tablet) {
+        flex: 1 1 auto;
+      }
+    }
+
+    &:has(.franchise-formats__jump) {
+      flex: 0 0 66rem;
+
+      @include breakpoint(tablet) {
+        flex: 1 1 auto;
+      }
+    }
+  }
+
+  &__title {
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    letter-spacing: -0.03em;
+
+    @include font(3rem, 133.3%, 500);
+
+    @include breakpoint(tablet) {
+      @include font(1.6rem, 125%, 500);
+      text-align: center;
+    }
+  }
+
+  &__link {
+    &.franchise-formats__link--mta {
+      margin-top: auto;
+    }
+
+    &.franchise-formats__link--mobile {
+      width: 100%;
+      margin-inline: auto;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__right {
+    flex: 0 1 100%;
+  }
+
+  &__swiper {
+    &.swiper {
+      margin-right: -100%;
+      padding-right: 100%;
+
+      @include breakpoint(tablet) {
+        margin-inline: calc(var(--content-padding) * -1);
+        padding-inline: var(--content-padding);
+      }
+    }
+  }
+
+  &__swiper-slide {
+    &.franchise-short {
+      max-width: 38rem;
+
+      @include breakpoint(tablet) {
+        max-width: 28rem;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.5rem;
+    }
+
+    &.franchise-formats__controls--left {
+      justify-content: unset;
+      margin-left: 11.6rem;
+
+      @include breakpoint(tablet) {
+        justify-content: center;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  &__swiper-control {
+    margin-inline: 23rem -23rem;
+
+    @include breakpoint(tablet) {
+      margin-inline: auto;
+    }
+  }
+
+  &__double-btns {
+    margin-top: 2.5rem;
+    margin-left: 11.6rem;
+  }
+
+  &__approach {
+    max-width: 54rem;
+    aspect-ratio: 1.25 / 1;
+  }
+
+  &__quotation {
+    &+.franchise-formats__link {
+      width: 100%;
+    }
+  }
 }

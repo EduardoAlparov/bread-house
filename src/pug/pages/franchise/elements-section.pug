@@ -72,6 +72,13 @@ section.section.elements-section
             .elements-item__text=item.text
 
     .elements-section__bottom
+      .elements-section__swiper-controls
+        .double-btns
+          button.double-btns__btn.double-btns__btn--prev(type="button")
+            +icon-multi('prev')
+          button.double-btns__btn.double-btns__btn--next(type="button")
+            +icon-multi('prev')
+
       a.elements-section__download(href="#", download)
         span
           | Скачать&nbsp;пакет&nbsp;материалов

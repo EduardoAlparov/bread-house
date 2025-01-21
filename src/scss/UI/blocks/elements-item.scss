@@ -1,83 +1,97 @@
 .elements-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+
+  overflow: hidden;
+
+  border-radius: 3.5rem;
+
+  color: #FFF;
+
+  &__image {
+    position: absolute;
+    inset: -1px;
+    z-index: 100;
+
+    img {
+      display: block;
+      width: 100%;
+      min-height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__body {
     position: relative;
+    z-index: 200;
 
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-end;
+    gap: 1.5rem;
 
-    overflow: hidden;
+    flex: 0 1 26rem;
+    padding: 7rem 6.7rem 4rem;
 
-    border-radius: 3.5rem;
+    @include breakpoint(tablet) {
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 3rem;
+    }
+  }
 
-    color: #FFF;
+  &__title {
+    letter-spacing: -0.02em;
+    @include font(3.2rem, 109%, 500);
 
-    &__image {
-        position: absolute;
-        inset: -1px;
-        z-index: 100;
+    @include breakpoint(tablet) {
+      @include font(2rem, 128%, 500);
+    }
+  }
 
-        img {
-          display: block;
-          width: 100%;
-          min-height: 100%;
+  &__text {
+    letter-spacing: -0.02em;
+    @include font(2.4rem, 125%, 500);
 
-          object-fit: cover;
-          object-position: center;
-        }
+    @include breakpoint(tablet) {
+      @include font(1.2rem, 150%, 500);
+    }
+  }
+
+  &__link {
+    min-width: 35rem;
+    margin-top: auto;
+
+    &.link-icon {
+      padding-inline: 2.4rem;
+    }
+  }
+
+  &.elements-item--big {
+    .elements-item__body {
+      gap: 3rem;
+      flex: 1 1 auto;
+
+      padding: 6.25rem 7.2rem;
     }
 
-    &__body {
-        position: relative;
-        z-index: 200;
-
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-
-        flex: 0 1 26rem;
-        padding: 7rem 6.7rem 4rem;
+    .elements-item__title {
+      @include font(6.4rem, 109%, 500);
+      letter-spacing: -0.03em;
     }
 
-    &__title {
-        letter-spacing: -0.02em;
-        @include font(3.2rem, 109%, 500);
+    .elements-item__text {
+      @include font(3.2rem, 125%, 500);
+      letter-spacing: -0.03em;
     }
+  }
 
-    &__text {
-        letter-spacing: -0.02em;
-        @include font(2.4rem, 125%, 500);
-    }
-
-    &__link {
-        min-width: 35rem;
-        margin-top: auto;
-
-        &.link-icon {
-            padding-inline: 2.4rem;
-        }
-    }
-
-    &.elements-item--big {
-      .elements-item__body {
-          gap: 3rem;
-          flex: 1 1 auto;
-
-          padding: 6.25rem 7.2rem;
-      }
-
-      .elements-item__title {
-          @include font(6.4rem, 109%, 500);
-          letter-spacing: -0.03em;
-      }
-
-      .elements-item__text {
-          @include font(3.2rem, 125%, 500);
-          letter-spacing: -0.03em;
-      }
-    }
-
-    &.elements-item--black-color {
-        color: var(--Grafiit-main, #303030);
-    }
+  &.elements-item--black-color {
+    color: var(--Grafiit-main, #303030);
+  }
 }

@@ -7,35 +7,42 @@
 @import "./pages/**/*";
 
 :root {
-    /* layouts: */
-    --max-container-width: 192rem;
-    --content-padding: 5.5rem;
-    --header-height: 17.2rem;
+  /* layouts: */
+  --max-container-width: 192rem;
+  --content-padding: 5.5rem;
+  --header-height: 17.2rem;
 
-    /* typography: */
-    --main-ff: "CoFo Sans", sans-serif;
+  /* typography: */
+  --main-ff: "CoFo Sans", sans-serif;
 
-    /* colors: */
-    --color-dark: #333;
-    --color-bg: #EFF2F6;
-    --color-bg-2: #F5F5F7;
+  /* colors: */
+  --color-dark: #333;
+  --color-bg: #EFF2F6;
+  --color-bg-2: #F5F5F7;
 
-    --White: #fff;
-    --Text: #292B32;
-    --Orange: #DE7D57;
-    --Orange-2: #E18A68;
-    --Orange-3: #DE5757;
-    --Yellow: #ECCD75;
-    --Brown: #57453A;
-    --Red: #891C22;
-    --Beige: #DBC19C;
+  --White: #fff;
+  --Text: #292B32;
+  --Orange: #DE7D57;
+  --Orange-2: #E18A68;
+  --Orange-3: #DE5757;
+  --Yellow: #ECCD75;
+  --Brown: #57453A;
+  --Red: #891C22;
+  --Beige: #DBC19C;
 
 
-    --Grafiit-main: #303030;
-    --Pale-yellow: #F5E8CE;
+  --Grafiit-main: #303030;
+  --Pale-yellow: #F5E8CE;
 
-    --font-body: 500 1.6rem/1.25 var(--main-ff);
+  --font-body: 500 1.6rem/1.25 var(--main-ff);
 
-    /* etc: */
-    --transition: 200ms ease-in;
+  /* etc: */
+  --transition: 200ms ease-in;
+
+
+  @include breakpoint(tablet) {
+    --max-container-width: 100%;
+    --content-padding: 2rem;
+    --header-height: 7rem;
+  }
 }

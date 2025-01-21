@@ -1,21 +1,34 @@
 .reviews {
-    &__body {
-        padding-top: 1.5rem;
-    }
+  &__body {
+    padding-top: 1.5rem;
+  }
 
-    &__swiper.swiper {
-        margin-inline: calc(var(--content-padding) * -1) 0;
-        padding-inline: var(--content-padding) 0;
-    }
+  &__swiper.swiper {
+    margin-inline: calc(var(--content-padding) * -1) 0;
+    padding-inline: var(--content-padding) 0;
 
-    &__swiper-wrapper {
-        padding-bottom: 12.5rem;
+    @include breakpoint(tablet) {
+      margin-inline: calc(var(--content-padding) * -1);
+      padding-inline: var(--content-padding);
     }
+  }
 
-    &__swiper-controls {
-        display: flex;
-        justify-content: center;
+  &__swiper-wrapper {
+    padding-bottom: 12.5rem;
 
-        margin-top: 5rem;
+    @include breakpoint(tablet) {
+      padding-bottom: unset;
     }
+  }
+
+  &__swiper-controls {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.5rem;
+    }
+  }
 }

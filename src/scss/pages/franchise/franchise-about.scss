@@ -1,128 +1,202 @@
 .franchise-about {
-    &__body {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr) 32.7rem;
-        grid-template-rows: repeat(2, calc(52.5rem / 2));
-        gap: 2.6rem 3.4rem;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 32.7rem;
+    grid-template-rows: repeat(2, calc(52.5rem / 2));
+    gap: 2.6rem 3.4rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 10;
+
+    max-width: 10ch;
+
+    letter-spacing: -0.02em;
+    @include font(2.6rem, 115.4%, 500);
+
+    @include breakpoint(tablet) {
+      @include font(2rem, 125%, 500);
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__numbers {
+    position: relative;
+    z-index: 10;
+
+    letter-spacing: -0.02em;
+    @include font(5rem, 80%, 700);
+
+    @include breakpoint(tablet) {
+      @include font(2.4rem, 100%, 500);
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2.5rem;
+
+    overflow: hidden;
+    padding: 3rem 2.5rem 3rem 3.5rem;
+
+    color: var(--Grafiit-main, #303030);
+
+    background-color: #F5F5F7;
+    border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      min-height: 15rem;
+      padding: 2.5rem 3.2rem;
+
+      border-radius: 1.5rem;
     }
 
-    &__text {
-        position: relative;
-        z-index: 10;
-
-        max-width: 10ch;
-
-        letter-spacing: -0.02em;
-        @include font(2.6rem, 115.4%, 500);
+    picture {
+      display: contents;
     }
 
-    &__numbers {
-        position: relative;
-        z-index: 10;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
 
-        letter-spacing: -0.02em;
-        @include font(5rem, 80%, 700);
+      display: block;
+
+      width: 100%;
+      transform: translate(-50%, -50%);
+      max-width: unset;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
-    &__item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: space-between;
+    &.franchise-about__item--pale {
 
-        overflow: hidden;
-        padding: 3rem 2.5rem 3rem 3.5rem;
-
-        color: var(--Grafiit-main, #303030);
-
-        background-color: #F5F5F7;
-        border-radius: 3.5rem;
-
-        picture {
-            display: contents;
-        }
-
-        img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-
-            display: block;
-
-            width: 100%;
-            transform: translate(-50%, -50%);
-            max-width: unset;
-            min-height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        &.franchise-about__item--pale {
-
-            background-color: var(--Pale-yellow, #F5E8CE);
-        }
-
-        &.franchise-about__item--biggest {
-            grid-row: 1 / 3;
-            grid-column: 1 / 4;
-
-            padding: 6.2rem 6.9rem;
-
-            color: #FFF;
-
-            .franchise-about__text {
-                max-width: 12ch;
-                @include font(4.8rem, 115%, 500);
-            }
-
-            .franchise-about__numbers {
-                @include font(8rem, 90%, 700);
-            }
-        }
-
-        &.franchise-about__item--big-vertical {
-            grid-row: 1 / 3;
-            grid-column: 6 / 7;
-
-            padding: 3.7rem 4.2rem 6.3rem;
-
-            .franchise-about__text {
-                @include font(3.2rem, 125%, 500);
-            }
-
-            .franchise-about__numbers {
-                @include font(8rem, 68.75%, 700);
-            }
-        }
-
-        &.franchise-about__item--big-horizontal {
-            grid-column: 4 / 6;
-
-            padding: 3rem 4.2rem;
-
-            .franchise-about__text {
-                max-width: 15ch;
-
-                @include font(3.2rem, 125%, 500);
-            }
-        }
+      background-color: var(--Pale-yellow, #F5E8CE);
     }
 
-    &__image {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        overflow: hidden;
+    &.franchise-about__item--biggest {
+      grid-row: 1 / 3;
+      grid-column: 1 / 4;
 
-        &::before {
-            position: absolute;
-            inset: -1px;
-            z-index: 2;
+      padding: 6.2rem 6.9rem;
 
-            background: linear-gradient(269deg, rgba(48, 48, 48, 0.00) 4.33%, rgba(48, 48, 48, 0.69) 96.12%);
-            content: "";
+      color: #FFF;
+
+      @include breakpoint(tablet) {
+        min-height: 20rem;
+        padding: 2.5rem 3.2rem;
+      }
+
+      .franchise-about__text {
+        max-width: 12ch;
+        @include font(4.8rem, 115%, 500);
+
+        @include breakpoint(tablet) {
+          @include font(2rem, 125%, 500);
+          letter-spacing: -0.02em;
         }
+      }
+
+      .franchise-about__numbers {
+        @include font(8rem, 90%, 700);
+
+        @include breakpoint(tablet) {
+          @include font(2.4rem, 100%, 500);
+          letter-spacing: -0.02em;
+        }
+      }
     }
+
+    &.franchise-about__item--big-vertical {
+      grid-row: 1 / 3;
+      grid-column: 6 / 7;
+
+      padding: 3.7rem 4.2rem 6.3rem;
+
+      @include breakpoint(tablet) {
+        padding: 2.5rem 3.2rem;
+      }
+
+      .franchise-about__text {
+        @include font(3.2rem, 125%, 500);
+
+        @include breakpoint(tablet) {
+          @include font(2rem, 125%, 500);
+          letter-spacing: -0.02em;
+        }
+      }
+
+      .franchise-about__numbers {
+        @include font(8rem, 68.75%, 700);
+
+        @include breakpoint(tablet) {
+          @include font(2.4rem, 100%, 500);
+          letter-spacing: -0.02em;
+        }
+      }
+    }
+
+    &.franchise-about__item--big-horizontal {
+      grid-column: 4 / 6;
+
+      padding: 3rem 4.2rem;
+
+      @include breakpoint(tablet) {
+        padding: 2.5rem 3.2rem;
+      }
+
+      .franchise-about__text {
+        max-width: 15ch;
+
+        @include font(3.2rem, 125%, 500);
+
+        @include breakpoint(tablet) {
+          @include font(2rem, 125%, 500);
+          letter-spacing: -0.02em;
+        }
+      }
+    }
+
+    &.franchise-about__item--hide-on-mobile {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    &.franchise-about__item--dark-on-mobile {
+      color: #FFF;
+      background: #303030;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      inset: -1px;
+      z-index: 2;
+
+      background: linear-gradient(269deg, rgba(48, 48, 48, 0.00) 4.33%, rgba(48, 48, 48, 0.69) 96.12%);
+      content: "";
+    }
+  }
 
 }

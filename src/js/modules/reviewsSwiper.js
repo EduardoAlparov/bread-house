@@ -7,7 +7,7 @@ export default () => {
     reviews.forEach((review) => {
         new Swiper(review, {
             modules: [ Navigation ],
-            slidesPerView: 5,
+            slidesPerView: 1.2,
             spaceBetween: 20,
             speed: 1000,
 
@@ -15,6 +15,17 @@ export default () => {
                 nextEl: review.querySelector('.double-btns__btn--next'),
                 prevEl: review.querySelector('.double-btns__btn--prev'),
             },
+
+            breakpoints: {
+              // when window width is >= 480px
+              640: {
+                slidesPerView: 2
+              },
+              // when window width is >= 640px
+              1024: {
+                slidesPerView: 5
+              }
+            }
         })
     })
 }

@@ -24,13 +24,20 @@ export default () => {
             new Swiper(s, {
                 modules: [ Navigation ],
                 slidesPerView: 'auto',
-                spaceBetween: 50,
+                spaceBetween: 20,
                 speed: 700,
 
                 navigation: {
                     nextEl: format.querySelector('.double-btns__btn--next'),
                     prevEl: format.querySelector('.double-btns__btn--prev'),
                 },
+
+                breakpoints: {
+                  // when window width is >= 640px
+                  1024: {
+                    spaceBetween: 50,
+                  }
+                }
             })
         }
     })

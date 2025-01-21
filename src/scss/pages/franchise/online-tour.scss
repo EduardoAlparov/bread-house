@@ -1,105 +1,153 @@
 .online-tour {
-    &__body {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
+  &__body {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: unset;
+      gap: 1.5rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7.5rem;
+
+    flex: 0 0 61.4rem;
+
+    @include breakpoint(tablet) {
+      align-items: center;
+      gap: 1.5rem;
+
+      flex: 1 1 auto;
+    }
+  }
+
+  &__title {
+    max-width: 15ch;
+
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include font(2.4rem, 141.6%, 500);
+    letter-spacing: -0.03em;
+
+    @include breakpoint(tablet) {
+      max-width: 30rem;
+      text-align: center;
+      @include font(1.6rem, 125%, 500);
+    }
+  }
+
+  &__link.link-icon {
+    padding-inline: 4.7rem;
+  }
+
+  &__videos {
+    position: relative;
+    flex: 0 0 50%;
+
+    aspect-ratio: 1.6 / 1;
+    overflow: hidden;
+
+    background: var(--Pale-yellow, #F5E8CE);
+    border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+
+      border-radius: 1.5rem;
+    }
+  }
+
+  &__big-videos {
+    position: absolute;
+    top: 5.3rem;
+    right: 5rem;
+    bottom: 5.3rem;
+    z-index: 100;
+
+    aspect-ratio: 1.48 / 1;
+    overflow: hidden;
+
+    background-color: lightgray;
+    border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      top: 1.6rem;
+      right: 1.6rem;
+      bottom: 1.6rem;
+
+      border-radius: 1.5rem;
     }
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 7.5rem;
+    &::before {
+      position: absolute;
+      inset: -1px;
+      z-index: 301;
 
-        flex: 0 0 61.4rem;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+      content: "";
+    }
+  }
+
+  &__small-videos {
+    position: absolute;
+    left: 5rem;
+    bottom: 10.8rem;
+    z-index: 200;
+
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+
+    border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      left: 1.6rem;
+      bottom: 3.6rem;
     }
 
-    &__title {
-        max-width: 15ch;
+    @include breakpoint(small-mobile) {
+      width: 7rem;
+      height: 7rem;
+
+      border-radius: 1.5rem;
+    }
+  }
+
+  &__big-videos,
+  &__small-videos {
+
+    video,
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+      width: 101%;
+      max-width: unset;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
-    &__text {
-        @include font(2.4rem, 141.6%, 500);
-        letter-spacing: -0.03em;
+    img {
+      z-index: 200;
     }
 
-    &__link.link-icon {
-        padding-inline: 4.7rem;
+    video {
+      z-index: 300;
     }
-
-    &__videos {
-        position: relative;
-        flex: 0 0 50%;
-
-        aspect-ratio: 1.6 / 1;
-        overflow: hidden;
-
-        background: var(--Pale-yellow, #F5E8CE);
-        border-radius: 3.5rem;
-    }
-
-    &__big-videos {
-        position: absolute;
-        top: 5.3rem;
-        right: 5rem;
-        bottom: 5.3rem;
-        z-index: 100;
-
-        aspect-ratio: 1.48 / 1;
-        overflow: hidden;
-
-        background-color: lightgray;
-        border-radius: 3.5rem;
-
-        &::before {
-            position: absolute;
-            inset: -1px;
-            z-index: 301;
-
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
-            content: "";
-        }
-    }
-
-    &__small-videos {
-        position: absolute;
-        left: 5rem;
-        bottom: 10.8rem;
-        z-index: 200;
-
-        width: 20rem;
-        height: 20rem;
-        overflow: hidden;
-
-        // background: #F5F5F7;
-        border-radius: 3.5rem;
-        // border: 4px solid rgba(255, 255, 255, 0.10);
-    }
-
-    &__big-videos,
-    &__small-videos {
-
-        video,
-        img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-
-            display: block;
-            width: 101%;
-            max-width: unset;
-            min-height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        img {
-            z-index: 200;
-        }
-
-        video {
-            z-index: 300;
-        }
-    }
+  }
 }

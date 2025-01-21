@@ -1,73 +1,125 @@
 .elements-section {
-    &__body {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 2.8rem;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.8rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      align-items: stretch;
+      gap: 1.8rem;
+      overflow: hidden;
+    }
+  }
+
+  &__item {
+    min-height: 45rem;
+
+    &:first-child {
+      color: var(--Grafiit-main, #303030);
     }
 
-    &__item {
-        min-height: 45rem;
+    @include breakpoint(tablet) {
+      min-height: 19rem;
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 100%;
+    }
+  }
 
-        &:first-child {
-            color: var(--Grafiit-main, #303030);
-        }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 7.5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__swiper-controls {
+    display: none;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
+  &__download {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: max-content;
+    width: 42.5rem;
+    padding: 1.6rem 2.4rem;
+
+    border-radius: 2.5rem;
+    border: 1px solid var(--Grafiit-main, #303030);
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      border-radius: 1.7rem;
     }
 
-    &__bottom {
-        display: flex;
-        justify-content: center;
+    span {
+      display: inline;
 
-        margin-top: 7.5rem;
-    }
+      color: var(--Grafiit-main, #303030);
+      letter-spacing: -0.04em;
+      text-align: center;
 
-    &__download {
-        display: grid;
-        place-content: center;
-        place-items: center;
-        grid-auto-flow: column;
-        align-items: center;
-        gap: 1.5rem;
+      @include font(2.4rem, 112.5%, 500);
 
-        width: max-content;
-        width: 42.5rem;
-        padding: 1.6rem 2.4rem;
-
-        border-radius: 2.5rem;
-        border: 1px solid var(--Grafiit-main, #303030);
-
-        span {
-            display: inline;
-
-            color: var(--Grafiit-main, #303030);
-            letter-spacing: -0.04em;
-            text-align: center;
-
-            @include font(2.4rem, 112.5%, 500);
-        }
-
-        .icon {
-            width: 1.5rem;
-            height: 1.75rem;
-
-            fill: var(--Grafiit-main, #303030);
-        }
-
-        .icon-tg-blue {
-            width: 2rem;
-            height: 1.7rem;
-        }
-    }
-
-    &__inner-wrapper {
-      margin-top: -2.5rem;
-    }
-
-    &__video-wrapper {
-      margin-top: 5rem;
-
-      &.socials-section__video {
-        aspect-ratio: 2.784 / 1;
+      @include breakpoint(tablet) {
+        @include font(1.5rem, 133.3%, 500);
       }
     }
+
+    .icon {
+      width: 1.5rem;
+      height: 1.75rem;
+
+      fill: var(--Grafiit-main, #303030);
+    }
+
+    .icon-tg-blue {
+      width: 2rem;
+      height: 1.7rem;
+    }
+  }
+
+  &__inner-wrapper {
+    margin-top: -2.5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: -1rem;
+    }
+  }
+
+  &__video-wrapper {
+    margin-top: 5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.5rem;
+    }
+
+    &.socials-section__video {
+      aspect-ratio: 2.784 / 1;
+
+      @include breakpoint(tablet) {
+        aspect-ratio: 1.415 / 1;
+
+        border-radius: 1.5rem;
+      }
+    }
+  }
 }
