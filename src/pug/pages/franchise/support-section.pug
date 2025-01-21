@@ -39,14 +39,21 @@ section.section.support-section
       p.events-section__subtitle.section__subtitle
         | помогаем с фин.моделью на этапе заявки до обучения персонала, которые работают руками
 
-    ul.support-section__list
-      each item in supportTeam
-        li.support-section__item.support-item
-          .support-item__image
-            +picture(item.img, '')
-          .support-item__role(class=item.roleClass)=item.role
-          p.support-item__slogan=item.slogan
+    .support-section__list-wrapper.swiper
+      ul.support-section__list
+        each item in supportTeam
+          li.support-section__item.support-item
+            .support-item__image
+              +picture(item.img, '')
+            .support-item__role(class=item.roleClass)=item.role
+            p.support-item__slogan=item.slogan
 
+      .support-section__swiper-controls.elements-section__swiper-controls
+        .double-btns
+          button.double-btns__btn.double-btns__btn--prev(type="button")
+            +icon-multi('prev')
+          button.double-btns__btn.double-btns__btn--next(type="button")
+            +icon-multi('prev')
 
     .support-section__promo.support-promo
       .support-promo__body
@@ -66,5 +73,8 @@ section.section.support-section
           | Получить демо-день
           +icon-multi('link')
 
-      .support-promo__image
+      .support-promo__image.hide-on-mobile
         +picture('support/promo.png', '')
+
+      .support-promo__image.show-on-mobile
+        +picture('support/promo-m.png', '')

@@ -1,79 +1,98 @@
 .events-section {
 
-    &__title,
-    &__subtitle {
-        text-align: center;
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__swiper.swiper {
+    @include breakpoint(tablet) {
+      margin-inline: calc((var(--content-padding) * -1) + 0.5rem);
+      // padding-inline: var(--content-padding);
+    }
+  }
+
+  &__control-panel {
+    position: absolute;
+    left: 8.5rem;
+    bottom: 7.3rem;
+    z-index: 500;
+
+    display: flex;
+
+    width: 100%;
+    max-width: 109.5rem;
+
+    @include breakpoint(tablet) {
+      left: 3rem;
+      bottom: 3.4rem;
+
+      max-width: calc(100% - 6rem);
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    flex-grow: 1;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__button {
+    @include font(2rem, 100%, 500);
+
+    display: grid;
+    place-content: center;
+    place-items: center;
+
+    width: max-content;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 1.5rem 2.4rem;
+
+    border-radius: 50rem;
+    border: 1px solid #FFF;
+
+    color: #FFF;
+    white-space: nowrap;
+    letter-spacing: -0.03em;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+
+
+    &::before {
+      position: absolute;
+      left: 0;
+      z-index: -1;
+
+      height: 100%;
+      width: 0%;
+
+      background-color: #FFF;
+
+      transition-property: width;
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
+
+      content: "";
     }
 
-    &__control-panel {
-        position: absolute;
-        left: 8.5rem;
-        bottom: 7.3rem;
-        z-index: 500;
+    &.events-section__button--active {
+      color: var(--Grafiit-main, #303030);
+      border-color: transparent;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%);
 
-        display: flex;
-
-
-        max-width: 109.5rem;
+      &::before {
+        width: calc(var(--event-progress) * 1%);
+      }
     }
-
-    &__pagination {
-        display: flex;
-        align-items: center;
-        gap: 2.5rem;
-
-        flex-grow: 1;
-    }
-
-    &__button {
-        @include font(2rem, 100%, 500);
-
-        display: grid;
-        place-content: center;
-        place-items: center;
-
-        width: max-content;
-        flex-shrink: 0;
-        overflow: hidden;
-        padding: 1.5rem 2.4rem;
-
-        border-radius: 50rem;
-        border: 1px solid #FFF;
-
-        color: #FFF;
-        white-space: nowrap;
-        letter-spacing: -0.03em;
-
-        transition-property: color;
-        transition-duration: 0.3s;
-        transition-timing-function: linear;
-
-
-        &::before {
-          position: absolute;
-          left: 0;
-          z-index: -1;
-
-          height: 100%;
-          width: 0%;
-
-          background-color: #FFF;
-
-          transition-property: width;
-          transition-duration: 0.5s;
-          transition-timing-function: linear;
-
-          content: "";
-        }
-
-        &.events-section__button--active {
-            color: var(--Grafiit-main, #303030);
-            border-color: transparent;
-            background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%);
-
-          &::before {
-            width: calc(var(--event-progress) * 1%);
-          }
-        }
-    }
+  }
 }

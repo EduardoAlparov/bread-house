@@ -52,6 +52,11 @@
     width: 4.5rem;
     height: 2.5rem;
     fill: #4888F7;
+
+    @include breakpoint(tablet) {
+      width: 2.4rem;
+      height: 1.3rem;
+    }
   }
 
   .icon-vk-small {

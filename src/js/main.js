@@ -18,6 +18,7 @@ import standartsSwiper from './modules/standartsSwiper';
 import bigSwiper from './modules/bigSwiper';
 import shortsSwiper from './modules/shortsSwiper';
 import eventsSwiper from './modules/eventsSwiper';
+import footerMenuExpand from './modules/footerMenuExpand';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -39,4 +40,5 @@ documenReady(() => {
   bigSwiper();
   shortsSwiper();
   eventsSwiper();
+  footerMenuExpand();
 });

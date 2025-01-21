@@ -19,6 +19,10 @@
 
     background-color: var(--color-bg, #EFF2F6);
     border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      border-radius: 2rem;
+    }
   }
 
   &__site-container {

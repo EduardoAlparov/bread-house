@@ -1,43 +1,58 @@
 .support-section {
-    &__site-container {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
+  &__site-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    &__list {
-        display: flex;
-        align-items: start;
-        gap: 5.5rem;
-    }
+  &__list-wrapper {
+    width: 100%;
+  }
 
-    &__item {
-        position: relative;
+  &__list {
+    display: flex;
+    align-items: start;
+    gap: 5.5rem;
+  }
 
-        &:not(:last-child) {
-            padding-right: 5.5rem;
+  &__item {
+    position: relative;
 
-            &::after {
-                position: absolute;
-                right: 0;
-                top: 0;
+    &:not(:last-child) {
+      padding-right: 5.5rem;
 
-                height: 39.5rem;
-                width: 0.2rem;
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
 
-                background-image: url('data:image/svg+xml, %3Csvg%20width%3D%222%22%20height%3D%22396%22%20viewBox%3D%220%200%202%20396%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20x1%3D%221%22%20y1%3D%220.19043%22%20x2%3D%220.999983%22%20y2%3D%22395.19%22%20stroke%3D%22%23E3E3E8%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%224%208%22%2F%3E%0A%3C%2Fsvg%3E%0A');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                content: "";
-            }
+        height: 39.5rem;
+        width: 0.2rem;
+
+        background-image: url('data:image/svg+xml, %3Csvg%20width%3D%222%22%20height%3D%22396%22%20viewBox%3D%220%200%202%20396%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20x1%3D%221%22%20y1%3D%220.19043%22%20x2%3D%220.999983%22%20y2%3D%22395.19%22%20stroke%3D%22%23E3E3E8%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%224%208%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+
+        @include breakpoint(tablet) {
+          height: 100%;
         }
+      }
     }
+  }
 
-    &__promo {
-        width: 100%;
-        max-width: 120rem;
-        margin-top: 9.5rem;
-        margin-inline: auto;
+  &__promo {
+    width: 100%;
+    max-width: 120rem;
+    margin-top: 9.5rem;
+    margin-inline: auto;
+  }
+
+  &__swiper-controls {
+    &.elements-section__swiper-controls {
+      margin-bottom: 0;
+      margin-top: 2.5rem;
     }
+  }
 }

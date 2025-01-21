@@ -1,143 +1,231 @@
 .franchise-form {
-    &__body {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
+  &__body {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
 
-        padding: 7.5rem 8.5rem;
+    padding: 7.5rem 8.5rem;
 
-        background: #F5F5F7;
-        border-radius: 3.5rem;
+    background: #F5F5F7;
+    border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: unset;
+      gap: 2.5rem;
+
+      padding: 2rem 3rem;
+      border-radius: 2rem;
+    }
+  }
+
+  &__left {
+    flex-basis: 70rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      flex-basis: auto;
+    }
+  }
+
+  &__list {
+    margin-top: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    color: var(--Grafiit-main, #303030);
+    letter-spacing: -0.03em;
+    @include font(2.4rem, 167%, 500);
+
+    @include breakpoint(tablet) {
+      @include font(1.5rem, 133.3%, 500);
+
+      max-width: 25ch;
+      letter-spacing: -0.03em;
     }
 
-    &__left {
-        flex-basis: 70rem;
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
 
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: space-between;
+      @include breakpoint(tablet) {
+        margin-bottom: 1.5rem;
+      }
     }
 
-    &__list {
-        margin-top: 2rem;
+    &::before {
+      width: 4rem;
+      height: 4rem;
+
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+
+      border-radius: 1.5rem;
+      background: #FFF;
+
+      color: var(--Orange, #DE7D57);
+
+      content: counter(ordered-list, decimal-leading-zero);
+      @include font(1.4rem, 160%, 700);
+    }
+  }
+
+
+  &__right {
+    flex-basis: 78.5rem;
+
+    padding-top: 1rem;
+
+    @include breakpoint(tablet) {
+      flex-basis: auto;
+      padding-top: unset;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__center,
+  &__inputs,
+  &__submit {
+    flex-basis: 100%;
+
+    @include breakpoint(tablet) {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  &__button {
+    width: 100%;
+
+    &.link-icon {
+      @include breakpoint(tablet) {
+        flex: 0 1 auto;
+        width: auto;
+        min-width: unset;
+        padding: 1.6rem;
+      }
+    }
+  }
+
+  &__input {
+    flex-basis: calc(100% / 2 - 1rem);
+
+    @include breakpoint(tablet) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__agreement {
+    display: inline-block;
+
+    // text-align: center;
+    color: #909090;
+    letter-spacing: -0.04em;
+    @include font(1.6rem, 150%, 400);
+
+    @include breakpoint(tablet) {
+      @include font(1.2rem, 125%, 400);
+      text-align: center;
     }
 
-    &__list-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 1.5rem;
+    &>a {
+      display: inline;
 
-        color: var(--Grafiit-main, #303030);
-        letter-spacing: -0.03em;
-        @include font(2.4rem, 167%, 500);
+      letter-spacing: -0.04em;
+      @include font(1.6rem, 150%, 400);
 
-        &:not(:last-child) {
-            margin-bottom: 2.5rem;
-        }
-
-        &::before {
-            width: 4rem;
-            height: 4rem;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 1.5rem;
-            background: #FFF;
-
-            color: var(--Orange, #DE7D57);
-
-            content: counter(ordered-list, decimal-leading-zero);
-            @include font(1.4rem, 160%, 700);
-        }
-    }
-
-
-    &__right {
-        flex-basis: 78.5rem;
-
-        padding-top: 1rem;
-    }
-
-    &__top {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    &__inputs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    &__center,
-    &__inputs,
-    &__submit {
-        flex-basis: 100%;
-    }
-
-    &__center {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1.5rem;
-    }
-
-    &__submit {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-    }
-
-    &__button {
-        width: 100%;
-    }
-
-    &__input {
-        flex-basis: calc(100% / 2 - 1rem);
-    }
-
-    &__agreement {
-        display: inline-block;
-
-        // text-align: center;
-        color: #909090;
-        letter-spacing: -0.04em;
-        @include font(1.6rem, 150%, 400);
-
-        &>a {
-            display: inline;
-
-            letter-spacing: -0.04em;
-            @include font(1.6rem, 150%, 400);
-        }
-    }
-
-    &__divider {
+      @include breakpoint(tablet) {
+        @include font(1.2rem, 125%, 400);
         text-align: center;
-        letter-spacing: -0.04em;
-        @include font(2rem, 120%, 500);
+      }
     }
+  }
 
-    &__bottom {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2.5rem;
+  &__divider {
+    text-align: center;
+    letter-spacing: -0.04em;
+    @include font(2rem, 120%, 500);
 
-        margin-top: 5rem;
+    @include breakpoint(tablet) {
+      @include font(1.2rem, 125%, 400);
+      text-align: center;
     }
+  }
 
-    &__text {
-        @extend .text-24;
-    }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
 
-    &__socials {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+    margin-top: 5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      margin-top: 1rem;
     }
+  }
+
+  &__text {
+    @extend .text-24;
+
+    @include breakpoint(tablet) {
+      @include font(1.2rem, 125%, 400);
+      text-align: center;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }

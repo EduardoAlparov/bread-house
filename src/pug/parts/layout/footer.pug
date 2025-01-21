@@ -34,18 +34,22 @@
 footer.page-footer
   .page-footer__site-container
     .page-footer__logo
-      a.logo(href="/")
+      a.logo.logo--big(href="/")
         +icon-multi('logo')
         if logoTooltip
           span.logo__tooltip= logoTooltip
-      a.page-footer__details.page-footer__link(href="#") Реквизиты компании
+      a.page-footer__details.page-footer__link.hide-on-mobile(href="#") Реквизиты компании
 
     .page-footer__menus
       each menu in menus
-        ul.page-footer__menu
-          each item in menu
-            li
-              a.page-footer__link(href="#")=item
+        .page-footer__menu.page-footer__menu--collapsed
+          button.page-footer__menu-expand.js-footer-menu-expand.show-on-mobile(type="button")
+            =menu[0]
+            +icon-multi('down')
+          ul
+            each item in menu
+              li
+                a.page-footer__link(href="#")=item
 
     .page-footer__bottom
       p.page-footer__copyright
@@ -58,3 +62,5 @@ footer.page-footer
             br
             | Mark Weber
           +picture('dev.png', 'alt')
+
+        a.page-footer__details.page-footer__link.show-on-mobile(href="#") Реквизиты компании

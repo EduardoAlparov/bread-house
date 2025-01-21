@@ -8,6 +8,10 @@
 
   width: 100%;
 
+  @include breakpoint(tablet) {
+    padding-inline: 0.5rem;
+  }
+
   &__site-container {
     position: relative;
     display: flex;
@@ -17,7 +21,7 @@
     padding-top: 5.8rem;
 
     @include breakpoint(tablet) {
-      padding-top: 1.3rem;
+      padding-top: 3rem;
     }
   }
 
@@ -42,6 +46,8 @@
 
     @include breakpoint(tablet) {
       display: flex;
+      align-items: center;
+      gap: 1rem;
     }
   }
 

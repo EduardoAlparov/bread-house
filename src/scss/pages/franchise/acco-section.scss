@@ -1,143 +1,223 @@
 .acco-section {
-    &__body {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        gap: 7.9rem;
+  &__body {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 7.9rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      justify-content: unset;
+      gap: 2.5rem;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+    flex: 1 1 auto;
+
+    @include breakpoint(tablet) {
+      gap: 2.5rem;
+    }
+  }
+
+  &__right {
+    flex: 1 0 92rem;
+
+    @include breakpoint(tablet) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__title {
+    max-width: 15ch;
+
+    @include breakpoint(tablet) {
+      margin-inline: auto;
+      text-align: center;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: flex-end;
+    gap: 5rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__author-image {
+    position: relative;
+
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+
+    background-color: #F5F5F7;
+    border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      width: 7.5rem;
+      height: 7.5rem;
+
+      border-radius: 1.5rem;
     }
 
-    &__left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 5rem;
-        flex: 1 1 auto;
+    img {
+      position: absolute;
+      inset: -1px;
+
+      display: block;
+      width: 100%;
+      max-width: unset;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__author-name {
+    @extend .text-30;
+  }
+
+  &__author-role {
+    @include font(1.8rem, 122.2%, 400);
+
+    max-width: 23ch;
+    letter-spacing: -0.04em;
+
+    @include breakpoint(tablet) {
+      @include font(1.2rem, 125%, 400);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
     }
 
-    &__right {
-        flex: 1 0 92rem;
-    }
-
-    &__title {
-        max-width: 15ch;
-    }
-
-    &__author {
-        display: flex;
-        align-items: flex-end;
-        gap: 5rem;
-    }
-
-    &__author-image {
-        position: relative;
-
-        width: 20rem;
-        height: 20rem;
-        overflow: hidden;
-
-        background-color: #F5F5F7;
-        border-radius: 3.5rem;
-
-        img {
-            position: absolute;
-            inset: -1px;
-
-            display: block;
-            width: 100%;
-            max-width: unset;
-            min-height: 100%;
-            object-fit: cover;
-            object-position: center;
+    &.acco-section__list--collapsed {
+      .acco-section__item {
+        &:nth-child(1n + 5) {
+          @include breakpoint(tablet) {
+            display: none;
+          }
         }
+      }
+    }
+  }
+
+  &__item {
+    padding: 2.5rem 4rem;
+
+    color: var(--Grafiit-main, #303030);
+
+    background: #F5F5F7;
+    border-radius: 2rem;
+
+    @include breakpoint(tablet) {
+      padding: 1.4rem 1.65rem;
+
+      border-radius: 1rem;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    width: 100%;
+
+    span {
+      letter-spacing: -0.02em;
+      @include font(2.4rem, 130%, 700);
+
+      @include breakpoint(tablet) {
+        @include font(1.6rem, 130%, 700);
+
+        text-align: left;
+      }
     }
 
-    &__author-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+    &.acco-section__button--active {
+      &~.acco-section__dropdown {
+        max-height: 200rem;
+        transform: scaleY(1);
+        opacity: 1;
+        visibility: visible;
+      }
     }
+  }
 
-    &__author-name {
-        @extend .text-30;
+  &__text {
+    max-width: 77rem;
+    padding-block: 1rem 1.5rem;
+
+    letter-spacing: -0.02em;
+    @include font(2rem, 130%, 400);
+
+    @include breakpoint(tablet) {
+      @include font(1.4rem, 130%, 400);
+
+      padding-block: 1rem 1.5rem;
+      padding-inline: 1.8rem 1rem;
     }
+  }
 
-    &__author-role {
-        max-width: 23ch;
-        letter-spacing: -0.04em;
-        @include font(1.8rem, 122.2%, 400);
+  &__arrow {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+
+    background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20width%3D%2250%22%20height%3D%2250%22%20rx%3D%2225%22%20transform%3D%22matrix(-1%20-8.74228e-08%20-8.74228e-08%201%2050%200)%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M24.1305%2032.6268L24.1305%2017.0019L25.8289%2017.0019L25.8289%2032.6268L24.1305%2032.6268Z%22%20fill%3D%22%23DE7D57%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M29.185%2029.6467L27.984%2028.4458L25.0057%2031.4241L22.0274%2028.4458L20.8265%2029.6467L25.0057%2033.8259L29.185%2029.6467Z%22%20fill%3D%22%23DE7D57%22%2F%3E%0A%3C%2Fsvg%3E');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include breakpoint(tablet) {
+      width: 2.5rem;
+      height: 2.5rem;
     }
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 2.5rem;
-    }
-
-    &__item {
-        padding: 2.5rem 4rem;
-
-        color: var(--Grafiit-main, #303030);
-
-        background: #F5F5F7;
-        border-radius: 2rem;
-    }
-
-    &__button {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-
-        width: 100%;
-
-        span {
-            letter-spacing: -0.02em;
-            @include font(2.4rem, 130%, 700);
-        }
-
-        &.acco-section__button--active {
-            &~.acco-section__dropdown {
-                max-height: 200rem;
-                transform: scaleY(1);
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
-
-    &__text {
-        max-width: 77rem;
-        padding-block: 1rem 1.5rem;
-
-        letter-spacing: -0.02em;
-        @include font(2rem, 130%, 400);
-    }
-
-    &__arrow {
-        display: block;
-        width: 5rem;
-        height: 5rem;
-
-        background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20width%3D%2250%22%20height%3D%2250%22%20rx%3D%2225%22%20transform%3D%22matrix(-1%20-8.74228e-08%20-8.74228e-08%201%2050%200)%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M24.1305%2032.6268L24.1305%2017.0019L25.8289%2017.0019L25.8289%2032.6268L24.1305%2032.6268Z%22%20fill%3D%22%23DE7D57%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M29.185%2029.6467L27.984%2028.4458L25.0057%2031.4241L22.0274%2028.4458L20.8265%2029.6467L25.0057%2033.8259L29.185%2029.6467Z%22%20fill%3D%22%23DE7D57%22%2F%3E%0A%3C%2Fsvg%3E');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+  }
 
 
-    &__dropdown {
-        max-height: 0;
+  &__dropdown {
+    max-height: 0;
 
-        transform-origin: top;
-        transform: scaleY(0);
+    transform-origin: top;
+    transform: scaleY(0);
 
-        opacity: 0;
-        visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
 
-        transition-property: max-height, opacity, transform;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
-    }
+    transition-property: max-height, opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+
+  &__expand {
+    margin-top: 1rem;
+    margin-inline: auto;
+  }
 }

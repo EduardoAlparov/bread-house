@@ -46,7 +46,18 @@
               <a class="menu__link" href="#">Блог</a>
             </li>
           </ul>
-          <div class="page-header__mobile-buttons"></div>
+          <div class="page-header__mobile-buttons">
+            <a class="page-header__phone simple-btn" href="#">
+              <svg class="icon icon-phone">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#phone"></use>
+              </svg>
+            </a>
+            <a class="page-header__burger simple-btn" href="#">
+              <svg class="icon icon-burger">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#burger"></use>
+              </svg>
+            </a>
+          </div>
         </nav>
       </header>
 
@@ -296,6 +307,7 @@
         </section>
         <section class="section socials-section">
           <div class="socials-section__site-container">
+            <h2 class="socials-section__title section__title show-on-mobile">Максимально открыты и&nbsp;подтверждаем свою&nbsp;экспертность в&nbsp;соц.сетях</h2>
             <div class="socials-section__body">
               <div class="socials-section__video">
                 <button type="button">
@@ -309,7 +321,7 @@
                 </picture>
               </div>
               <div class="socials-section__info">
-                <h2 class="socials-section__title section__title">Максимально открыты и&nbsp;подтверждаем свою&nbsp;экспертность в&nbsp;соц.сетях</h2>
+                <h3 class="socials-section__title section__title hide-on-mobile">Максимально открыты и&nbsp;подтверждаем свою&nbsp;экспертность в&nbsp;соц.сетях</h3>
                 <ul class="socials-section__list">
                   <li class="socials-section__list-item">
                     <a class="socials-section__link link-icon link-icon--dark-blue" href="#">Мы в ВК<svg class="icon icon-vk-big">
@@ -339,81 +351,111 @@
       <footer class="page-footer">
         <div class="page-footer__site-container">
           <div class="page-footer__logo">
-            <a class="logo" href="/">
+            <a class="logo logo--big" href="/">
               <svg class="icon icon-logo">
                 <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
               </svg>
             </a>
-            <a class="page-footer__details page-footer__link" href="#">Реквизиты компании</a>
+            <a class="page-footer__details page-footer__link hide-on-mobile" href="#">Реквизиты компании</a>
           </div>
           <div class="page-footer__menus">
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Достижения</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Благотворительность</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Карьера</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">СМИ о нас</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Франшиза</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">3 бизнеса в одной франшизе</a>
-              </li>
-            </ul>
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Компания</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">О нас</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Производство</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Блог компании</a>
-              </li>
-            </ul>
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Онлайн-экскурси</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Обучение</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Демо-день</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Маркетингкит</a>
-              </li>
-            </ul>
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Точки продаж</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Отдел открытия и комплектации</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Отдел сопровождения</a>
-              </li>
-            </ul>
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Контакты</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Продажа франшизы</a>
-              </li>
-            </ul>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Достижения<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Достижения</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Благотворительность</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Карьера</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">СМИ о нас</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Франшиза</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">3 бизнеса в одной франшизе</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Компания<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Компания</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">О нас</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Производство</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Блог компании</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Онлайн-экскурси<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Онлайн-экскурси</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Обучение</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Демо-день</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Маркетингкит</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Точки продаж<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Точки продаж</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Отдел открытия и комплектации</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Отдел сопровождения</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Контакты<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Контакты</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Продажа франшизы</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="page-footer__bottom">
             <p class="page-footer__copyright">© 2024 Использование любых материалов с данного ресурса возможно только после письменного согласия владельца авторских прав</p>
@@ -425,6 +467,7 @@
                   <img src="assets/images/dev.png" alt="alt">
                 </picture>
               </a>
+              <a class="page-footer__details page-footer__link show-on-mobile" href="#">Реквизиты компании</a>
             </div>
           </div>
         </div>

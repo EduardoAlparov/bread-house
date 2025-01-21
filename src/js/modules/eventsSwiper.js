@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import Autoplay from 'swiper/modules/autoplay.mjs';
+import Controller from 'swiper/modules/controller.mjs';
 
 export default () => {
   const events = document.querySelectorAll('.js-events-swiper');
@@ -11,7 +12,7 @@ export default () => {
       const ACTIVE_CLASS = 'events-section__button--active';
 
       const eventSwiper = new Swiper(s, {
-        modules: [Autoplay],
+        modules: [Autoplay, Controller],
         slidesPerView: 1,
         spaceBetween: 25,
         speed: 1000,
@@ -40,6 +41,15 @@ export default () => {
             btn.classList.toggle(ACTIVE_CLASS);
           }
         }
+      });
+
+      const pSwiper = new Swiper(controls, {
+        modules: [Controller],
+        slidesPerView: 'auto',
+        wrapperClass: 'events-section__pagination',
+        slideClass: 'events-section__button'
       })
+
+      eventSwiper.controller.control = pSwiper
   })
 }

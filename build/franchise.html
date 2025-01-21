@@ -46,7 +46,18 @@
               <a class="menu__link" href="#">Блог</a>
             </li>
           </ul>
-          <div class="page-header__mobile-buttons"></div>
+          <div class="page-header__mobile-buttons">
+            <a class="page-header__phone simple-btn" href="#">
+              <svg class="icon icon-phone">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#phone"></use>
+              </svg>
+            </a>
+            <a class="page-header__burger simple-btn" href="#">
+              <svg class="icon icon-burger">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#burger"></use>
+              </svg>
+            </a>
+          </div>
         </nav>
       </header>
 
@@ -922,58 +933,74 @@
               <h2 class="events-section__title section__title">Не оставим один на один с бизнесом</h2>
               <p class="events-section__subtitle section__subtitle">помогаем с фин.моделью на этапе заявки до обучения персонала, которые работают руками</p>
             </div>
-            <ul class="support-section__list">
-              <li class="support-section__item support-item">
-                <div class="support-item__image">
-                  <picture>
-                    <source type="image/webp" srcset="assets/images/support/img-1.webp" alt="">
-                    <img src="assets/images/support/img-1.png" alt="">
-                  </picture>
+            <div class="support-section__list-wrapper swiper">
+              <ul class="support-section__list">
+                <li class="support-section__item support-item">
+                  <div class="support-item__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/support/img-1.webp" alt="">
+                      <img src="assets/images/support/img-1.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="support-item__role support-item__role--orange">Консультант по внедрению</div>
+                  <p class="support-item__slogan">Рассчитает окупаемость и покажет выгоды франшизы</p>
+                </li>
+                <li class="support-section__item support-item">
+                  <div class="support-item__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/support/img-2.webp" alt="">
+                      <img src="assets/images/support/img-2.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="support-item__role support-item__role--brown">Менеджер успеха</div>
+                  <p class="support-item__slogan">Найдет место и обеспечит оборудованием</p>
+                </li>
+                <li class="support-section__item support-item">
+                  <div class="support-item__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/support/img-3.webp" alt="">
+                      <img src="assets/images/support/img-3.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="support-item__role support-item__role--red">HR менеджер</div>
+                  <p class="support-item__slogan">Поможет с наймом персонала, проведет обучение</p>
+                </li>
+                <li class="support-section__item support-item">
+                  <div class="support-item__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/support/img-1.webp" alt="">
+                      <img src="assets/images/support/img-1.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="support-item__role support-item__role--coral">Менеджер</div>
+                  <p class="support-item__slogan">Подскажет как привлечь клиентов в новую пекарню</p>
+                </li>
+                <li class="support-section__item support-item">
+                  <div class="support-item__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/support/img-2.webp" alt="">
+                      <img src="assets/images/support/img-2.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="support-item__role support-item__role--pale">Менеджер</div>
+                  <p class="support-item__slogan">Проведет обучение персонала</p>
+                </li>
+              </ul>
+              <div class="support-section__swiper-controls elements-section__swiper-controls">
+                <div class="double-btns">
+                  <button class="double-btns__btn double-btns__btn--prev" type="button">
+                    <svg class="icon icon-prev">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                    </svg>
+                  </button>
+                  <button class="double-btns__btn double-btns__btn--next" type="button">
+                    <svg class="icon icon-prev">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                    </svg>
+                  </button>
                 </div>
-                <div class="support-item__role support-item__role--orange">Консультант по внедрению</div>
-                <p class="support-item__slogan">Рассчитает окупаемость и покажет выгоды франшизы</p>
-              </li>
-              <li class="support-section__item support-item">
-                <div class="support-item__image">
-                  <picture>
-                    <source type="image/webp" srcset="assets/images/support/img-2.webp" alt="">
-                    <img src="assets/images/support/img-2.png" alt="">
-                  </picture>
-                </div>
-                <div class="support-item__role support-item__role--brown">Менеджер успеха</div>
-                <p class="support-item__slogan">Найдет место и обеспечит оборудованием</p>
-              </li>
-              <li class="support-section__item support-item">
-                <div class="support-item__image">
-                  <picture>
-                    <source type="image/webp" srcset="assets/images/support/img-3.webp" alt="">
-                    <img src="assets/images/support/img-3.png" alt="">
-                  </picture>
-                </div>
-                <div class="support-item__role support-item__role--red">HR менеджер</div>
-                <p class="support-item__slogan">Поможет с наймом персонала, проведет обучение</p>
-              </li>
-              <li class="support-section__item support-item">
-                <div class="support-item__image">
-                  <picture>
-                    <source type="image/webp" srcset="assets/images/support/img-1.webp" alt="">
-                    <img src="assets/images/support/img-1.png" alt="">
-                  </picture>
-                </div>
-                <div class="support-item__role support-item__role--coral">Менеджер</div>
-                <p class="support-item__slogan">Подскажет как привлечь клиентов в новую пекарню</p>
-              </li>
-              <li class="support-section__item support-item">
-                <div class="support-item__image">
-                  <picture>
-                    <source type="image/webp" srcset="assets/images/support/img-2.webp" alt="">
-                    <img src="assets/images/support/img-2.png" alt="">
-                  </picture>
-                </div>
-                <div class="support-item__role support-item__role--pale">Менеджер</div>
-                <p class="support-item__slogan">Проведет обучение персонала</p>
-              </li>
-            </ul>
+              </div>
+            </div>
             <div class="support-section__promo support-promo">
               <div class="support-promo__body">
                 <div class="support-promo__left">
@@ -1003,10 +1030,16 @@
                   </svg>
                 </a>
               </div>
-              <div class="support-promo__image">
+              <div class="support-promo__image hide-on-mobile">
                 <picture>
                   <source type="image/webp" srcset="assets/images/support/promo.webp" alt="">
                   <img src="assets/images/support/promo.png" alt="">
+                </picture>
+              </div>
+              <div class="support-promo__image show-on-mobile">
+                <picture>
+                  <source type="image/webp" srcset="assets/images/support/promo-m.webp" alt="">
+                  <img src="assets/images/support/promo-m.png" alt="">
                 </picture>
               </div>
             </div>
@@ -1031,7 +1064,7 @@
                 </div>
               </div>
               <div class="acco-section__right">
-                <ul class="acco-section__list">
+                <ul class="acco-section__list acco-section__list--collapsed">
                   <li class="acco-section__item" id="faq-id-1">
                     <button class="acco-section__button js-faq-btn" type="button"><span class="acco-section__question">Вопрос об открытии пекарни</span><i class="acco-section__arrow"></i>
                     </button>
@@ -1082,6 +1115,7 @@
                     </div>
                   </li>
                 </ul>
+                <button class="acco-section__expand stats-section__expand show-on-mobile" type="button">Показать еще</button>
               </div>
             </div>
           </div>
@@ -1314,6 +1348,7 @@
         </section>
         <section class="section socials-section">
           <div class="socials-section__site-container">
+            <h2 class="socials-section__title section__title show-on-mobile">Максимально открыты и&nbsp;подтверждаем свою&nbsp;экспертность в&nbsp;соц.сетях</h2>
             <div class="socials-section__body">
               <div class="socials-section__video">
                 <button type="button">
@@ -1327,7 +1362,7 @@
                 </picture>
               </div>
               <div class="socials-section__info">
-                <h2 class="socials-section__title section__title">Максимально открыты и&nbsp;подтверждаем свою&nbsp;экспертность в&nbsp;соц.сетях</h2>
+                <h3 class="socials-section__title section__title hide-on-mobile">Максимально открыты и&nbsp;подтверждаем свою&nbsp;экспертность в&nbsp;соц.сетях</h3>
                 <ul class="socials-section__list">
                   <li class="socials-section__list-item">
                     <a class="socials-section__link link-icon link-icon--dark-blue" href="#">Мы в ВК<svg class="icon icon-vk-big">
@@ -1359,81 +1394,111 @@
       <footer class="page-footer">
         <div class="page-footer__site-container">
           <div class="page-footer__logo">
-            <a class="logo" href="/">
+            <a class="logo logo--big" href="/">
               <svg class="icon icon-logo">
                 <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
               </svg><span class="logo__tooltip">Φраншиза</span>
             </a>
-            <a class="page-footer__details page-footer__link" href="#">Реквизиты компании</a>
+            <a class="page-footer__details page-footer__link hide-on-mobile" href="#">Реквизиты компании</a>
           </div>
           <div class="page-footer__menus">
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Достижения</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Благотворительность</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Карьера</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">СМИ о нас</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Франшиза</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">3 бизнеса в одной франшизе</a>
-              </li>
-            </ul>
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Компания</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">О нас</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Производство</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Блог компании</a>
-              </li>
-            </ul>
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Онлайн-экскурси</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Обучение</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Демо-день</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Маркетингкит</a>
-              </li>
-            </ul>
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Точки продаж</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Отдел открытия и комплектации</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Отдел сопровождения</a>
-              </li>
-            </ul>
-            <ul class="page-footer__menu">
-              <li>
-                <a class="page-footer__link" href="#">Контакты</a>
-              </li>
-              <li>
-                <a class="page-footer__link" href="#">Продажа франшизы</a>
-              </li>
-            </ul>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Достижения<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Достижения</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Благотворительность</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Карьера</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">СМИ о нас</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Франшиза</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">3 бизнеса в одной франшизе</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Компания<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Компания</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">О нас</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Производство</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Блог компании</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Онлайн-экскурси<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Онлайн-экскурси</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Обучение</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Демо-день</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Маркетингкит</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Точки продаж<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Точки продаж</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Отдел открытия и комплектации</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Отдел сопровождения</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu page-footer__menu--collapsed">
+              <button class="page-footer__menu-expand js-footer-menu-expand show-on-mobile" type="button">Контакты<svg class="icon icon-down">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#down"></use>
+                </svg>
+              </button>
+              <ul>
+                <li>
+                  <a class="page-footer__link" href="#">Контакты</a>
+                </li>
+                <li>
+                  <a class="page-footer__link" href="#">Продажа франшизы</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="page-footer__bottom">
             <p class="page-footer__copyright">© 2024 Использование любых материалов с данного ресурса возможно только после письменного согласия владельца авторских прав</p>
@@ -1445,6 +1510,7 @@
                   <img src="assets/images/dev.png" alt="alt">
                 </picture>
               </a>
+              <a class="page-footer__details page-footer__link show-on-mobile" href="#">Реквизиты компании</a>
             </div>
           </div>
         </div>
