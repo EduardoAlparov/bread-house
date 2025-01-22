@@ -66,7 +66,7 @@
           <div class="hero__slider-wrapper">
             <div class="hero__swiper swiper">
               <ul class="hero__swipper-wrapper swiper-wrapper">
-                <li class="hero__swiper-slide swiper-slide hero-slide">
+                <li class="hero__swiper-slide swiper-slide hero-slide hero-slide--toolip">
                   <div class="hero-slide__image">
                     <picture>
                       <source type="image/webp" srcset="assets/images/hero/about.webp">
@@ -116,7 +116,7 @@
               </div>
             </div>
             <div class="chronology__list-wrapper">
-              <ul class="chronology__list">
+              <ul class="chronology__list _collapsed">
                 <li class="chronology__item chronology__item--small chronology__item--photo">
                   <div class="chronology__item-info">
                     <p class="chronology__item-title">Собственные</p>
@@ -203,6 +203,7 @@
                 </li>
               </ul>
             </div>
+            <button class="chronology__expand stats-section__expand show-on-mobile" type="button">Показать еще</button>
             <div class="chronology__link-wrapper">
               <div class="link-icon link-icon--grey">Записаться на онлайн экскурсию<svg class="icon icon-chat">
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#chat"></use>
@@ -309,7 +310,7 @@
                   </div>
                 </div>
               </div>
-              <div class="franchise-formats__grid">
+              <div class="franchise-formats__grid franchise-formats__grid--no-gap">
                 <div class="franchise-formats__left franchise-formats__left--bigger"></div>
                 <div class="franchise-formats__right">
                   <div class="franchise-formats__double-btns double-btns">
@@ -334,6 +335,7 @@
             <div class="short-about__body">
               <div class="short-about__left">
                 <div class="short-about__tooltip">Коротко о главном</div>
+                <div class="short-about__icon show-on-mobile"></div>
                 <h2 class="short-about__title">Все&nbsp;началось с&nbsp;малого...</h2>
                 <p class="short-about__text">какой-то хороший текст в одну или может даже в две строки</p>
                 <ul class="short-about__list">
@@ -435,13 +437,13 @@
         <section class="section events-section">
           <div class="events-section__site-container">
             <div class="events-section__heading section__heading">
-              <h2 class="events-section__title section__title">Сообщество предпринимателей</h2>
-              <p class="events-section__subtitle section__subtitle">Ближайшие мероприятия</p>
+              <h2 class="events-section__title section__title">Ближайшие мероприятия</h2>
+              <p class="events-section__subtitle section__subtitle">Ознакомьтесь с тем, что происходит в Доме хлеба прямо сейчас</p>
             </div>
-            <div class="events-section__body">
+            <div class="events-section__body js-events-swiper">
               <div class="events-section__swiper swiper">
                 <ul class="events-section__swiper-wrapper swiper-wrapper">
-                  <li class="events-section__swiper-slide swiper-slide event-slide">
+                  <li class="events-section__swiper-slide swiper-slide event-slide" id="event-01">
                     <div class="event-slide__image">
                       <picture>
                         <source type="image/webp" srcset="assets/images/franchise-carousel/slide.webp" alt="">
@@ -459,13 +461,28 @@
                       </a>
                     </div>
                   </li>
+                  <li class="events-section__swiper-slide swiper-slide event-slide" id="event-02">
+                    <div class="event-slide__image">
+                      <video autoplay loop muted>
+                        <source src="./assets/images/video.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="event-slide__body">
+                      <div class="event-slide__info">
+                        <div class="event-slide__date">13.06.2024 в 10:00</div>
+                        <h3 class="event-slide__text">Бизнес-завтрак с Андреем Герасимовым в Самаре</h3>
+                      </div>
+                      <a class="event-slide__link link-icon link-icon--white" href="#">Зарегистрироваться на событие<svg class="icon icon-event">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#event"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </li>
                 </ul>
                 <div class="events-section__control-panel">
                   <div class="events-section__pagination">
-                    <button class="events-section__button" type="button">Вебинар по масштабированию</button>
-                    <button class="events-section__button events-section__button--active" type="button">Бизнес-завтрак</button>
-                    <button class="events-section__button" type="button">Вебинар по масштабированию</button>
-                    <button class="events-section__button" type="button">Бизнес-завтрак</button>
+                    <button class="events-section__button" type="button" data-event-pagination="event-01">Вебинар по масштабированию</button>
+                    <button class="events-section__button" type="button" data-event-pagination="event-02">Бизнес-завтрак</button>
                   </div>
                 </div>
               </div>
