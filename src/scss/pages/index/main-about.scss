@@ -1,150 +1,258 @@
 .main-about {
-    &__body {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
+  &__body {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.5rem;
+
+    flex: 0 1 54rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.5rem;
+
+      flex: 1 1 auto;
     }
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3.5rem;
+    &.main-about__info--wider {
+      flex: 0 1 56rem;
 
-        flex: 0 1 54rem;
-
-        &.main-about__info--wider {
-            flex: 0 1 56rem;
-        }
-
-        &.main-about__info--biggest {
-            flex: 0 1 65rem;
-            justify-content: space-between;
-        }
+      @include breakpoint(tablet) {
+        flex: 1 1 auto;
+      }
     }
 
-    &__title {
-        @extend .text-h1;
+    &.main-about__info--biggest {
+      flex: 0 1 65rem;
+      justify-content: space-between;
+
+      @include breakpoint(tablet) {
+        justify-content: unset;
+        flex: 1 1 auto;
+      }
     }
 
-    &__desc {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3rem;
+    &.main-about__info--center {
+      align-items: center;
 
+      .main-about__desc {
         &>p {
-            letter-spacing: -0.03em;
-            @include font(3rem, 133.3%, 500);
+          @include breakpoint(tablet) {
+            text-align: center;
+            text-wrap: balance;
+          }
         }
+      }
     }
 
-    &__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 0.5fr);
-        grid-template-rows: repeat(2, auto);
-        gap: 3rem;
+    .format-quotation__text,
+    .format-quotation__desc,
+    .format-quotation__title {
+      @include breakpoint(tablet) {
+        width: 100%;
+        margin-inline: auto;
+        text-align: center;
+      }
+    }
+  }
 
-        flex: 0 1 103rem;
+  &__title {
+    @extend .text-h1;
+  }
 
-        &.main-about__grid--smaller {
-            gap: 0;
-            flex: 0 1 89rem;
-        }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
 
-        &:has(.main-about__image) {
-          gap: 0;
-          max-width: 90rem;
-        }
+    @include breakpoint(tablet) {
+      gap: 1.5rem;
     }
 
-    &__grid-item {
-        // width: calc(100% / 2 - (3rem / 2));
+    &>p {
+      letter-spacing: -0.03em;
+      @include font(3rem, 133.3%, 500);
 
-        &--half {
-            aspect-ratio: 1;
-            grid-column: span 1;
-        }
+      @include breakpoint(tablet) {
+        @include font(1.6rem, 125%, 500);
+      }
+    }
+  }
 
-        &--full {
-            grid-column: span 2;
-        }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 3rem;
+
+    flex: 0 1 103rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(1, 100%);
+      grid-template-rows: auto;
+      gap: 1.5rem;
+
+      flex: 1 1 auto;
     }
 
-    &__list {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 3.5rem;
+    &.main-about__grid--smaller {
+      gap: 0;
+      flex: 0 1 89rem;
 
-        &>li {
-            position: relative;
+      @include breakpoint(tablet) {
+        flex: 1 1 auto;
+      }
+    }
 
-            padding-left: 6rem;
+    &:has(.main-about__image) {
+      gap: 0;
+      max-width: 90rem;
+    }
+  }
 
-            @include font(4rem, 100%, 500);
-            letter-spacing: -0.03em;
-            color: var(--Grafiit-main, #303030);
+  &__grid-item {
+    // width: calc(100% / 2 - (3rem / 2));
 
-            &::before {
-                position: absolute;
-                top: 50%;
-                left: 3rem;
+    &--half {
+      aspect-ratio: 1;
+      grid-column: span 1;
 
-                flex-shrink: 0;
-                width: 10px;
-                height: 10px;
-                transform: translate(-50%, -50%);
+      @include breakpoint(tablet) {
+        grid-column: span 1;
+        aspect-ratio: 1.25 / 1;
+      }
+    }
 
-                background-color: var(--Grafiit-main, #303030);
-                border-radius: 100%;
-                content: "";
+    &--full {
+      grid-column: span 2;
 
-            }
+      @include breakpoint(tablet) {
+        grid-column: span 1;
+        width: 100%;
+        aspect-ratio: 0.628 / 1;
+      }
+
+      &:has(.main-about__novelty) {
+        @include breakpoint(tablet) {
+          grid-column: span 1;
+          width: 100%;
+          aspect-ratio: unset;
         }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+
+    @include breakpoint(tablet) {
+      justify-content: center;
+      width: 100%;
     }
 
-    &__link {
-        min-width: 40rem;
-        padding: 3.3rem 4.35rem;
-    }
-
-    &__novelty {
-        &.novelty {
-            gap: 3rem;
-
-            max-width: unset;
-            aspect-ratio: unset;
-            padding: 5rem 10.5rem;
-
-            .novelty__image {
-                aspect-ratio: 2.3 / 1;
-            }
-        }
-    }
-
-    &__image {
+    &>li {
       position: relative;
 
-      width: 100%;
-      max-width: 90rem;
-      aspect-ratio: 1.5 / 1;
-      overflow: hidden;
+      padding-left: 6rem;
 
-      border-radius: 3.5rem;
+      @include font(4rem, 100%, 500);
+      letter-spacing: -0.03em;
+      color: var(--Grafiit-main, #303030);
 
-      &>picture img {
+      &::before {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 3rem;
+
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
         transform: translate(-50%, -50%);
 
-        display: block;
-        width: 100%;
+        background-color: var(--Grafiit-main, #303030);
+        border-radius: 100%;
+        content: "";
 
-        object-fit: cover;
-        object-position: center;
+        @include breakpoint(tablet) {
+          left: 2rem;
+
+          width: 6px;
+          height: 6px;
+        }
       }
+
+      @include breakpoint(tablet) {
+        @include font(2rem, 200%, 500);
+        padding-left: 4rem;
+      }
+    }
+  }
+
+  &__link {
+    min-width: 40rem;
+    padding: 3.3rem 4.35rem;
+
+    @include breakpoint(tablet) {
+      min-width: 100%;
+      padding: 1.6rem 2.5rem;
+    }
+  }
+
+  &__novelty {
+    &.novelty {
+      gap: 3rem;
+
+      max-width: unset;
+      aspect-ratio: unset;
+      padding: 5rem 10.5rem;
+
+      @include breakpoint(tablet) {
+        gap: 1.5rem;
+        padding: 2rem;
+      }
+
+      .novelty__image {
+        aspect-ratio: 2.3 / 1;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    width: 100%;
+    max-width: 90rem;
+    aspect-ratio: 1.5 / 1;
+    overflow: hidden;
+
+    border-radius: 3.5rem;
+
+    &>picture img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+      width: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   &__qr-code {

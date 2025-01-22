@@ -10,6 +10,12 @@
 
   border-radius: 3rem;
 
+  @include breakpoint(tablet) {
+    padding: 2.6rem 3.2rem;
+
+    border-radius: 2rem;
+  }
+
   &__image {
     position: absolute;
     inset: -1px;
@@ -33,15 +39,34 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @include breakpoint(tablet) {
+      flex-grow: 1;
+      align-items: center;
+      gap: 1.7rem;
+    }
   }
 
   &__title {
     @extend .text-48;
+
+    @include breakpoint(tablet) {
+      max-width: 10ch;
+      margin-right: auto;
+
+      text-align: left;
+    }
   }
 
   &__text {
     @include font(2.4rem, 125%, 500);
     letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      text-align: left;
+      margin-right: auto;
+      @include font(1.4rem, 142.8%, 500);
+    }
   }
 
   &__button {
@@ -58,6 +83,12 @@
 
     color: var(--White, #fff);
 
+    @include breakpoint(tablet) {
+      align-items: flex-end;
+      justify-content: stretch;
+      padding: 2.6rem 3.2rem;
+    }
+
     .link-icon {
       &.link-icon--outlined {
         border: 1px solid var(--White, #fff);
@@ -66,7 +97,7 @@
 
         .icon-link {
           stroke: var(--White, #fff);
-      }
+        }
       }
     }
   }
@@ -76,13 +107,25 @@
 
     .about-link__info {
       flex: 0 1 39rem;
+
+      @include breakpoint(tablet) {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+      }
     }
 
     .about-link__image {
-        inset: unset;
-        top: 1.2rem;
-        bottom: 1.2rem;
-        right: 0;
+      inset: unset;
+      top: 1.2rem;
+      bottom: 1.2rem;
+      right: 0;
+
+      @include breakpoint(tablet) {
+        top: 2rem;
+        right: 3rem;
+        bottom: unset;
+        left: 3rem;
+      }
     }
   }
 }

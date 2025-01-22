@@ -1,96 +1,135 @@
 .hero-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  padding-block: 7rem;
+
+  color: var(--White, #fff);
+
+  @include breakpoint(tablet) {
+    align-items: center;
+
+    padding-block: 19rem 11rem;
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+
+    overflow: hidden;
+    width: calc(100% - (2 * 1.5rem));
+    height: 100%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 5rem;
+
+    @include breakpoint(tablet) {
+      width: calc(100% - (2 * 0.5rem));
+      border-radius: 2rem;
+    }
+
+    &::after {
+      position: absolute;
+      inset: 0;
+      z-index: 101;
+
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.44%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      content: "";
+    }
+
+    video,
+    img {
+      display: block;
+      width: 100%;
+      min-height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__body {
+    @extend [class*="__site-container"];
+
+    position: relative;
+    z-index: 200;
+  }
+
+  &__article {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
+    gap: 2.5rem;
 
-    padding-block: 7rem;
+    &.hero-slide__article--mw {
+      max-width: 62rem;
 
-    color: var(--White, #fff);
-
-    &__image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 100;
-
-        overflow: hidden;
-        width: calc(100% - (2 * 1.5rem));
-        height: 100%;
-        transform: translate(-50%, -50%);
-
-        border-radius: 5rem;
-
-        &::after {
-            position: absolute;
-            inset: 0;
-            z-index: 101;
-
-            width: 100%;
-            height: 100%;
-
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.44%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-            content: "";
-        }
-
-        video,
-        img {
-            display: block;
-            width: 100%;
-            min-height: 100%;
-
-            object-fit: cover;
-            object-position: center;
-        }
+      @include breakpoint(tablet) {
+        max-width: 100%;
+      }
     }
 
-    &__body {
-        @extend [class*="__site-container"];
+    @include breakpoint(tablet) {
+      align-items: center;
+      gap: 2rem;
+    }
+  }
 
-        position: relative;
-        z-index: 200;
+  &__title {
+    @extend .text-75;
+
+    @include breakpoint(tablet) {
+      max-width: 15ch;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include font(3rem, 133.25%, 400);
+    letter-spacing: -0.03em;
+
+    @include breakpoint(tablet) {
+      max-width: 20ch;
+      text-align: center;
+      @include font(1.6rem, 125%, 500);
+    }
+  }
+
+  &__link {
+    &.link-icon--white {
+      .icon-link {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &.hero-slide--grey {
+    color: var(--Grafiit-main, #303030);
+
+    .hero-slide__image {
+      background-color: var(--color-bg-2, #F5F5F7);
+
+      &::after {
+        content: none;
+      }
     }
 
-    &__article {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-
-        &.hero-slide__article--mw {
-            max-width: 62rem;
-        }
+    .hero-slide__article {
+      max-width: 80rem;
     }
+  }
 
-    &__title {
-        @extend .text-75;
+  &.hero-slide--toolip {
+    @include breakpoint(tablet) {
+      padding-block: 11rem 25rem;
+      min-height: 50rem;
+      justify-content: unset;
     }
-
-    &__text {
-        @include font(3rem, 133.25%, 400);
-        letter-spacing: -0.03em;
-    }
-
-    &__link {
-        &.link-icon--white {
-            .icon-link {
-                transform: rotate(0);
-            }
-        }
-    }
-
-    &.hero-slide--grey {
-        color: var(--Grafiit-main, #303030);
-
-        .hero-slide__image {
-            background-color: var(--color-bg-2, #F5F5F7);
-
-            &::after {
-                content: none;
-            }
-        }
-
-        .hero-slide__article {
-            max-width: 80rem;
-        }
-    }
+  }
 }

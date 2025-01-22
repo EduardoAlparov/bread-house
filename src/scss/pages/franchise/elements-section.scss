@@ -8,8 +8,7 @@
     @include breakpoint(tablet) {
       display: flex;
       align-items: stretch;
-      gap: 1.8rem;
-      overflow: hidden;
+      gap: 0;
     }
   }
 

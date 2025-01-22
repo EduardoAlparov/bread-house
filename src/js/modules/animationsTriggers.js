@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default () => {
     const triggers = document.querySelectorAll('.js-animation-trigger');
-    const isMobile = window.matchMedia('(max-width: 992px)').matches;
+    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
     let startPercent;
 
     isMobile ? (startPercent = 30) : (startPercent = 0);

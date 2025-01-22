@@ -83,5 +83,11 @@
         height: 1.3rem;
       }
     }
+
+    &.main-about__quotation {
+      &::after {
+        content: none;
+      }
+    }
   }
 }

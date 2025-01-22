@@ -53,7 +53,7 @@
   ];
 
 section.section.elements-section
-  .elements-section__site-container
+  .elements-section__site-container.js-transform-swiper
     .elements-section__heading.section__heading
       h2.events-section__title.section__title
         | 9 элементов инструментов
@@ -62,14 +62,15 @@ section.section.elements-section
       p.events-section__subtitle.section__subtitle
         | Единое окно эффективного управления пекарней
 
-    ul.elements-section__body
-      each item in elements
-        li.elements-section__item.elements-item
-          .elements-item__image
-            +picture(item.img, 'image')
-          .elements-item__body
-            .elements-item__title=item.title
-            .elements-item__text=item.text
+    .elements-section__body-wrapper.js-swiper
+      ul.elements-section__body.js-swiper-wrapper
+        each item in elements
+          li.elements-section__item.elements-item.js-swiper-slide
+            .elements-item__image
+              +picture(item.img, 'image')
+            .elements-item__body
+              .elements-item__title=item.title
+              .elements-item__text=item.text
 
     .elements-section__bottom
       .elements-section__swiper-controls

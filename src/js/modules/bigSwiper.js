@@ -12,7 +12,7 @@ export default () => {
             initialSlide: isAutoplay ? 1 : 0,
             modules: [ Autoplay, Navigation ],
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 10,
             speed: 1000,
             loop: isAutoplay ? true : false,
 
@@ -25,6 +25,12 @@ export default () => {
                 nextEl: big.querySelector('.double-btns__btn--next'),
                 prevEl: big.querySelector('.double-btns__btn--prev'),
             },
+
+            breakpoints: {
+              1024: {
+                spaceBetween: 20,
+              }
+            }
         })
     })
 }

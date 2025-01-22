@@ -1,73 +1,114 @@
 .hero {
-    padding-block: 1rem;
+  padding-block: 1rem;
 
-    &__slider-wrapper {
-        width: 100%;
+  &__slider-wrapper {
+    width: 100%;
 
-        overflow: hidden;
+    overflow: hidden;
+  }
+
+  &__swiper {
+    &.swiper {}
+  }
+
+  &__swipper-wrapper {
+    &.swiper-wrapper {}
+  }
+
+  &__swiper-slide {
+
+    &.hero-slide {
+      min-height: 81.5rem;
+
+      @include breakpoint(tablet) {
+        min-height: 50rem;
+      }
     }
+  }
 
-    &__swiper {
-        &.swiper {}
+  &__swiper-control {
+    position: absolute;
+    bottom: 7rem;
+    right: 6rem;
+    z-index: 300;
+
+    @include breakpoint(tablet) {
+      right: unset;
+      bottom: 3rem;
+      left: 50%;
+
+      transform: translateX(-50%);
     }
+  }
 
-    &__swipper-wrapper {
-        &.swiper-wrapper {}
+  &__stats-line {
+    width: calc(100% - (2 * 1.5rem));
+    margin-top: 1.5rem;
+
+    @include breakpoint(tablet) {
+      width: calc(100% - (2 * 0.5rem));
+      margin-top: 1rem;
     }
+  }
 
-    &__swiper-slide {
+  &__tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.5rem;
 
-        &.hero-slide {
-            min-height: 81.5rem;
+    padding: 4.4rem 6.2rem;
 
-        }
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(9.5px);
+    border-radius: 3rem;
+
+    color: #FFF;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+
+      padding: 2.4rem 2.1rem;
+
+
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(7.661654472351074px);
+      border: 0.806px solid rgba(255, 255, 255, 0.15);
+      border-radius: 2rem;
     }
+  }
 
-    &__swiper-control {
-        position: absolute;
-        bottom: 7rem;
-        right: 6rem;
-        z-index: 300;
+  &__tooltip-icon {
+    width: 3rem;
+    height: 2.2rem;
+
+    background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2223%22%20viewBox%3D%220%200%2030%2023%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M27%201.83333C28.6667%203.66667%2029.6667%205.66667%2029.6667%209C29.6667%2014.8333%2025.5%2020%2019.6667%2022.6667L18.1667%2020.5C23.6667%2017.5%2024.8333%2013.6667%2025.1667%2011.1667C24.3333%2011.6667%2023.1667%2011.8333%2022%2011.6667C19%2011.3333%2016.6667%209%2016.6667%205.83333C16.6667%204.33333%2017.3333%202.83333%2018.3333%201.66667C19.5%200.5%2020.8333%200%2022.5%200C24.3333%200%2026%200.833334%2027%201.83333ZM10.3333%201.83333C12%203.66667%2013%205.66667%2013%209C13%2014.8333%208.83333%2020%203%2022.6667L1.5%2020.5C7%2017.5%208.16667%2013.6667%208.5%2011.1667C7.66667%2011.6667%206.5%2011.8333%205.33333%2011.6667C2.33333%2011.3333%200%208.83333%200%205.83333C0%204.33333%200.666667%202.83333%201.66667%201.66667C2.83333%200.5%204.16667%200%205.83333%200C7.66667%200%209.33333%200.833334%2010.3333%201.83333Z%22%20fill%3D%22%23ECCD75%22%2F%3E%0A%3C%2Fsvg%3E');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include breakpoint(tablet) {
+      width: 2rem;
+      height: 1.5rem;
     }
+  }
 
-    &__stats-line {
-        width: calc(100% - (2 * 1.5rem));
-        margin-top: 1.5rem;
+  &__tooltip-text {
+    @include font(2rem, 175%, 500);
+    letter-spacing: -0.03em;
+
+    @include breakpoint(tablet) {
+      @include font(1.2rem, 220%, 500);
     }
+  }
 
-    &__tooltip {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 2.5rem;
+  &__tooltip-bigtext {
+    @include font(3.2rem, 125%, 500);
+    letter-spacing: -0.03em;
 
-        padding: 4.4rem 6.2rem;
-
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(9.5px);
-        border-radius: 3rem;
-
-        color: #FFF;
+    @include breakpoint(tablet) {
+      @include font(1.6rem, 125%, 500);
     }
-
-    &__tooltip-icon {
-        width: 3rem;
-        height: 2.2rem;
-
-        background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2223%22%20viewBox%3D%220%200%2030%2023%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M27%201.83333C28.6667%203.66667%2029.6667%205.66667%2029.6667%209C29.6667%2014.8333%2025.5%2020%2019.6667%2022.6667L18.1667%2020.5C23.6667%2017.5%2024.8333%2013.6667%2025.1667%2011.1667C24.3333%2011.6667%2023.1667%2011.8333%2022%2011.6667C19%2011.3333%2016.6667%209%2016.6667%205.83333C16.6667%204.33333%2017.3333%202.83333%2018.3333%201.66667C19.5%200.5%2020.8333%200%2022.5%200C24.3333%200%2026%200.833334%2027%201.83333ZM10.3333%201.83333C12%203.66667%2013%205.66667%2013%209C13%2014.8333%208.83333%2020%203%2022.6667L1.5%2020.5C7%2017.5%208.16667%2013.6667%208.5%2011.1667C7.66667%2011.6667%206.5%2011.8333%205.33333%2011.6667C2.33333%2011.3333%200%208.83333%200%205.83333C0%204.33333%200.666667%202.83333%201.66667%201.66667C2.83333%200.5%204.16667%200%205.83333%200C7.66667%200%209.33333%200.833334%2010.3333%201.83333Z%22%20fill%3D%22%23ECCD75%22%2F%3E%0A%3C%2Fsvg%3E');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    &__tooltip-text {
-        @include font(2rem, 175%, 500);
-        letter-spacing: -0.03em;
-    }
-
-    &__tooltip-bigtext {
-        @include font(3.2rem, 125%, 500);
-        letter-spacing: -0.03em;
-    }
+  }
 }

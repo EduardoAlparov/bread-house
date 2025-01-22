@@ -19,6 +19,7 @@ import bigSwiper from './modules/bigSwiper';
 import shortsSwiper from './modules/shortsSwiper';
 import eventsSwiper from './modules/eventsSwiper';
 import footerMenuExpand from './modules/footerMenuExpand';
+import mobileSwipers from './modules/mobileSwipers';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -41,4 +42,5 @@ documenReady(() => {
   shortsSwiper();
   eventsSwiper();
   footerMenuExpand();
+  mobileSwipers();
 });

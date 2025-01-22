@@ -33,16 +33,16 @@
   ]
 
 section.section.support-section
-  .support-section__site-container
+  .support-section__site-container.js-transform-swiper
     .support-section__heading.section__heading
       h2.events-section__title.section__title Не оставим один на один с бизнесом
       p.events-section__subtitle.section__subtitle
         | помогаем с фин.моделью на этапе заявки до обучения персонала, которые работают руками
 
-    .support-section__list-wrapper.swiper
-      ul.support-section__list
+    .support-section__list-wrapper.swiper.js-swiper
+      ul.support-section__list.js-swiper-wrapper
         each item in supportTeam
-          li.support-section__item.support-item
+          li.support-section__item.support-item.js-swiper-slide
             .support-item__image
               +picture(item.img, '')
             .support-item__role(class=item.roleClass)=item.role

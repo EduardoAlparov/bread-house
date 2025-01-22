@@ -28,6 +28,15 @@
       }
     }
 
+    &+.franchise-formats__link {
+      &.link-icon {
+        @include breakpoint(tablet) {
+          width: 100%;
+          margin-top: 2.5rem;
+        }
+      }
+    }
+
     @include breakpoint(tablet) {
       flex-direction: column;
       gap: 3.5rem;
@@ -89,6 +98,7 @@
     @include breakpoint(tablet) {
       @include font(1.6rem, 125%, 500);
       text-align: center;
+      text-wrap: balance;
     }
   }
 
@@ -161,11 +171,21 @@
   &__double-btns {
     margin-top: 2.5rem;
     margin-left: 11.6rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+      margin-inline: auto;
+    }
   }
 
   &__approach {
     max-width: 54rem;
     aspect-ratio: 1.25 / 1;
+
+    @include breakpoint(tablet) {
+      max-width: 25rem;
+      aspect-ratio: 1;
+    }
   }
 
   &__quotation {

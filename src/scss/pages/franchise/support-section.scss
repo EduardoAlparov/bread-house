@@ -13,6 +13,10 @@
     display: flex;
     align-items: start;
     gap: 5.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 0;
+    }
   }
 
   &__item {
@@ -20,6 +24,11 @@
 
     &:not(:last-child) {
       padding-right: 5.5rem;
+
+      @include breakpoint(tablet) {
+        min-width: 28rem;
+        padding-right: 2rem;
+      }
 
       &::after {
         position: absolute;

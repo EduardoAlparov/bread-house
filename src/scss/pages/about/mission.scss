@@ -1,31 +1,42 @@
 .mission {
-    &__title {
-        margin-bottom: 7.5rem;
-    }
+  &__title {
+    margin-bottom: 7.5rem;
+  }
 
-    &__slider-wrapper {
-        max-width: 150rem;
-        margin-inline: auto;
-    }
+  &__slider-wrapper {
+    max-width: 150rem;
+    margin-inline: auto;
 
-    &__swiper.swiper {
-        overflow: visible;
+    @include breakpoint(tablet) {
+      max-width: 100%;
     }
+  }
 
-    &__swiper-controls {
-        display: flex;
-        justify-content: center;
-        margin-top: 7.5rem;
+  &__swiper.swiper {
+    overflow: visible;
+    width: calc(100% - 8rem);
+  }
+
+  &__swiper-wrapper.swiper-wrapper {
+    align-items: stretch;
+  }
+
+  &__swiper-slide {
+    @include breakpoint(tablet) {
+      // max-width: 80vw;
     }
+  }
 
-    &__courses {
-      display: grid;
-      grid-template-columns: repeat(2, 0.5fr);
-      grid-auto-rows: calc((60rem * 2 + 5rem) / 2);
-      gap: 5rem;
-    }
+  &__swiper-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 7.5rem;
+  }
 
-    &__course {
-
-    }
+  &__courses {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-auto-rows: calc((60rem * 2 + 5rem) / 2);
+    gap: 5rem;
+  }
 }

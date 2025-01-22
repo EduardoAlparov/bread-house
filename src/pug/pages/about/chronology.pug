@@ -112,7 +112,7 @@ section.section.chronology
           button.chronology__nav-btn.tab-btn(type="button", data-chrono=item.data)=item.text
 
     .chronology__list-wrapper
-      ul.chronology__list
+      ul.chronology__list._collapsed
         each item in chronologyItems
           li.chronology__item(class=item.class)
             .chronology__item-info
@@ -124,6 +124,8 @@ section.section.chronology
             else
               .chronology__item-image
                 +picture(item.img)
+
+    button.chronology__expand.stats-section__expand.show-on-mobile(type="button") Показать еще
 
     .chronology__link-wrapper
       .link-icon.link-icon--grey

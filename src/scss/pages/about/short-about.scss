@@ -1,203 +1,302 @@
 .short-about {
-    &__body {
-        position: relative;
+  &__body {
+    position: relative;
 
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        gap: 9rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 9rem;
 
-        width: 100%;
-        max-width: 120rem;
-        margin-inline: auto;
-        padding: 8rem 9.3rem 8rem 10rem;
+    width: 100%;
+    max-width: 120rem;
+    margin-inline: auto;
+    padding: 8rem 9.3rem 8rem 10rem;
 
-        background-color: var(--Grafiit-main, #303030);
-        border-radius: 3.5rem;
+    background-color: var(--Grafiit-main, #303030);
+    border-radius: 3.5rem;
 
-        color: #FFF;
+    color: #FFF;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+
+      padding: 3rem 2rem;
+
+      border-radius: 2rem;
+    }
+  }
+
+  &__left,
+  &__right {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    @include breakpoint(tablet) {
+      align-items: center;
+    }
+  }
+
+  &__right {
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      gap: 1.5rem;
+    }
+  }
+
+  &__left {
+    gap: 3.1rem;
+    flex-shrink: 1;
+
+    @include breakpoint(tablet) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__tooltip {
+    @include font(1.8rem, 111.1%, 500);
+
+    display: grid;
+    place-items: center;
+    place-content: center;
+
+    width: min-content;
+    height: 5rem;
+    padding: 1.2rem 2.4rem;
+    transform: rotate(-3deg);
+
+    letter-spacing: -0.03em;
+    text-align: center;
+    white-space: nowrap;
+
+    border: 1px solid #FFF;
+    border-radius: 50rem;
+
+    @include breakpoint(tablet) {
+      height: 3.5rem;
+
+      @include font(1.2rem, 111.1%, 500);
+    }
+  }
+
+  &__title {
+    @extend .text-h1;
+
+    width: min-content;
+
+    &:not(.short-about__title--no-quotes) {
+      &::after {
+        display: inline-block;
+
+        width: 3rem;
+        height: 6rem;
+        margin-left: 6rem;
+
+        background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2223%22%20viewBox%3D%220%200%2030%2023%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M27%201.83333C28.6667%203.66667%2029.6667%205.66667%2029.6667%209C29.6667%2014.8333%2025.5%2020%2019.6667%2022.6667L18.1667%2020.5C23.6667%2017.5%2024.8333%2013.6667%2025.1667%2011.1667C24.3333%2011.6667%2023.1667%2011.8333%2022%2011.6667C19%2011.3333%2016.6667%209%2016.6667%205.83333C16.6667%204.33333%2017.3333%202.83333%2018.3333%201.66667C19.5%200.5%2020.8333%200%2022.5%200C24.3333%200%2026%200.833334%2027%201.83333ZM10.3333%201.83333C12%203.66667%2013%205.66667%2013%209C13%2014.8333%208.83333%2020%203%2022.6667L1.5%2020.5C7%2017.5%208.16667%2013.6667%208.5%2011.1667C7.66667%2011.6667%206.5%2011.8333%205.33333%2011.6667C2.33333%2011.3333%200%208.83333%200%205.83333C0%204.33333%200.666667%202.83333%201.66667%201.66667C2.83333%200.5%204.16667%200%205.83333%200C7.66667%200%209.33333%200.833334%2010.3333%201.83333Z%22%20fill%3D%22%23ECCD75%22%2F%3E%0A%3C%2Fsvg%3E');
+        background-size: 3rem 2.3rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+
+        @include breakpoint(tablet) {
+          content: none;
+        }
+      }
     }
 
-    &__left,
-    &__right {
-        flex-shrink: 0;
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+  }
 
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
+  &__text {
+    @include font(3rem, 133.3%, 500);
+
+    max-width: 25ch;
+    letter-spacing: -0.03em;
+
+    @include breakpoint(tablet) {
+      letter-spacing: -0.022em;
+      text-align: center;
+      @include font(1.6rem, 125%, 500);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-left: 1rem;
+
+    list-style: none;
+
+    @include breakpoint(tablet) {
+      align-items: center;
+      padding-left: unset;
     }
 
-    &__right {
-        justify-content: space-between;
-    }
+    &>li {
+      @include font(2.4rem, 141.6%, 400);
 
-    &__left {
-        gap: 3.1rem;
-        flex-shrink: 1;
-    }
+      position: relative;
 
-    &__tooltip {
-        @include font(1.8rem, 111.1%, 500);
+      padding-left: 3.6rem;
+
+      letter-spacing: -0.03em;
+
+      @include breakpoint(tablet) {
+        padding-left: 2rem;
+
+        text-align: center;
+        @include font(1.2rem, 141.6%, 400);
+      }
+
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
 
         display: grid;
         place-items: center;
 
-        width: min-content;
-        height: 5rem;
-        padding: 1.2rem 2.4rem;
-        transform: rotate(-3deg);
+        width: 3.6rem;
 
-        letter-spacing: -0.03em;
-        text-align: center;
-        white-space: nowrap;
+        content: '\2022';
 
-        border: 1px solid #FFF;
-        border-radius: 50rem;
-    }
-
-    &__title {
-        @extend .text-h1;
-
-        width: min-content;
-
-        &:not(.short-about__title--no-quotes) {
-            &::after {
-                display: inline-block;
-
-                width: 3rem;
-                height: 6rem;
-                margin-left: 6rem;
-
-                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2223%22%20viewBox%3D%220%200%2030%2023%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M27%201.83333C28.6667%203.66667%2029.6667%205.66667%2029.6667%209C29.6667%2014.8333%2025.5%2020%2019.6667%2022.6667L18.1667%2020.5C23.6667%2017.5%2024.8333%2013.6667%2025.1667%2011.1667C24.3333%2011.6667%2023.1667%2011.8333%2022%2011.6667C19%2011.3333%2016.6667%209%2016.6667%205.83333C16.6667%204.33333%2017.3333%202.83333%2018.3333%201.66667C19.5%200.5%2020.8333%200%2022.5%200C24.3333%200%2026%200.833334%2027%201.83333ZM10.3333%201.83333C12%203.66667%2013%205.66667%2013%209C13%2014.8333%208.83333%2020%203%2022.6667L1.5%2020.5C7%2017.5%208.16667%2013.6667%208.5%2011.1667C7.66667%2011.6667%206.5%2011.8333%205.33333%2011.6667C2.33333%2011.3333%200%208.83333%200%205.83333C0%204.33333%200.666667%202.83333%201.66667%201.66667C2.83333%200.5%204.16667%200%205.83333%200C7.66667%200%209.33333%200.833334%2010.3333%201.83333Z%22%20fill%3D%22%23ECCD75%22%2F%3E%0A%3C%2Fsvg%3E');
-                background-size: 3rem 2.3rem;
-                background-repeat: no-repeat;
-                background-position: center;
-                content: "";
-            }
+        @include breakpoint(tablet) {
+          width: 2rem;
         }
+      }
+    }
+  }
+
+  &__author {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    width: 35rem;
+    aspect-ratio: 1;
+    overflow: hidden;
+    padding: 2.6rem 4.2rem;
+
+    border-radius: 3rem;
+
+    @include breakpoint(tablet) {
+      width: 50%;
+      min-width: 15rem;
+      padding: 2rem;
+
+      border-radius: 2rem;
     }
 
-    &__text {
-        @include font(3rem, 133.3%, 500);
+    &::before {
+      position: absolute;
+      inset: -1px;
+      z-index: 100;
 
-        max-width: 25ch;
-        letter-spacing: -0.03em;
+      display: block;
+
+      background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 35.56%, rgba(48, 48, 48, 0.75) 83.89%);
+      content: "";
     }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        padding-left: 1rem;
-
-        list-style: none;
-
-        &>li {
-            @include font(2.4rem, 141.6%, 400);
-
-            position: relative;
-
-            padding-left: 3.6rem;
-
-            letter-spacing: -0.03em;
-
-
-            &::before {
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                display: grid;
-                place-items: center;
-
-                width: 3.6rem;
-
-                content: '\2022';
-            }
-        }
+    &.short-about__author--hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
     }
+  }
 
-    &__author {
-        position: relative;
+  &__author-info {
+    position: relative;
+    z-index: 200;
 
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
 
-        width: 35rem;
-        aspect-ratio: 1;
-        overflow: hidden;
-        padding: 2.6rem 4.2rem;
-
-        border-radius: 3rem;
-
-        &::before {
-            position: absolute;
-            inset: -1px;
-            z-index: 100;
-
-            display: block;
-
-            background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 35.56%, rgba(48, 48, 48, 0.75) 83.89%);
-            content: "";
-        }
-
-        &.short-about__author--hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
+    @include breakpoint(tablet) {
+      gap: 0.5rem;
     }
+  }
 
-    &__author-info {
-        position: relative;
-        z-index: 200;
+  &__author-name {
+    @include font(3rem, 116.7%, 500);
+    letter-spacing: -0.04em;
 
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
+    @include breakpoint(tablet) {
+      width: min-content;
+      @include font(1.6rem, 125%, 500);
     }
+  }
 
-    &__author-name {
-        @include font(3rem, 116.7%, 500);
-        letter-spacing: -0.04em;
+  &__author-role {
+    @include font(1.8rem, 122.2%, 400);
+    letter-spacing: -0.04em;
+
+    @include breakpoint(tablet) {
+      max-width: 20ch;
+
+      @include font(1rem, 130%, 500);
     }
+  }
 
-    &__author-role {
-        @include font(1.8rem, 122.2%, 400);
-        letter-spacing: -0.04em;
+  &__author-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 50;
+
+    display: block;
+
+    width: 100%;
+    max-width: unset;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__link {
+    &.link-icon {
+      width: 100%;
+      padding: 3.1rem 7.2rem;
+
+      @include breakpoint(tablet) {
+        width: 50%;
+        min-width: 27rem;
+        padding: 1.6rem 2.4rem;
+      }
     }
+  }
 
-    &__author-image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 50;
+  &__pic {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 
-        display: block;
+  &__icon {
+    width: 25px;
+    height: 19px;
 
-        width: 100%;
-        max-width: unset;
-        min-height: 100%;
-        transform: translate(-50%, -50%);
-
-        object-fit: cover;
-        object-position: center;
-    }
-
-    &__link {
-        &.link-icon {
-            width: 100%;
-            padding: 3.1rem 7.2rem;
-        }
-    }
-
-    &__pic {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
+    background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2223%22%20viewBox%3D%220%200%2030%2023%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M27%201.83333C28.6667%203.66667%2029.6667%205.66667%2029.6667%209C29.6667%2014.8333%2025.5%2020%2019.6667%2022.6667L18.1667%2020.5C23.6667%2017.5%2024.8333%2013.6667%2025.1667%2011.1667C24.3333%2011.6667%2023.1667%2011.8333%2022%2011.6667C19%2011.3333%2016.6667%209%2016.6667%205.83333C16.6667%204.33333%2017.3333%202.83333%2018.3333%201.66667C19.5%200.5%2020.8333%200%2022.5%200C24.3333%200%2026%200.833334%2027%201.83333ZM10.3333%201.83333C12%203.66667%2013%205.66667%2013%209C13%2014.8333%208.83333%2020%203%2022.6667L1.5%2020.5C7%2017.5%208.16667%2013.6667%208.5%2011.1667C7.66667%2011.6667%206.5%2011.8333%205.33333%2011.6667C2.33333%2011.3333%200%208.83333%200%205.83333C0%204.33333%200.666667%202.83333%201.66667%201.66667C2.83333%200.5%204.16667%200%205.83333%200C7.66667%200%209.33333%200.833334%2010.3333%201.83333Z%22%20fill%3D%22%23ECCD75%22%2F%3E%0A%3C%2Fsvg%3E');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
