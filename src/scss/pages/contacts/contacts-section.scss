@@ -1,0 +1,91 @@
+.contacts-section {
+
+  &__nav {
+    margin-bottom: 7.5rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__window-wrappper,
+  &__window {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.5rem;
+    }
+  }
+
+  &__link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__link-item {
+    flex-basis: calc(100% / 4 - (3rem * 3 / 4));
+
+    @include breakpoint(tablet) {
+      flex-basis: calc(100% / 2 - (1rem / 2));
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: unset;
+      gap: 1rem;
+    }
+  }
+
+  &__socials-item {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 100%;
+  }
+
+  &__socials-link {
+    flex-grow: 1;
+  }
+
+  &__map-wrapper {
+    position: relative;
+
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 3.62 / 1;
+
+    background-color: lightgray;
+    border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      aspect-ratio: 1.415 / 1;
+
+      border-radius: 2rem;
+    }
+  }
+
+  &__map {
+    position: absolute;
+    inset: -1px;
+    z-index: 100;
+  }
+
+  &__big-link {
+    width: 100%;
+  }
+}

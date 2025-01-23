@@ -20,6 +20,7 @@ import shortsSwiper from './modules/shortsSwiper';
 import eventsSwiper from './modules/eventsSwiper';
 import footerMenuExpand from './modules/footerMenuExpand';
 import mobileSwipers from './modules/mobileSwipers';
+import locationMap from './modules/locationMap';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -43,4 +44,5 @@ documenReady(() => {
   eventsSwiper();
   footerMenuExpand();
   mobileSwipers();
+  locationMap();
 });

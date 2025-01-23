@@ -109,6 +109,10 @@
     background-color: #EAEAEF;
 
     color: var(--Grafiit-main, #303030);
+
+    .icon-link {
+      stroke: var(--Grafiit-main, #303030);
+    }
   }
 
   &.link-icon--dark-blue {

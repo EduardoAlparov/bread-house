@@ -132,4 +132,19 @@
       justify-content: unset;
     }
   }
+
+  &.hero-slide--low {
+    padding-block: 7rem 5rem;
+
+    @include breakpoint(tablet) {
+      padding-block: 7rem 3.4rem;
+    }
+
+    .hero-slide__image {
+      &::after {
+        background: rgba(48, 48, 48, 0.50);
+        backdrop-filter: blur(4px);
+      }
+    }
+  }
 }

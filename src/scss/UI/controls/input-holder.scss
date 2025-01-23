@@ -7,14 +7,6 @@
     height: 5rem;
   }
 
-  &:has(textarea) {
-    height: 12rem;
-
-    @include breakpoint(laptop) {
-      height: 20rem;
-    }
-  }
-
   &>input {
     width: 100%;
     height: 100%;
@@ -45,17 +37,26 @@
   }
 
   &>textarea {
+    width: 100%;
     height: 100%;
-    padding: 2rem var(--gap-l, 3.2rem);
+    padding: 3rem 4rem;
 
     color: var(--Grafiit-main, #303030);
 
-    background: var(--Gray-20, #F5F5F5);
+    background: #FFF;
     border-radius: 2.5rem;
-    resize: none;
+    border: 1px solid #EEE;
 
     letter-spacing: -0.02em;
     @include font(2rem, 125%, 400);
+
+    @include breakpoint(tablet) {
+      padding: 1.6rem 2.4rem;
+
+      border-radius: 1rem;
+
+      @include font(1.4rem, 125%, 400);
+    }
   }
 
   &>input {

@@ -69,3 +69,4 @@ npm run build:prod
 ## Страница - [О нас.](https://eduardoalparov.github.io/bread-house/about.html)
 ## Страница - [Производство.](https://eduardoalparov.github.io/bread-house/production.html)
 ## Страница - [Oбразование.](https://eduardoalparov.github.io/bread-house/education.html)
+## Страница - [Контакты.](https://eduardoalparov.github.io/bread-house/contacts.html)

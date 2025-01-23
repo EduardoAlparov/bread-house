@@ -1,0 +1,93 @@
+-
+  const navItems = [
+    {
+      data: "franchise-001",
+      text: "Продажа франшизы",
+    },
+    {
+      data: "open-001",
+      text: "Отдел открытия и комплектации",
+    },
+    {
+      data: "support-001",
+      text: "Отдел сопровождения",
+    },
+    {
+      data: "points-001",
+      text: "Точки продаж",
+    }
+  ];
+
+section.hero
+  .hero__slider-wrapper
+    .hero__swiper.swiper
+      ul.hero__swipper-wrapper.swiper-wrapper
+        li.hero__swiper-slide.swiper-slide.hero-slide.hero-slide--low
+          .hero-slide__image
+            +picture('hero/contacts.jpg')
+
+          .hero-slide__body
+            .hero-slide__article.hero-slide__article--mw
+              h1.hero-slide__title
+                | Контакты
+
+  .hero__contacts-section.contacts-section
+    .contacts-section__site-container
+      .contacts-section__nav.chronology__nav
+        each item in navItems
+          button.chronology__nav-btn.tab-btn(type="button", data-chrono=item.data)=item.text
+
+      .contacts-section__window-wrappper
+        .contacts-section__window
+          .contacts-section__link-list
+            a.contacts-section__link-item.contact-item(href="#")
+              .contact-item__image
+                +picture('hero/link.jpg')
+              .contact-item__tooltip Точка продаж в Екатеренбурге
+            a.contacts-section__link-item.contact-item(href="#")
+              .contact-item__image
+                +picture('hero/link.jpg')
+              .contact-item__tooltip Мы в Ростове-на-Дону
+            a.contacts-section__link-item.contact-item(href="#")
+              .contact-item__image
+                +picture('hero/link.jpg')
+              .contact-item__tooltip Москва главная
+            a.contacts-section__link-item.contact-item(href="#")
+              .contact-item__image
+                +picture('hero/link.jpg')
+              .contact-item__tooltip Волгоград
+
+        .contacts-section__info.contacts-info
+          .contacts-info__item
+            .contacts-info__label Адрес
+            a.contacts-info__link(href="https://yandex.ru/maps/-/CHaOBYIT" target="_blank" rel="noopener noreferrer")
+              | г.Ижевск,  ул. Вадима Сивкова, д. 290, 3 этаж
+          .contacts-info__item
+            .contacts-info__label Бесплатная горячая линия для консультациций
+            a.contacts-info__link(href="tel:88005339573")
+              | 8-800-533-95-73
+          .contacts-info__item
+            .contacts-info__label E-mail
+            a.contacts-info__link(href="mailto:sales@dom-hleba.ru")
+              | sales@dom-hleba.ru
+
+        ul.contacts-section__socials
+          li.contacts-section__socials-item
+            a.contacts-section__socials-link.link-icon.link-icon--dark-blue(href="#")
+              | Мы в ВК
+              +icon-multi('vk-big')
+          li.contacts-section__socials-item
+            a.contacts-section__socials-link.link-icon.link-icon--dark-red(href="#")
+              | Мы на You tube
+              +icon-multi('yt')
+          li.contacts-section__socials-item
+            a.contacts-section__socials-link.link-icon.link-icon--light-blue(href="#")
+              | Наш Telegram-канал
+              +icon-multi('tg')
+
+        .contacts-section__map-wrapper
+          .contacts-section__map.js-yamap
+
+        a.contacts-section__big-link.link-icon.link-icon--grey(href="#")
+          | Стать партнером
+          +icon-multi('link')(class="icon-no-rotate")

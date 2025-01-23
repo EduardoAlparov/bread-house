@@ -23,6 +23,14 @@
       @include breakpoint(tablet) {
         min-height: 50rem;
       }
+
+      &.hero-slide--low {
+        min-height: 45rem;
+
+        @include breakpoint(tablet) {
+          min-height: 20rem;
+        }
+      }
     }
   }
 
@@ -109,6 +117,14 @@
 
     @include breakpoint(tablet) {
       @include font(1.6rem, 125%, 500);
+    }
+  }
+
+  &__contacts-section {
+    margin-top: 7.5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 5rem;
     }
   }
 }

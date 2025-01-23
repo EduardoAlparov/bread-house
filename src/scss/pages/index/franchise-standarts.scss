@@ -41,4 +41,10 @@
       padding: 1.6rem 2.4rem;
     }
   }
+
+  &__direct-list-wrapper {
+    @include breakpoint(tablet) {
+      padding-inline: var(--content-padding, 2rem);
+    }
+  }
 }

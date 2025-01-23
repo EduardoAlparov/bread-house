@@ -160,10 +160,19 @@
     }
   }
 
+  &__textarea {
+    flex-basis: 100%;
+    min-height: 15rem;
+
+    @include breakpoint(tablet) {
+      min-height: 12.5rem;
+    }
+  }
+
   &__agreement {
     display: inline-block;
 
-    // text-align: center;
+    text-align: center;
     color: #909090;
     letter-spacing: -0.04em;
     @include font(1.6rem, 150%, 400);
@@ -210,6 +219,10 @@
       align-items: center;
       gap: 1rem;
 
+      margin-top: 1rem;
+    }
+
+    &.franchise-form__bottom--mt {
       margin-top: 1rem;
     }
   }
