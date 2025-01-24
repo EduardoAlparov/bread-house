@@ -133,6 +133,14 @@
     }
   }
 
+  &.hero-slide--production {
+    @include breakpoint(tablet) {
+      padding-block: 11rem 2.2rem;
+      min-height: 50rem;
+      justify-content: flex-end;
+    }
+  }
+
   &.hero-slide--low {
     padding-block: 7rem 5rem;
 

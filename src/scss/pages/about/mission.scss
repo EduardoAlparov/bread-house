@@ -1,6 +1,10 @@
 .mission {
   &__title {
     margin-bottom: 7.5rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__slider-wrapper {
@@ -31,6 +35,10 @@
     display: flex;
     justify-content: center;
     margin-top: 7.5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.5rem;
+    }
   }
 
   &__courses {

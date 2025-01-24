@@ -86,6 +86,22 @@
       align-items: center;
     }
 
+    &--center {
+      @include breakpoint(tablet) {
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 1.5rem;
+      }
+
+      .video-link__text {
+        @include breakpoint(tablet) {
+          width: auto;
+          max-width: unset;
+          text-align: left;
+        }
+      }
+    }
+
     &.video-link__body--row {
       flex-direction: row;
       align-items: flex-end;
@@ -107,6 +123,10 @@
 
       &:not(:last-child) {
         margin-bottom: 2rem;
+      }
+
+      @include breakpoint(tablet) {
+        @include font(1.6rem, 125%, 500);
       }
     }
   }

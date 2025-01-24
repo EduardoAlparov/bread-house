@@ -68,6 +68,12 @@
 
   &__title {
     @extend .text-h1;
+
+    &--center {
+      @include breakpoint(tablet) {
+        text-align: center;
+      }
+    }
   }
 
   &__desc {
@@ -78,6 +84,12 @@
 
     @include breakpoint(tablet) {
       gap: 1.5rem;
+    }
+
+    &--center {
+      @include breakpoint(tablet) {
+        text-align: center;
+      }
     }
 
     &>p {
@@ -141,6 +153,10 @@
         grid-column: span 1;
         width: 100%;
         aspect-ratio: 0.628 / 1;
+
+        @include breakpoint(tablet) {
+          aspect-ratio: unset;
+        }
       }
 
       &:has(.main-about__novelty) {
@@ -241,6 +257,11 @@
 
     border-radius: 3.5rem;
 
+    @include breakpoint(tablet) {
+      max-width: 100%;
+      border-radius: 1.5rem;
+    }
+
     &>picture img {
       position: absolute;
       top: 50%;
@@ -260,5 +281,10 @@
     left: 5rem;
     bottom: 4.5rem;
     z-index: 100;
+
+    @include breakpoint(tablet) {
+      left: 0.9rem;
+      bottom: 0.9rem;
+    }
   }
 }

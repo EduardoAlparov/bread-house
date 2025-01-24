@@ -8,7 +8,7 @@ export default () => {
     const isMobile = window.matchMedia('(max-width: 1024px)').matches;
     let startPercent;
 
-    isMobile ? (startPercent = 30) : (startPercent = 0);
+    isMobile ? (startPercent = 0) : (startPercent = 0);
 
     triggers.forEach((trigger) => {
         ScrollTrigger.create({

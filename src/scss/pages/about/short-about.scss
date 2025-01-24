@@ -26,6 +26,41 @@
 
       border-radius: 2rem;
     }
+
+    &.short-about__body--left {
+
+      @include breakpoint(tablet) {
+        padding: 4.3rem 2rem;
+      }
+
+      .short-about__left,
+      .short-about__right {
+        @include breakpoint(tablet) {
+          position: relative;
+          z-index: 10;
+
+          align-items: flex-start;
+        }
+      }
+
+      .short-about__list {
+        @include breakpoint(tablet) {
+          align-items: flex-start;
+        }
+
+        &>li {
+          @include breakpoint(tablet) {
+            text-align: left;
+          }
+        }
+      }
+
+      .short-about__title {
+        @include breakpoint(tablet) {
+          width: auto;
+        }
+      }
+    }
   }
 
   &__left,
@@ -288,6 +323,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
   }
 
   &__icon {
