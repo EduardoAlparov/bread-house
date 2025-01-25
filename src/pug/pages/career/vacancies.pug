@@ -1,0 +1,68 @@
+-
+  const vacancies = [
+    {
+      id: "vacancy-01",
+      title: "Кассир - консультант",
+      counter: '01'
+    },
+    {
+      id: "vacancy-02",
+      title: "Кондитер с опытом работы",
+      counter: '02'
+    },
+    {
+      id: "vacancy-03",
+      title: "Кухонный работник",
+      counter: '03'
+    },
+    {
+      id: "vacancy-04",
+      title: "Кассир - консультант",
+      counter: '04'
+    },
+  ]
+
+section.section.franchise-formats
+  .franchise-formats__site-container
+    .franchise-formats__body.js-formats-swiper(data-slide="3")
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--bigger.franchise-formats__left--ail
+          h2.franchise-formats__title.section__title
+            | Работа&nbsp;может
+            br
+            | быть&nbsp;любимой
+
+          p.franchise-formats__text
+            | какой-то хороший текст в одну или
+            | может даже в две строки
+
+          a.franchise-formats__link.link-icon.hide-on-mobile(href="#")
+            | Откликнуться на вакансию
+            +icon-multi('link')
+
+
+
+        .franchise-formats__right
+          .franchise-formats__swiper.franchise-formats__swiper--full-height.swiper
+            .franchise-formats__swiper-wrapper.swiper-wrapper
+              each item in vacancies
+                a.franchise-formats__swiper-slide.swiper-slide.vacancy.vacancy--higher(href="", id=item.id)
+                  .vacancy__inner
+                    .vacancy__counter
+                      span.vacancy__counter-value= item.counter
+                      span.vacancy__counter-divider /
+                      span.vacancy__counter-total= '0'+ vacancies.length
+                    p.vacancy__name= item.title
+                  p.vacancy__term Узнать подробнее
+
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--bigger
+          a.franchise-formats__link.franchise-formats__link--mobile.link-icon.show-on-mobile(href="#")
+            | Откликнуться на вакансию
+            +icon-multi('link')
+        .franchise-formats__right
+          .franchise-formats__double-btns.double-btns
+            button.double-btns__btn.double-btns__btn--prev(type="button")
+              +icon-multi('prev')
+            button.double-btns__btn.double-btns__btn--next(type="button")
+              +icon-multi('prev')

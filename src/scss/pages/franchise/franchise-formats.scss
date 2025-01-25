@@ -75,6 +75,19 @@
       }
     }
 
+    &.franchise-formats__left--ail {
+
+      @include breakpoint(tablet) {
+        align-items: flex-start;
+      }
+
+      .franchise-formats__text {
+        @include breakpoint(tablet) {
+          max-width: 20ch;
+        }
+      }
+    }
+
     &:has(.franchise-formats__jump) {
       flex: 0 0 66rem;
 
@@ -126,6 +139,16 @@
       @include breakpoint(tablet) {
         margin-inline: calc(var(--content-padding) * -1);
         padding-inline: var(--content-padding);
+      }
+    }
+
+    &.franchise-formats__swiper--full-height {
+      &.swiper {
+        height: 100%;
+
+        @include breakpoint(tablet) {
+          height: auto;
+        }
       }
     }
   }

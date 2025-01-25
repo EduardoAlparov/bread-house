@@ -1,0 +1,103 @@
+-
+  const reviews = [
+    {
+      text: `Небольшой хвалебный
+        текст о работе в нашей
+        команде хвалебный
+        текст о работе в нашей
+        команде`,
+      pic: 'review/user-1.png',
+      name: 'Сергей Паль',
+      loc: 'Екатеринбург'
+    },
+    {
+      text: `23%
+        достижимый
+        уровень
+        рентабельности`,
+      pic: 'review/user-2.png',
+      name: 'Ольга Чу',
+      loc: 'Москва'
+    },
+    {
+      text: `Сеть из 3
+        пекарен
+        в малом
+        городе`,
+      pic: 'review/user-3.png',
+      name: 'Тимур Гриб',
+      loc: 'Ростов-на-Дону'
+    },
+    {
+      text: `Кратный рост
+        выручки`,
+      pic: 'review/user-1.png',
+      name: 'Сергей Паль',
+      loc: 'Екатеринбург'
+    },
+    {
+      text: `23%
+        достижимый
+        уровень
+        рентабельности`,
+      pic: 'review/user-2.png',
+      name: 'Ольга Чу',
+      loc: 'Москва'
+    },
+    {
+      text: `Сеть из 3
+        пекарен
+        в малом
+        городе`,
+      pic: 'review/user-3.png',
+      name: 'Тимур Гриб',
+      loc: 'Ростов-на-Дону'
+    },
+    {
+      text: `Кратный рост
+        выручки`,
+      pic: 'review/user-1.png',
+      name: 'Сергей Паль',
+      loc: 'Екатеринбург'
+    },
+    {
+      text: `23%
+        достижимый
+        уровень
+        рентабельности`,
+      pic: 'review/user-2.png',
+      name: 'Ольга Чу',
+      loc: 'Москва'
+    },
+  ];
+
+section.section.reviews
+  .reviews__site-container
+    .reviews__heading.section__heading
+      h2.section__title.section__title--tac
+        span.reviews__count Отзывы сотрудников
+
+    .reviews__body
+      .reviews__swiper.swiper.js-reviews-swiper
+        ul.reviews__swiper-wrapper.swiper-wrapper
+          each item in reviews
+            li.reviews__swiper-slide.swiper-slide
+              a.reviews__item.review(href="#")
+                .review__image
+                  +picture('review/img.png', 'alt')
+
+                .review__body
+                  p.review__text.review__text--smaller=item.text
+                  .review__author
+                    +picture(item.pic, 'alt')
+
+                    .review__author-col
+                      p.review__author-name=item.name
+                      p.review__author-location=item.loc
+
+        .reviews__swiper-controls
+          .double-btns
+            button.double-btns__btn.double-btns__btn--prev(type="button")
+              +icon-multi('prev')
+            button.double-btns__btn.double-btns__btn--next(type="button")
+              +icon-multi('prev')

@@ -231,7 +231,8 @@
     @extend .text-24;
 
     @include breakpoint(tablet) {
-      @include font(1.2rem, 125%, 400);
+      @include font(1.6rem, 125%, 400);
+      letter-spacing: -0.03em;
       text-align: center;
     }
   }

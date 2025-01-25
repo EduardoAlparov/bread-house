@@ -35,6 +35,13 @@
       border-radius: 2rem;
     }
 
+    &.socials-section__image {
+      &--red {
+        background: linear-gradient(180deg, rgba(186, 13, 12, 0.00) 61.67%, rgba(186, 13, 12, 0.90) 96.17%);
+        background-color: #BA0D0C;
+      }
+    }
+
     img {
       position: absolute;
       left: 50%;
@@ -158,6 +165,22 @@
         width: 100%;
         padding-inline: unset;
       }
+    }
+  }
+
+  &__jump {
+    position: absolute;
+    left: 50%;
+    bottom: 3.6rem;
+    z-index: 100;
+
+    width: calc(100% - (7.5rem * 2));
+    transform: translateX(-50%);
+
+    @include breakpoint(tablet) {
+      bottom: 0.8rem;
+
+      width: calc(100% - (0.6rem * 2));
     }
   }
 }

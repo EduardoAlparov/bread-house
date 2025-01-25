@@ -1,0 +1,39 @@
+-
+  const heroStats = [
+    '10 лет работают в компании',
+    '3500 сотрудников',
+    '10 лет работают в компании',
+    '3500 сотрудников',
+    '10 лет работают в компании',
+    '3500 сотрудников',
+    '10 лет работают в компании',
+    '3500 сотрудников',
+  ]
+
+
+section.hero
+  .hero__slider-wrapper
+    .hero__swiper.swiper
+      ul.hero__swipper-wrapper.swiper-wrapper
+        li.hero__swiper-slide.swiper-slide.hero-slide.hero-slide--production
+          .hero-slide__image
+            +picture('hero/career.jpg')
+
+          .hero-slide__body
+            .hero-slide__article.hero-slide__article--mw
+              h1.hero-slide__title
+                | Вкусная&nbsp;работа
+
+              p.hero-slide__text
+                | Немного хорошего текста о&nbsp;работе с&nbsp;нами
+
+              a.hero-slide__link.link-icon.link-icon--white(href="#")
+                | Стать частью команды
+                +icon-multi('link')(class="icon-no-rotate")
+
+
+  .hero__stats-line.hero__site-container.hero-stats
+    .hero-stats__wrapper
+      ul.hero-stats__list
+        each item in heroStats
+          li.hero-stats__item=item

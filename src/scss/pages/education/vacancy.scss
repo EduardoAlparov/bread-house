@@ -11,9 +11,20 @@
   background-color: var(--color-bg-2, #F5F5F7);
   border-radius: 3rem;
 
+  @include breakpoint(tablet) {
+    max-width: 17.5rem;
+    padding: 2.6rem 1.8rem;
+
+    border-radius: 1.8rem;
+  }
+
   &__name {
     @include font(3.2rem, 109.4%, 500);
     letter-spacing: -0.03em;
+
+    @include breakpoint(tablet) {
+      @include font(1.8rem, 103.7%, 500);
+    }
   }
 
   &__inner {
@@ -21,6 +32,10 @@
     flex-direction: column;
     align-items: stretch;
     gap: 3rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
   }
 
   &__text {
@@ -41,11 +56,55 @@
     text-underline-position: from-font;
 
     text-decoration: none;
+
+    @include breakpoint(tablet) {
+      @include font(1.2rem, 155.5%, 500);
+    }
+  }
+
+  &__counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+
+    color: #909090;
+    letter-spacing: -0.03em;
+    @include font(1.6rem, 125%, 500);
+
+    @include breakpoint(tablet) {
+      letter-spacing: -0.02em;
+      @include font(1rem, 187%, 500);
+    }
+  }
+
+  &__counter-value {
+    color: var(--Grafiit-main, #303030);
   }
 
   &:hover {
     .vacancy__term {
       text-decoration: underline;
+    }
+  }
+
+  &.vacancy--higher {
+    aspect-ratio: 0.875 / 1;
+    transition: background 0.3s ease-out;
+
+    @include breakpoint(tablet) {
+      aspect-ratio: 1;
+    }
+
+    .vacancy__name {
+      max-width: min-content;
+    }
+
+    &:hover {
+      background-color: var(--Pale-yellow, #F5E8CE);
+
+      .vacancy__term {
+        text-decoration: none;
+      }
     }
   }
 }
