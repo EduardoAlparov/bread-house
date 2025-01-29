@@ -1,0 +1,85 @@
+.edu-section {
+
+  &__body,
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.5rem;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  &__tag {
+    &.short-about__tooltip {
+      color: var(--Grafiit-main, #303030);
+      background-color: transparent;
+      border: 1px solid var(--Grafiit-main, #303030);
+    }
+  }
+
+  &__title {
+    @extend .text-h1;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__add {
+    &.link-icon {
+      width: 20rem;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__formats {
+    display: none;
+    align-items: stretch;
+    gap: 5rem;
+
+    padding: 7.5rem 8.8rem;
+
+    border-radius: 3.5rem;
+    border: 2px solid #EBEBF0;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      gap: 2.5rem;
+
+      padding: 2.5rem 0 0;
+      border-radius: none;
+      border: none;
+    }
+  }
+
+  &__format {
+    flex: 0 1 50%;
+  }
+
+  &__dropdown {
+    &:has(.acco-section__button--active) {
+      &~.edu-section__formats {
+        display: flex;
+      }
+    }
+  }
+}

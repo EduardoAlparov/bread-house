@@ -1,0 +1,145 @@
+.cities {
+  &__title {
+    text-align: center;
+  }
+
+  &__scrolling-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__scrolling-item {
+    --gap-size: 5rem;
+    --scroll-time: 40s;
+
+    padding-block: 5rem;
+
+    border-top: 2px solid var(--Grafiit-main, #303030);
+
+    @include breakpoint(tablet) {
+      --gap-size: 1.3rem;
+
+      padding-block: 1.3rem;
+
+      border-width: 0.5px;
+    }
+
+    &:last-child {
+      border-bottom: 2px solid var(--Grafiit-main, #303030);
+
+      @include breakpoint(tablet) {
+        border-width: 0.5px;
+      }
+    }
+
+    &.cities__scrolling-item--big {
+      --gap-size: 7rem;
+
+      @include breakpoint(tablet) {
+        --gap-size: 1.8rem;
+      }
+
+      .cities__scrolling-inner {
+        justify-content: flex-end;
+
+        animation: scrollText var(--scroll-time) infinite linear;
+      }
+
+      .cities__scrolling-point {
+        @include font(7.2rem, 111.11%, 500);
+
+        @include breakpoint(tablet) {
+          @include font(1.89rem, 111.11%, 500);
+        }
+      }
+    }
+
+    &.cities__scrolling-item--middle {
+      --gap-size: 6rem;
+
+      @include breakpoint(tablet) {
+        --gap-size: 1.6rem;
+      }
+
+      .cities__scrolling-inner {
+        justify-content: flex-start;
+
+        animation: scrollText var(--scroll-time) infinite reverse linear;
+      }
+
+      .cities__scrolling-point {
+        @include font(4.8rem, 166.66%, 500);
+
+        @include breakpoint(tablet) {
+          @include font(1.26rem, 166.66%, 500);
+        }
+      }
+    }
+
+    &.cities__scrolling-item--small {
+
+      .cities__scrolling-inner {
+        justify-content: flex-end;
+        animation: scrollText var(--scroll-time) infinite linear;
+      }
+
+      .cities__scrolling-point {
+        @include font(3.6rem, 222.222%, 500);
+
+        @include breakpoint(tablet) {
+          @include font(0.94rem, 222.222%, 500);
+        }
+      }
+    }
+  }
+
+  &__scrolling-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: var(--gap-size);
+  }
+
+  &__scrolling-point {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: var(--gap-size);
+
+    &>span {
+      display: block;
+      flex-shrink: 0;
+
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .icon {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+
+      @include breakpoint(tablet) {
+        width: 4px;
+        height: 4px;
+      }
+    }
+
+    &:last-child {
+      .icon {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

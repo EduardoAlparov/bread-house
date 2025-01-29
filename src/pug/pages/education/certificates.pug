@@ -1,0 +1,78 @@
+-
+  const certificates = [
+    {
+      title: `Сертификат
+        о прохождении
+        обучения`,
+      img: 'cert/img.png',
+      text: `Навык
+        который\u00A0вы
+        получите`,
+    },
+    {
+      title: `Сертификат
+        о прохождении
+        обучения`,
+      img: 'cert/img.png',
+      text: `Навык
+        который\u00A0вы
+        получите`,
+    },
+    {
+      title: `Сертификат
+        о прохождении
+        обучения`,
+      img: 'cert/img.png',
+      text: `Навык
+        который\u00A0вы
+        получите`,
+    },
+    {
+      title: `Сертификат
+        о прохождении
+        обучения`,
+      img: 'cert/img.png',
+      text: `Навык
+        который\u00A0вы
+        получите`,
+    },
+  ]
+
+section.section.franchise-formats
+  .franchise-formats__site-container
+    .franchise-formats__body.js-formats-swiper(data-slide="3")
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--bigger
+          h2.franchise-formats__title.section__title
+            | Сертификат
+            br
+            | обучения
+
+        .franchise-formats__right
+          .franchise-formats__swiper.swiper
+            .franchise-formats__swiper-wrapper.swiper-wrapper
+              each item, index in certificates
+                if index == 0
+                  a.franchise-formats__swiper-slide.swiper-slide.certificate.certificate--grey(id="" data-fancybox="certificates")
+                    .certificate__body
+                      p.certificate__title= item.title
+                    .certificate__image
+                      +picture(item.img)
+                      p.certificate__text=item.text
+                else
+                  a.franchise-formats__swiper-slide.swiper-slide.certificate(id="" data-fancybox="certificates")
+                    .certificate__body
+                      p.certificate__title= item.title
+                    .certificate__image
+                      +picture(item.img)
+                      p.certificate__text=item.text
+
+      .franchise-formats__grid
+        .franchise-formats__left.franchise-formats__left--bigger
+
+        .franchise-formats__right
+          .franchise-formats__double-btns.double-btns
+            button.double-btns__btn.double-btns__btn--prev(type="button")
+              +icon-multi('prev')
+            button.double-btns__btn.double-btns__btn--next(type="button")
+              +icon-multi('prev')

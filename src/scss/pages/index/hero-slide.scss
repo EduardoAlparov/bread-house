@@ -122,6 +122,16 @@
 
     .hero-slide__article {
       max-width: 80rem;
+
+      @include breakpoint(tablet) {
+        max-width: unset;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      padding-block: 11rem 36.5rem;
+      min-height: 77rem;
+      justify-content: unset;
     }
   }
 

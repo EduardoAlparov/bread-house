@@ -27,6 +27,25 @@
       border-radius: 2rem;
     }
 
+    &.short-about__body--video {
+      gap: 1rem;
+
+      @include breakpoint(tablet) {
+        gap: 1.5rem;
+      }
+
+      .short-about__link {
+        &.link-icon {
+          width: 100%;
+          padding: 3.1rem 3.2rem;
+
+          @include breakpoint(tablet) {
+            padding: 1.6rem 2.4rem;
+          }
+        }
+      }
+    }
+
     &.short-about__body--left {
 
       @include breakpoint(tablet) {
@@ -118,6 +137,10 @@
 
       @include font(1.2rem, 111.1%, 500);
     }
+
+    &.short-about__tab {
+      transform: unset
+    }
   }
 
   &__title {
@@ -153,7 +176,7 @@
   &__text {
     @include font(3rem, 133.3%, 500);
 
-    max-width: 25ch;
+    max-width: 26ch;
     letter-spacing: -0.03em;
 
     @include breakpoint(tablet) {
@@ -212,6 +235,36 @@
       }
     }
   }
+
+  &__tabs-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      padding-inline: 2rem;
+      max-width: calc(100vw - 4rem);
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include breakpoint(tablet) {
+      flex-wrap: nowrap;
+
+      width: 100%;
+      margin-inline: -6rem;
+      padding-inline: 2rem;
+      overflow: auto;
+
+      @include noScrollbar();
+    }
+  }
+
 
   &__author {
     position: relative;
@@ -334,5 +387,28 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &__video {
+    max-width: 38rem;
+
+    @include breakpoint(tablet) {
+      max-width: 28rem;
+    }
+
+    &.socials-section__video {
+      flex: unset;
+      width: 100%;
+      aspect-ratio: 0.89 / 1;
+      overflow: hidden;
+
+      &>button {
+        width: 8.5rem;
+
+        @include breakpoint(tablet) {
+          width: 5rem;
+        }
+      }
+    }
   }
 }

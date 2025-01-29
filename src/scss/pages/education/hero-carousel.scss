@@ -1,0 +1,96 @@
+.hero-carousel {
+  width: 35rem;
+  height: 50rem;
+  overflow: hidden;
+
+  border-radius: 3.5rem;
+
+  @include breakpoint(tablet) {
+    width: 28.3rem;
+    height: 28.3rem;
+
+    border-radius: 2rem;
+  }
+
+  &__swiper {
+    height: 100%;
+  }
+
+  &__swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    background-color: lightgray;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 300;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    flex-grow: 1;
+    width: 100%;
+    padding: 3.2rem 3.2rem 14.5rem;
+
+    @include breakpoint(tablet) {
+      padding: 2.6rem 2.6rem 11.1rem;
+    }
+  }
+
+  &__text {
+    @include font(3rem, 123.33%, 500);
+    color: #FFF;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      @include font(2.4rem, 123.33%, 500);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      inset: -1px;
+      z-index: 150;
+
+      background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 32.8%, #303030 100%);
+      content: "";
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 100;
+
+      width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__swiper-controls {
+    position: absolute;
+    bottom: 3.2rem;
+    left: 3.2rem;
+    z-index: 500;
+
+    @include breakpoint(tablet) {
+      bottom: 2.6rem;
+      left: 2.6rem;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.edu-projects {
+  &__body {
+    display: flex;
+    align-items: stretch;
+    gap: 5rem;
+
+    @include breakpoint(tablet) {
+
+      gap: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    flex: 0 1 50%;
+    min-height: 60rem;
+    padding: 6.25rem 7.2rem;
+    overflow: hidden;
+
+    color: #FFF;
+
+    border-radius: 3.5rem;
+
+    @include breakpoint(tablet) {
+      flex: 1 1 auto;
+      max-width: 25rem;
+      min-height: 23rem;
+      padding: 1.75rem 1.25rem;
+
+      border-radius: 2rem;
+    }
+
+
+    &.edu-projects__item--no-image {
+      color: var(--Grafiit-main, #303030);
+      border: 2px solid #EBEBF0;
+
+      .edu-projects__image {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    overflow: hidden;
+
+    &::after {
+      position: absolute;
+      inset: -1px;
+
+      background: linear-gradient(0deg, rgba(48, 48, 48, 0.50) 0%, rgba(48, 48, 48, 0.50) 100%);
+      content: "";
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    width: min-content;
+    letter-spacing: -0.03em;
+    @include font(6.4rem, 110%, 500);
+
+    @include breakpoint(tablet) {
+      @include font(2rem, 125%, 500);
+    }
+  }
+
+  &__link.link-icon {
+    @include breakpoint(tablet) {
+      min-width: 100%;
+    }
+  }
+}

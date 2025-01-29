@@ -1,0 +1,35 @@
+.reviews-section {
+  &__site-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.5rem;
+    }
+  }
+
+  &__swiper.swiper {
+    @include breakpoint(tablet) {
+      margin-inline: calc(var(--content-padding) * -1);
+      padding-inline: var(--content-padding);
+    }
+  }
+
+  &__swiper-slide {
+    &.franchise-short {
+      height: 100%;
+    }
+  }
+
+  &__swiper-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 7.5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.5rem;
+    }
+  }
+}

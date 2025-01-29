@@ -34,8 +34,11 @@ section.hero
   .hero__contacts-section.contacts-section
     .contacts-section__site-container
       .contacts-section__nav.chronology__nav
-        each item in navItems
-          button.chronology__nav-btn.tab-btn(type="button", data-chrono=item.data)=item.text
+        each item, index in navItems
+          if index == 0
+            button.chronology__nav-btn.chronology__nav-btn--active.tab-btn.js-tab-btn(type="button", data-chrono=item.data)=item.text
+          else
+            button.chronology__nav-btn.tab-btn.js-tab-btn(type="button", data-chrono=item.data)=item.text
 
       .contacts-section__window-wrappper
         .contacts-section__window

@@ -1,0 +1,36 @@
+section.section.short-about
+  .short-about__site-container
+    .short-about__body.short-about__body--video
+      .short-about__left
+        h2.short-about__title.short-about__title--no-quotes
+          | Учимся&nbsp;на образовательной платформе&nbsp;Геткурс
+
+        p.short-about__text
+          | Хороший текст про нас и наше обучение
+
+        ul.short-about__list
+          li какой-то поясняющий текст
+          li какой-то поясняющий текст
+          li какой-то поясняющий текст
+
+        .short-about__video.socials-section__video.show-on-mobile
+          button(type="button", data-play-video)
+            +icon-multi('play')
+          video(mute)
+            source(src="./assets/images/video.mp4" type="video/mp4")
+
+        ul.short-about__tabs
+          li.short-about__tab.short-about__tooltip Лекции
+          li.short-about__tab.short-about__tooltip Практика
+          li.short-about__tab.short-about__tooltip Персональная обратная связь
+
+      .short-about__right
+        .short-about__video.socials-section__video.hide-on-mobile
+          button(type="button", data-play-video)
+            +icon-multi('play')
+          video(mute)
+            source(src="./assets/images/video.mp4" type="video/mp4")
+
+        a.short-about__link.link-icon.link-icon--white
+          | Получить доступ к курсам
+          +icon-multi('link')(class="icon-no-rotate")

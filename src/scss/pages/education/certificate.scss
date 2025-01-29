@@ -1,0 +1,75 @@
+.certificate {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  max-width: 35rem;
+  aspect-ratio: 0.64 / 1;
+  overflow: hidden;
+
+  border-radius: 3rem;
+
+  &__body {
+    position: relative;
+
+    flex-grow: 1;
+    padding: 3.6rem 4.8rem;
+
+    background: #F5F5F7;
+
+    @include breakpoint(tablet) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+
+    overflow: hidden;
+
+    &::after {
+      position: absolute;
+      inset: -1px;
+      z-index: 150;
+
+      background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 31.09%, #303030 100%);
+      content: ""
+    }
+  }
+
+  &__title,
+  &__text {
+    @include font(3.2rem, 109.4%, 500);
+    letter-spacing: -0.03em;
+
+    @include breakpoint(tablet) {
+      @include font(1.6rem, 103.7%, 500);
+    }
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 3.6rem;
+    left: 4.8rem;
+    z-index: 200;
+
+    width: min-content;
+
+    color: #FFF;
+
+    @include breakpoint(tablet) {
+      bottom: 2.4rem;
+      left: 2.4rem;
+    }
+  }
+
+  &.certificate--grey {
+    .certificate__image {
+      display: none;
+    }
+  }
+}

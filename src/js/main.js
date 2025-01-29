@@ -13,6 +13,8 @@ import franchiseCarousel from './modules/franchiseCarousel';
 import formatsSwiper from './modules/formatsSwiper';
 import faqsDropdowns from './modules/faqsDropdowns';
 import tabsToggle from './modules/tabsToggle';
+import renderRating from './modules/renderRating';
+import doubleReviewsSwiper from './modules/doubleReviewsSwiper';
 
 import standartsSwiper from './modules/standartsSwiper';
 import bigSwiper from './modules/bigSwiper';
@@ -37,6 +39,8 @@ documenReady(() => {
   formatsSwiper();
   faqsDropdowns();
   tabsToggle();
+  renderRating();
+  doubleReviewsSwiper();
 
   standartsSwiper();
   bigSwiper();

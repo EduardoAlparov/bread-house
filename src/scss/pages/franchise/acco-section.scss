@@ -167,6 +167,10 @@
         opacity: 1;
         visibility: visible;
       }
+
+      .acco-section__arrow {
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -195,6 +199,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
     @include breakpoint(tablet) {
       width: 2.5rem;
       height: 2.5rem;
@@ -219,5 +227,38 @@
   &__expand {
     margin-top: 1rem;
     margin-inline: auto;
+  }
+}
+
+
+.acco-section__item {
+  &.acco-section__item--bigger {
+    .acco-section__button {
+      &>span {
+        @include font(3.2rem, 130%, 500);
+
+        @include breakpoint(tablet) {
+          @include font(1.6rem, 130%, 500);
+        }
+      }
+    }
+
+    .acco-section__text {
+      max-width: 102.4rem;
+      @include font(2.4rem, 130%, 400);
+
+      @include breakpoint(tablet) {
+        @include font(1.4rem, 130%, 400);
+      }
+    }
+  }
+
+  &.acco-section__item--orange {
+    background: #F8E8CE;
+  }
+
+  &.acco-section__item--black {
+    color: #FFF;
+    background: var(--Grafiit-main, #303030);
   }
 }

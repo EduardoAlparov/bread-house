@@ -3,18 +3,48 @@
     display: flex;
     align-items: stretch;
     gap: 2.2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.5rem;
+      overflow: auto;
+
+      margin-inline: calc(var(--content-padding) * -1);
+      padding-inline: var(--content-padding);
+
+      @include noScrollbar();
+    }
   }
 
   &__item {
     flex-basis: 34.5rem;
 
+    @include breakpoint(tablet) {
+      flex-basis: 20rem;
+      flex-shrink: 0;
+    }
+
     &.stats-section__item {
       padding-block: 4.2rem;
       padding-inline: 3.2rem;
+
+      @include breakpoint(tablet) {
+        align-items: flex-start;
+
+        min-height: 10rem;
+
+        padding-block: 1.2rem;
+        padding-inline: 2rem;
+      }
     }
 
     &.stats-section__item--orange {
       flex-grow: 1;
+
+      @include breakpoint(tablet) {
+        flex-grow: 0;
+        flex-basis: 25rem;
+        flex-shrink: 0;
+      }
     }
 
     &>.stats-section__text {
@@ -22,11 +52,32 @@
 
       letter-spacing: -0.02em;
       @include font(1.8rem, 139%, 500);
+
+      @include breakpoint(tablet) {
+        max-width: 100%;
+        text-align: left;
+        @include font(1.2rem, 103.3%, 500);
+      }
+    }
+
+    &>.stats-section__numbers {
+      @include breakpoint(tablet) {
+        text-align: left;
+        @include font(2.4rem, 132.3%, 500);
+      }
     }
   }
 
   &__link {
     margin-top: 5rem;
     margin-inline: auto;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__scroll-tooltip {
+    margin-top: 1.5rem;
   }
 }

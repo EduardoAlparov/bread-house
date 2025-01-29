@@ -1,0 +1,157 @@
+-
+  const shorts = [
+    {
+      id: "franchise-short-01",
+      src: "https://vk.com/video_ext.php?oid=-20629724&id=456241973&hash=5c19eb857534cea1"
+    },
+    {
+      id: "franchise-short-02",
+      src: "https://vk.com/video_ext.php?oid=-46638176&id=456239522&hash=f90b58fe7e1c5134"
+    },
+    {
+      id: "franchise-short-03",
+      src: "https://vk.com/video_ext.php?oid=-20629724&id=456241973&hash=5c19eb857534cea1"
+    },
+    {
+      id: "franchise-short-04",
+      src: "https://vk.com/video_ext.php?oid=-46638176&id=456239522&hash=f90b58fe7e1c5134"
+    },
+    {
+      id: "franchise-short-05",
+      src: "https://vk.com/video_ext.php?oid=-20629724&id=456241973&hash=5c19eb857534cea1"
+    },
+    {
+      id: "franchise-short-06",
+      src: "https://vk.com/video_ext.php?oid=-46638176&id=456239522&hash=f90b58fe7e1c5134"
+    },
+  ]
+
+section.section.reviews-section
+  .reviews-section__site-container
+    .reviews-section__top
+      .section__heading.section__heading--mbM
+        h2.events-section__title.section__title
+          | Что говорят участники курсов
+
+      .reviews-section__carousel
+        .reviews-section__swiper.swiper.js-double-reviews-swiper
+          ul.reviews-section__swiper-wrapper.swiper-wrapper
+            li.reviews-section__swiper-slide.swiper-slide.course-review
+              .course-review__rating.stars(data-rating="4.5")
+                .stars__list
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+
+              .course-review__text
+                p
+                  | Небольшой хвалебный текст об обучении хвалебный текст об обучении
+                  | хвалебный текст об обучении хвалебный текст об обучении хвалебный
+                p
+                  | Текст об обучении хвалебный текст об обучении хвалебный текст об
+                  | обучении хвалебный текст об обучении хвалебный текст об обучении
+                  | хвалебный текст об обучении хвалебный текст об обучении хвалебный
+
+              .course-review__bottom
+                .course-review__author.review__author
+                  +picture('review/user-1.png', 'alt')
+
+                  .review__author-col
+                    p.review__author-name
+                      | Сергей Паль
+                    p.review__author-location
+                      | Екатеринбург
+            li.reviews-section__swiper-slide.swiper-slide.course-review
+              .course-review__rating.stars(data-rating="4.5")
+                .stars__list
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+
+              .course-review__text
+                p
+                  | Небольшой хвалебный текст об обучении хвалебный текст об обучении
+                  | хвалебный текст об обучении хвалебный текст об обучении хвалебный
+                p
+                  | Текст об обучении хвалебный текст об обучении хвалебный текст об
+                  | обучении хвалебный текст об обучении хвалебный текст об обучении
+                  | хвалебный текст об обучении хвалебный текст об обучении хвалебный
+
+              .course-review__bottom
+                .course-review__author.review__author
+                  +picture('review/user-1.png', 'alt')
+
+                  .review__author-col
+                    p.review__author-name
+                      | Сергей Паль
+                    p.review__author-location
+                      | Екатеринбург
+            li.reviews-section__swiper-slide.swiper-slide.course-review
+              .course-review__rating.stars(data-rating="4.5")
+                .stars__list
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+                  span.stars__item
+
+              .course-review__text
+                p
+                  | Небольшой хвалебный текст об обучении хвалебный текст об обучении
+                  | хвалебный текст об обучении хвалебный текст об обучении хвалебный
+                p
+                  | Текст об обучении хвалебный текст об обучении хвалебный текст об
+                  | обучении хвалебный текст об обучении хвалебный текст об обучении
+                  | хвалебный текст об обучении хвалебный текст об обучении хвалебный
+
+              .course-review__bottom
+                .course-review__author.review__author
+                  +picture('review/user-1.png', 'alt')
+
+                  .review__author-col
+                    p.review__author-name
+                      | Сергей Паль
+                    p.review__author-location
+                      | Екатеринбург
+
+          .reviews-section__swiper-controls
+            .double-btns
+              button.double-btns__btn.double-btns__btn--prev(type="button")
+                +icon-multi('prev')
+              button.double-btns__btn.double-btns__btn--next(type="button")
+                +icon-multi('prev')
+
+
+    .reviews-section__center.js-shorts-swiper(data-slide="5")
+      .reviews-section__swiper.franchise-formats__swiper.swiper
+        ul.reviews-section__swiper-wrapper.swiper-wrapper
+          each short in shorts
+            li.reviews-section__swiper-slide.swiper-slide.franchise-short(id=short.id)
+              .franchise-short__body
+                .franchise-short__embed-video
+                  iframe(
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    allowfullscreen="1"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                    src=short.src
+                  )
+                button.franchise-short__button(type="button")
+                  +icon-multi('play-big')
+
+        .reviews-section__swiper-controls
+          .double-btns
+            button.double-btns__btn.double-btns__btn--prev(type="button")
+              +icon-multi('prev')
+            button.double-btns__btn.double-btns__btn--next(type="button")
+              +icon-multi('prev')
+
+    .reviews-section__bottom
+      a.contacts-section__big-link.link-icon.link-icon--grey(href="#")
+        | Оставить отзыв
+        +icon-multi('pencil')(class="icon-no-rotate")

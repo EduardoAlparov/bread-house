@@ -1,0 +1,21 @@
+.professionals {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    flex-basis: calc(100% / 5 - (2rem * 4 / 5));
+
+    @include breakpoint(tablet) {
+      flex-shrink: 0;
+      flex-basis: 17.5rem;
+    }
+  }
+}

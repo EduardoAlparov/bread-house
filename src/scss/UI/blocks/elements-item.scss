@@ -12,6 +12,10 @@
 
   color: #FFF;
 
+  @include breakpoint(tablet) {
+    border-radius: 2rem;
+  }
+
   &__image {
     position: absolute;
     inset: -1px;
@@ -69,6 +73,10 @@
 
     &.link-icon {
       padding-inline: 2.4rem;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
     }
   }
 
@@ -78,16 +86,30 @@
       flex: 1 1 auto;
 
       padding: 6.25rem 7.2rem;
+
+      @include breakpoint(tablet) {
+        gap: 1.5rem;
+
+        padding: 2.5rem 2rem;
+      }
     }
 
     .elements-item__title {
       @include font(6.4rem, 109%, 500);
       letter-spacing: -0.03em;
+
+      @include breakpoint(tablet) {
+        @include font(3.2rem, 115.625%, 500);
+      }
     }
 
     .elements-item__text {
       @include font(3.2rem, 125%, 500);
       letter-spacing: -0.03em;
+
+      @include breakpoint(tablet) {
+        @include font(1.6rem, 125%, 500);
+      }
     }
   }
 

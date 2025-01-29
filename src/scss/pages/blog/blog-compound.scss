@@ -1,0 +1,109 @@
+.blog-compound {
+  display: flex;
+  gap: 5rem;
+
+  @include breakpoint(tablet) {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 6rem;
+
+    flex-basis: calc(100% / 3 - (5rem * 2 / 3));
+
+    @include breakpoint(tablet) {
+      flex-basis: 100%;
+      gap: 2.5rem;
+    }
+
+    &.blog-compound__cell--bigger {
+      gap: 7.5rem;
+
+      @include breakpoint(tablet) {
+        gap: 2.5rem;
+      }
+    }
+
+    &.blog-compound__cell--reverse {
+      flex-direction: column-reverse;
+
+      @include breakpoint(tablet) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__middle-image,
+  &__big-image,
+  &__small-image {
+    overflow: hidden;
+
+    border-radius: 3rem;
+
+    @include breakpoint(tablet) {
+      border-radius: 2rem;
+    }
+
+    img {
+      display: block;
+
+      width: 100%;
+      min-height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__big-image {
+    aspect-ratio: 0.87 / 1;
+
+    @include breakpoint(tablet) {
+      aspect-ratio: 1.03 / 1;
+    }
+  }
+
+  &__small-image {
+    aspect-ratio: 1.75 / 1;
+
+    @include breakpoint(tablet) {
+      aspect-ratio: 1.61 / 1;
+    }
+  }
+
+  &__middle-image {
+    aspect-ratio: 1.45 / 1;
+
+    @include breakpoint(tablet) {
+      aspect-ratio: 1.61 / 1;
+    }
+  }
+
+  &__index {
+    padding: 4.2rem 5rem;
+
+    background: #F8E8CE;
+    border-radius: 3rem;
+
+    color: #B19F83;
+    letter-spacing: -0.02em;
+    @include font(3.6rem, 116.66%, 500);
+
+    @include breakpoint(tablet) {
+      padding: 2rem 3rem;
+
+      border-radius: 2rem;
+
+      @include font(2rem, 125%, 500);
+    }
+  }
+
+  &__link.link-icon {
+    width: 100%;
+  }
+}

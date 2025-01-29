@@ -13,12 +13,31 @@ section.section.section--promo-offset.hero
                 | от&nbsp;идеи до&nbsp;реализации
               p.hero-slide__text
                 | Узнаете как открыть вместе с&nbsp;трекером бизнес за 35 дней
-              a.main-about__link.link-icon(href="#")
+              a.hero-slide__link.link-icon(href="#")
                 | Записаться на курс
                 +icon-multi('link')
 
       .hero__swiper-control.hero__carousel.hero-carousel
-        .hero-carousel__swiper.swiper
+        .hero-carousel__swiper.swiper.js-big-swiper
           ul.hero-carousel__swiper-wrapper.swiper-wrapper
             li.hero-carousel__swiper-slide.swiper-slide
+              .hero-carousel__body
+                p.hero-carousel__text
+                  | Открыл сеть из&nbsp;3&nbsp;екарен в&nbsp;малом&nbsp;городе
+
               .hero-carousel__image
+                +picture('review-photo.jpg')
+            li.hero-carousel__swiper-slide.swiper-slide
+              .hero-carousel__body
+                p.hero-carousel__text
+                  | Открыл сеть из&nbsp;4&nbsp;екарен в&nbsp;малом&nbsp;городе
+
+              .hero-carousel__image
+                +picture('review-photo.jpg')
+
+          .hero-carousel__swiper-controls
+            .double-btns
+              button.double-btns__btn.double-btns__btn--prev(type="button")
+                +icon-multi('prev')
+              button.double-btns__btn.double-btns__btn--next(type="button")
+                +icon-multi('prev')

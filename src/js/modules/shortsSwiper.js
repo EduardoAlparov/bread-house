@@ -7,6 +7,33 @@ export default () => {
     formats.forEach((format) => {
         const s = format.querySelector('.franchise-formats__swiper.swiper');
 
+        if(format.dataset.slide) {
+          new Swiper(s, {
+              modules: [ Navigation ],
+              slidesPerView: 1.4,
+              spaceBetween: 12,
+              speed: 1000,
+
+              navigation: {
+                  nextEl: format.querySelector('.double-btns__btn--next'),
+                  prevEl: format.querySelector('.double-btns__btn--prev'),
+              },
+
+              breakpoints: {
+                // when window width is >= 640px
+                640: {
+                  spaceBetween: 16,
+                  slidesPerView: 3,
+                },
+                // when window width is >= 1024px
+                1024: {
+                  spaceBetween: 25,
+                  slidesPerView: 5
+                }
+              }
+          })
+        }
+
         new Swiper(s, {
           modules: [ Navigation ],
           slidesPerView: 'auto',

@@ -1,0 +1,92 @@
+-
+  var accoOne = [
+    {
+      id: 'acco-id-1',
+      question: 'Курс для Франчайзи',
+      text: `Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки`
+    },
+    {
+      id: 'acco-id-2',
+      question: 'Курс для Управляющего',
+      text: `Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки`
+    },
+    {
+      id: 'acco-id-3',
+      question: 'Курс для Продавца-кассира',
+      text: `Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки`
+    },
+    {
+      id: 'acco-id-4',
+      question: 'Курс для Пекарей',
+      text: `Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки`
+    },
+  ];
+
+-
+  var accoTwo = [
+    {
+      id: 'acco-id-7',
+      question: 'Курс по эффективным переговорам',
+      text: `Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки`
+    },
+    {
+      id: 'acco-id-6',
+      question: 'Курс поиск и привлечение инвестиций',
+      text: `Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки
+        ответ на вопрос в одну или даже две строки`
+    },
+  ];
+
+section.section.edu-section
+  .edu-section__site-container
+    .edu-section__body
+      .edu-section__tags
+        .edu-section__tag.short-about__tooltip
+          | 16 курсов
+        .edu-section__tag.short-about__tooltip
+          | 345 часов практики
+
+      .edu-section__row
+        h2.edu-section__title
+          | Программы обучения
+
+        ul.edu-section__list
+          for item in accoOne
+            li.edu-section__dropdown.acco-section__item.acco-section__item--bigger(id=item.id)
+              button.acco-section__button.js-faq-btn(type="button")
+                span.acco-section__question=item.question
+                i.acco-section__arrow
+              .acco-section__dropdown
+                p.acco-section__text=item.text
+
+        a.edu-section__add.link-icon.link-icon--outlined
+          | Еще
+          +icon-multi('link')
+
+      .edu-section__row
+        h2.edu-section__title
+          | Дополнительное обучение
+
+        ul.edu-section__list
+          for item in accoTwo
+            li.edu-section__dropdown.acco-section__item.acco-section__item--bigger.acco-section__item--orange(id=item.id)
+              button.acco-section__button.js-faq-btn(type="button")
+                span.acco-section__question=item.question
+                i.acco-section__arrow
+              .acco-section__dropdown
+                p.acco-section__text=item.text
+
+        a.edu-section__add.link-icon.link-icon--outlined
+          | Еще
+          +icon-multi('link')

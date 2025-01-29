@@ -1,0 +1,23 @@
+section.section.franchise-form
+  .franchise-form__site-container
+    .franchise-form__body
+      .franchise-form__left
+        h2.franchise-form__title.section__title
+          | Закажите консультацию и&nbsp;получите промокод на&nbsp;скидку
+
+      form.franchise-form__right(action="")
+        .franchise-form__top
+          .franchise-form__inputs
+            +Input-holder('text','Имя','contacts-name',true,true,'Имя')(class="franchise-form__input")
+            +Input-holder('text','Город','contacts-city',true,true,'Город')(class="franchise-form__input")
+            +Input-holder('tel','Телефон','contacts-phone',true,true,'Телефон')(class="franchise-form__input")
+            +Input-holder('email','Электронная почта','contacts-email',true,true,'Электронная почта')(class="franchise-form__input")
+            +Textarea-holder('Задайте ваш вопрос','contacts-comment')(class="franchise-form__input franchise-form__textarea")
+          .franchise-form__center
+            .franchise-form__submit
+              button.franchise-form__button.link-icon(type="submit")
+                | Заказать консультацию
+                +icon-multi('link')
+              p.franchise-form__agreement
+                | Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;
+                a(href="http://" target="_blank" rel="noopener noreferrer") Платформой

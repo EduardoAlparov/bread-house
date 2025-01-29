@@ -1,5 +1,55 @@
+-
+  const professionals = [
+    {
+      name: 'Алексей Ившин',
+      role: 'сооснователь Дом Хлеба',
+      img: 'profi/image-1.jpg'
+    },
+    {
+      name: 'Михаил Москотин',
+      role: 'бизнес-тренер',
+      img: 'profi/image-2.jpg'
+    },
+    {
+      name: 'Андрей Герасимов',
+      role: 'сооснователь Дом Хлеба',
+      img: 'profi/image-3.jpg'
+    },
+    {
+      name: 'Алексей Ившин',
+      role: 'сооснователь Дом Хлеба',
+      img: 'profi/image-1.jpg'
+    },
+    {
+      name: 'Михаил Москотин',
+      role: 'бизнес-тренер',
+      img: 'profi/image-2.jpg'
+    },
+  ]
+
 section.section.support-section
-  .support-section__site-container
-    .support-section__heading.section__heading
+  .support-section__site-container.js-transform-swiper
+    .section__heading.section__heading--mbM
       h2.events-section__title.section__title
         | Будете учиться у профессионалов
+
+    .support-section__professionals.professionals.js-swiper
+      .professionals__list.js-swiper-wrapper
+        each profi in professionals
+          .professionals__item.professional.js-swiper-slide
+            .professional__info
+              p.professional__name=profi.name
+              p.professional__role=profi.role
+            .professional__image
+              +picture(profi.img, profi.name)
+
+      .support-section__bottom
+        .double-btns
+          button.double-btns__btn.double-btns__btn--prev(type="button")
+            +icon-multi('prev')
+          button.double-btns__btn.double-btns__btn--next(type="button")
+            +icon-multi('prev')
+
+    a.support-section__link.link-icon(href="#")
+      | Задать вопрос эксперту
+      +icon-multi('link')

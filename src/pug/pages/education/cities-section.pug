@@ -1,0 +1,47 @@
+-
+  const citiesList = [
+    'Санкт-Петербург',
+    'Алматы',
+    'Санкт-Петербург',
+    'Санкт-Петербург',
+    'Алматы',
+    'Санкт-Петербург',
+    'Санкт-Петербург',
+    'Алматы',
+    'Санкт-Петербург',
+    'Санкт-Петербург',
+    'Алматы',
+    'Санкт-Петербург',
+    'Санкт-Петербург',
+    'Алматы',
+    'Санкт-Петербург',
+  ];
+
+section.section.cities
+  .cities__site-container
+    .cities__heading.section__heading.section__heading--mbM
+      h2.cities__title.section__title
+        | Присоединяйся к&nbsp;Дому&nbsp;Хлеба
+
+    .cities__scrolling-wrapper
+
+      .cities__scrolling-item.cities__scrolling-item--big
+        .cities__scrolling-inner
+          each city in citiesList
+            .cities__scrolling-point
+              span=city
+              +icon-multi('dot')
+
+      .cities__scrolling-item.cities__scrolling-item--middle
+        .cities__scrolling-inner
+          each city in citiesList
+            .cities__scrolling-point
+              span=city
+              +icon-multi('dot')
+
+      .cities__scrolling-item.cities__scrolling-item--small
+        .cities__scrolling-inner
+          each city in citiesList
+            .cities__scrolling-point
+              span=city
+              +icon-multi('dot')

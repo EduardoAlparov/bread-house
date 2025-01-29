@@ -8,6 +8,7 @@
   &__grid {
     display: flex;
     align-items: stretch;
+    justify-content: space-between;
     gap: 28rem;
 
     &:has(.franchise-formats__double-btns) {
@@ -128,7 +129,13 @@
   }
 
   &__right {
-    flex: 0 1 100%;
+    width: calc(50% - 4rem);
+    flex: 0 0 calc(50% - 4rem);
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      flex: 1 1 auto;
+    }
   }
 
   &__swiper {
@@ -139,6 +146,16 @@
       @include breakpoint(tablet) {
         margin-inline: calc(var(--content-padding) * -1);
         padding-inline: var(--content-padding);
+      }
+
+      &.reviews-section__swiper {
+        margin-right: auto;
+        padding-right: unset;
+
+        @include breakpoint(tablet) {
+          margin-inline: calc(var(--content-padding) * -1);
+          padding-inline: var(--content-padding);
+        }
       }
     }
 
@@ -159,6 +176,14 @@
 
       @include breakpoint(tablet) {
         max-width: 28rem;
+      }
+    }
+
+    &.certificate {
+      max-width: 35rem;
+
+      @include breakpoint(tablet) {
+        max-width: 17.5rem;
       }
     }
   }

@@ -1,0 +1,73 @@
+.professional {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 3rem;
+
+  padding: 3.2rem;
+
+  background: #F5F5F7;
+  border-radius: 3.5rem;
+
+  @include breakpoint(tablet) {
+    gap: 1.2rem;
+
+    padding: 1.4rem 1.2rem;
+
+    border-radius: 1.6rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.1rem;
+    }
+  }
+
+  &__name {
+    width: min-content;
+    @include font(3.6rem, 111.11%, 500);
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      @include font(1.6rem, 125%, 500);
+    }
+  }
+
+  &__role {
+    @include font(2rem, 80%, 500);
+    color: var(--Grey2, #9799A6);
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      @include font(1rem, 75%, 500);
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+
+    border-radius: 3rem;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

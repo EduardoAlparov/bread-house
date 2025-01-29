@@ -72,7 +72,7 @@
                     <div class="hero-slide__article">
                       <h1 class="hero-slide__title">Как открыть свой бизнес с&nbsp;франшизой пекарни Дом Хлеба от&nbsp;идеи до&nbsp;реализации</h1>
                       <p class="hero-slide__text">Узнаете как открыть вместе с&nbsp;трекером бизнес за 35 дней</p>
-                      <a class="main-about__link link-icon" href="#">Записаться на курс<svg class="icon icon-link">
+                      <a class="hero-slide__link link-icon" href="#">Записаться на курс<svg class="icon icon-link">
                           <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
                         </svg>
                       </a>
@@ -81,12 +81,45 @@
                 </li>
               </ul>
               <div class="hero__swiper-control hero__carousel hero-carousel">
-                <div class="hero-carousel__swiper swiper">
+                <div class="hero-carousel__swiper swiper js-big-swiper">
                   <ul class="hero-carousel__swiper-wrapper swiper-wrapper">
                     <li class="hero-carousel__swiper-slide swiper-slide">
-                      <div class="hero-carousel__image"></div>
+                      <div class="hero-carousel__body">
+                        <p class="hero-carousel__text">Открыл сеть из&nbsp;3&nbsp;екарен в&nbsp;малом&nbsp;городе</p>
+                      </div>
+                      <div class="hero-carousel__image">
+                        <picture>
+                          <source type="image/webp" srcset="assets/images/review-photo.webp">
+                          <img src="assets/images/review-photo.jpg">
+                        </picture>
+                      </div>
+                    </li>
+                    <li class="hero-carousel__swiper-slide swiper-slide">
+                      <div class="hero-carousel__body">
+                        <p class="hero-carousel__text">Открыл сеть из&nbsp;4&nbsp;екарен в&nbsp;малом&nbsp;городе</p>
+                      </div>
+                      <div class="hero-carousel__image">
+                        <picture>
+                          <source type="image/webp" srcset="assets/images/review-photo.webp">
+                          <img src="assets/images/review-photo.jpg">
+                        </picture>
+                      </div>
                     </li>
                   </ul>
+                  <div class="hero-carousel__swiper-controls">
+                    <div class="double-btns">
+                      <button class="double-btns__btn double-btns__btn--prev" type="button">
+                        <svg class="icon icon-prev">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                        </svg>
+                      </button>
+                      <button class="double-btns__btn double-btns__btn--next" type="button">
+                        <svg class="icon icon-prev">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -112,10 +145,63 @@
                 <p class="stats-section__text">довольных учеников отмечают отличные результат сразу после прохождения обучающего курса</p>
               </div>
             </div>
+            <div class="advantages__scroll-tooltip show-on-mobile">
+              <div class="scroll-tooltip"><i></i><span>Листайте влево-вправо</span>
+              </div>
+            </div>
             <a class="advantages__link link-icon" href="#">Почему выбирают нас<svg class="icon icon-link">
                 <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
               </svg>
             </a>
+          </div>
+        </section>
+        <section class="section webinar-form">
+          <div class="webinar-form__site-container">
+            <div class="webinar-form__body">
+              <div class="webinar-form__video socials-section__video">
+                <button type="button">
+                  <svg class="icon icon-play-big">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#play-big"></use>
+                  </svg>
+                </button>
+                <video mute>
+                  <source src="./assets/images/video.mp4" type="video/mp4">
+                </video>
+                <div class="socials-section__video-caption">
+                  <h6>Вебинар технолога</h6>
+                  <p>демо-версия</p>
+                </div>
+              </div>
+              <form class="webinar-form__form" action="">
+                <h2 class="webinar-form__title">Запишитесь сейчас на&nbsp;ближайший вебинар</h2>
+                <div class="franchise-form__top">
+                  <div class="franchise-form__inputs">
+                    <div class="input-holder input-holder--with-label franchise-form__input">
+                      <input class="input-holder__input" type="text" name="franchise-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+                    </div>
+                    <div class="input-holder input-holder--with-label franchise-form__input">
+                      <input class="input-holder__input" type="text" name="franchise-city" required="required" placeholder="Город" value=""><span class="input-holder__label">Город</span><i class="input-holder__error"></i>
+                    </div>
+                    <div class="input-holder input-holder--with-label franchise-form__input">
+                      <input class="input-holder__input" type="tel" name="franchise-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+                    </div>
+                    <div class="input-holder input-holder--with-label franchise-form__input">
+                      <input class="input-holder__input" type="email" name="franchise-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+                    </div>
+                  </div>
+                  <div class="franchise-form__center">
+                    <div class="franchise-form__submit">
+                      <button class="franchise-form__button link-icon" type="submit">Записаться на вебинар<svg class="icon icon-link">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                        </svg>
+                      </button>
+                      <p class="franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer">Платформой</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
         <section class="section franchise-formats">
@@ -149,12 +235,19 @@
                         </div>
                         <p class="vacancy__term">2 дня</p>
                       </a>
+                      <a class="franchise-formats__swiper-slide swiper-slide vacancy" href="" id="vacancy-04">
+                        <div class="vacancy__inner">
+                          <p class="vacancy__name">Управляющий пекарнеЙ</p>
+                          <p class="vacancy__text">Короткий текст об этом</p>
+                        </div>
+                        <p class="vacancy__term">2 дня</p>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="franchise-formats__grid">
-                <div class="franchise-formats__left franchise-formats__left--bigger">
+                <div class="franchise-formats__left franchise-formats__left--bigger hide-on-mobile">
                   <a class="franchise-formats__jump link-icon link-icon--outlined">Смотреть все вакансии<svg class="icon icon-link">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
                     </svg>
@@ -250,49 +343,619 @@
           </div>
         </section>
         <section class="section support-section">
-          <div class="support-section__site-container">
-            <div class="support-section__heading section__heading">
+          <div class="support-section__site-container js-transform-swiper">
+            <div class="section__heading section__heading--mbM">
               <h2 class="events-section__title section__title">Будете учиться у профессионалов</h2>
+            </div>
+            <div class="support-section__professionals professionals js-swiper">
+              <div class="professionals__list js-swiper-wrapper">
+                <div class="professionals__item professional js-swiper-slide">
+                  <div class="professional__info">
+                    <p class="professional__name">Алексей Ившин</p>
+                    <p class="professional__role">сооснователь Дом Хлеба</p>
+                  </div>
+                  <div class="professional__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/profi/image-1.webp" alt="Алексей Ившин">
+                      <img src="assets/images/profi/image-1.jpg" alt="Алексей Ившин">
+                    </picture>
+                  </div>
+                </div>
+                <div class="professionals__item professional js-swiper-slide">
+                  <div class="professional__info">
+                    <p class="professional__name">Михаил Москотин</p>
+                    <p class="professional__role">бизнес-тренер</p>
+                  </div>
+                  <div class="professional__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/profi/image-2.webp" alt="Михаил Москотин">
+                      <img src="assets/images/profi/image-2.jpg" alt="Михаил Москотин">
+                    </picture>
+                  </div>
+                </div>
+                <div class="professionals__item professional js-swiper-slide">
+                  <div class="professional__info">
+                    <p class="professional__name">Андрей Герасимов</p>
+                    <p class="professional__role">сооснователь Дом Хлеба</p>
+                  </div>
+                  <div class="professional__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/profi/image-3.webp" alt="Андрей Герасимов">
+                      <img src="assets/images/profi/image-3.jpg" alt="Андрей Герасимов">
+                    </picture>
+                  </div>
+                </div>
+                <div class="professionals__item professional js-swiper-slide">
+                  <div class="professional__info">
+                    <p class="professional__name">Алексей Ившин</p>
+                    <p class="professional__role">сооснователь Дом Хлеба</p>
+                  </div>
+                  <div class="professional__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/profi/image-1.webp" alt="Алексей Ившин">
+                      <img src="assets/images/profi/image-1.jpg" alt="Алексей Ившин">
+                    </picture>
+                  </div>
+                </div>
+                <div class="professionals__item professional js-swiper-slide">
+                  <div class="professional__info">
+                    <p class="professional__name">Михаил Москотин</p>
+                    <p class="professional__role">бизнес-тренер</p>
+                  </div>
+                  <div class="professional__image">
+                    <picture>
+                      <source type="image/webp" srcset="assets/images/profi/image-2.webp" alt="Михаил Москотин">
+                      <img src="assets/images/profi/image-2.jpg" alt="Михаил Москотин">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="support-section__bottom">
+                <div class="double-btns">
+                  <button class="double-btns__btn double-btns__btn--prev" type="button">
+                    <svg class="icon icon-prev">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                    </svg>
+                  </button>
+                  <button class="double-btns__btn double-btns__btn--next" type="button">
+                    <svg class="icon icon-prev">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a class="support-section__link link-icon" href="#">Задать вопрос эксперту<svg class="icon icon-link">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="section franchise-formats">
+          <div class="franchise-formats__site-container">
+            <div class="franchise-formats__body js-formats-swiper" data-slide="3">
+              <div class="franchise-formats__grid">
+                <div class="franchise-formats__left franchise-formats__left--bigger">
+                  <h2 class="franchise-formats__title section__title">Сертификат<br>обучения</h2>
+                </div>
+                <div class="franchise-formats__right">
+                  <div class="franchise-formats__swiper swiper">
+                    <div class="franchise-formats__swiper-wrapper swiper-wrapper">
+                      <a class="franchise-formats__swiper-slide swiper-slide certificate certificate--grey" id="" data-fancybox="certificates">
+                        <div class="certificate__body">
+                          <p class="certificate__title">Сертификат о прохождении обучения</p>
+                        </div>
+                        <div class="certificate__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/cert/img.webp">
+                            <img src="assets/images/cert/img.png">
+                          </picture>
+                          <p class="certificate__text">Навык который вы получите</p>
+                        </div>
+                      </a>
+                      <a class="franchise-formats__swiper-slide swiper-slide certificate" id="" data-fancybox="certificates">
+                        <div class="certificate__body">
+                          <p class="certificate__title">Сертификат о прохождении обучения</p>
+                        </div>
+                        <div class="certificate__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/cert/img.webp">
+                            <img src="assets/images/cert/img.png">
+                          </picture>
+                          <p class="certificate__text">Навык который вы получите</p>
+                        </div>
+                      </a>
+                      <a class="franchise-formats__swiper-slide swiper-slide certificate" id="" data-fancybox="certificates">
+                        <div class="certificate__body">
+                          <p class="certificate__title">Сертификат о прохождении обучения</p>
+                        </div>
+                        <div class="certificate__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/cert/img.webp">
+                            <img src="assets/images/cert/img.png">
+                          </picture>
+                          <p class="certificate__text">Навык который вы получите</p>
+                        </div>
+                      </a>
+                      <a class="franchise-formats__swiper-slide swiper-slide certificate" id="" data-fancybox="certificates">
+                        <div class="certificate__body">
+                          <p class="certificate__title">Сертификат о прохождении обучения</p>
+                        </div>
+                        <div class="certificate__image">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/cert/img.webp">
+                            <img src="assets/images/cert/img.png">
+                          </picture>
+                          <p class="certificate__text">Навык который вы получите</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="franchise-formats__grid">
+                <div class="franchise-formats__left franchise-formats__left--bigger"></div>
+                <div class="franchise-formats__right">
+                  <div class="franchise-formats__double-btns double-btns">
+                    <button class="double-btns__btn double-btns__btn--prev" type="button">
+                      <svg class="icon icon-prev">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                      </svg>
+                    </button>
+                    <button class="double-btns__btn double-btns__btn--next" type="button">
+                      <svg class="icon icon-prev">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <section class="section webinar-form">
-          <div class="webinar-form__site-container">
-            <div class="webinar-form__body">
-              <div class="webinar-form__video socials-section__video">
-                <button type="button">
-                  <svg class="icon icon-play-big">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#play-big"></use>
-                  </svg>
-                </button>
-                <video mute>
-                  <source src="./assets/images/video.mp4" type="video/mp4">
-                </video>
-                <div class="socials-section__video-caption">
-                  <h6>Вебинар технолога</h6>
-                  <p>демо-версия</p>
+        <section class="section reviews-section">
+          <div class="reviews-section__site-container">
+            <div class="reviews-section__top">
+              <div class="section__heading section__heading--mbM">
+                <h2 class="events-section__title section__title">Что говорят участники курсов</h2>
+              </div>
+              <div class="reviews-section__carousel">
+                <div class="reviews-section__swiper swiper js-double-reviews-swiper">
+                  <ul class="reviews-section__swiper-wrapper swiper-wrapper">
+                    <li class="reviews-section__swiper-slide swiper-slide course-review">
+                      <div class="course-review__rating stars" data-rating="4.5">
+                        <div class="stars__list"><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span>
+                        </div>
+                      </div>
+                      <div class="course-review__text">
+                        <p>Небольшой хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный</p>
+                        <p>Текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный</p>
+                      </div>
+                      <div class="course-review__bottom">
+                        <div class="course-review__author review__author">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/review/user-1.webp" alt="alt">
+                            <img src="assets/images/review/user-1.png" alt="alt">
+                          </picture>
+                          <div class="review__author-col">
+                            <p class="review__author-name">Сергей Паль</p>
+                            <p class="review__author-location">Екатеринбург</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="reviews-section__swiper-slide swiper-slide course-review">
+                      <div class="course-review__rating stars" data-rating="4.5">
+                        <div class="stars__list"><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span>
+                        </div>
+                      </div>
+                      <div class="course-review__text">
+                        <p>Небольшой хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный</p>
+                        <p>Текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный</p>
+                      </div>
+                      <div class="course-review__bottom">
+                        <div class="course-review__author review__author">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/review/user-1.webp" alt="alt">
+                            <img src="assets/images/review/user-1.png" alt="alt">
+                          </picture>
+                          <div class="review__author-col">
+                            <p class="review__author-name">Сергей Паль</p>
+                            <p class="review__author-location">Екатеринбург</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="reviews-section__swiper-slide swiper-slide course-review">
+                      <div class="course-review__rating stars" data-rating="4.5">
+                        <div class="stars__list"><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span><span class="stars__item"></span>
+                        </div>
+                      </div>
+                      <div class="course-review__text">
+                        <p>Небольшой хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный</p>
+                        <p>Текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный текст об обучении хвалебный</p>
+                      </div>
+                      <div class="course-review__bottom">
+                        <div class="course-review__author review__author">
+                          <picture>
+                            <source type="image/webp" srcset="assets/images/review/user-1.webp" alt="alt">
+                            <img src="assets/images/review/user-1.png" alt="alt">
+                          </picture>
+                          <div class="review__author-col">
+                            <p class="review__author-name">Сергей Паль</p>
+                            <p class="review__author-location">Екатеринбург</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="reviews-section__swiper-controls">
+                    <div class="double-btns">
+                      <button class="double-btns__btn double-btns__btn--prev" type="button">
+                        <svg class="icon icon-prev">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                        </svg>
+                      </button>
+                      <button class="double-btns__btn double-btns__btn--next" type="button">
+                        <svg class="icon icon-prev">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <form class="webinar-form__form" action="">
-                <h2 class="webinar-form__title">Запишитесь сейчас на&nbsp;ближайший вебинар</h2>
+            </div>
+            <div class="reviews-section__center js-shorts-swiper" data-slide="5">
+              <div class="reviews-section__swiper franchise-formats__swiper swiper">
+                <ul class="reviews-section__swiper-wrapper swiper-wrapper">
+                  <li class="reviews-section__swiper-slide swiper-slide franchise-short" id="franchise-short-01">
+                    <div class="franchise-short__body">
+                      <div class="franchise-short__embed-video">
+                        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" src="https://vk.com/video_ext.php?oid=-20629724&amp;id=456241973&amp;hash=5c19eb857534cea1"></iframe>
+                      </div>
+                      <button class="franchise-short__button" type="button">
+                        <svg class="icon icon-play-big">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#play-big"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="reviews-section__swiper-slide swiper-slide franchise-short" id="franchise-short-02">
+                    <div class="franchise-short__body">
+                      <div class="franchise-short__embed-video">
+                        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" src="https://vk.com/video_ext.php?oid=-46638176&amp;id=456239522&amp;hash=f90b58fe7e1c5134"></iframe>
+                      </div>
+                      <button class="franchise-short__button" type="button">
+                        <svg class="icon icon-play-big">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#play-big"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="reviews-section__swiper-slide swiper-slide franchise-short" id="franchise-short-03">
+                    <div class="franchise-short__body">
+                      <div class="franchise-short__embed-video">
+                        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" src="https://vk.com/video_ext.php?oid=-20629724&amp;id=456241973&amp;hash=5c19eb857534cea1"></iframe>
+                      </div>
+                      <button class="franchise-short__button" type="button">
+                        <svg class="icon icon-play-big">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#play-big"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="reviews-section__swiper-slide swiper-slide franchise-short" id="franchise-short-04">
+                    <div class="franchise-short__body">
+                      <div class="franchise-short__embed-video">
+                        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" src="https://vk.com/video_ext.php?oid=-46638176&amp;id=456239522&amp;hash=f90b58fe7e1c5134"></iframe>
+                      </div>
+                      <button class="franchise-short__button" type="button">
+                        <svg class="icon icon-play-big">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#play-big"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="reviews-section__swiper-slide swiper-slide franchise-short" id="franchise-short-05">
+                    <div class="franchise-short__body">
+                      <div class="franchise-short__embed-video">
+                        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" src="https://vk.com/video_ext.php?oid=-20629724&amp;id=456241973&amp;hash=5c19eb857534cea1"></iframe>
+                      </div>
+                      <button class="franchise-short__button" type="button">
+                        <svg class="icon icon-play-big">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#play-big"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="reviews-section__swiper-slide swiper-slide franchise-short" id="franchise-short-06">
+                    <div class="franchise-short__body">
+                      <div class="franchise-short__embed-video">
+                        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" src="https://vk.com/video_ext.php?oid=-46638176&amp;id=456239522&amp;hash=f90b58fe7e1c5134"></iframe>
+                      </div>
+                      <button class="franchise-short__button" type="button">
+                        <svg class="icon icon-play-big">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#play-big"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="reviews-section__swiper-controls">
+                  <div class="double-btns">
+                    <button class="double-btns__btn double-btns__btn--prev" type="button">
+                      <svg class="icon icon-prev">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                      </svg>
+                    </button>
+                    <button class="double-btns__btn double-btns__btn--next" type="button">
+                      <svg class="icon icon-prev">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#prev"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-section__bottom">
+              <a class="contacts-section__big-link link-icon link-icon--grey" href="#">Оставить отзыв<svg class="icon icon-pencil icon-no-rotate">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#pencil"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="section short-about">
+          <div class="short-about__site-container">
+            <div class="short-about__body short-about__body--video">
+              <div class="short-about__left">
+                <h2 class="short-about__title short-about__title--no-quotes">Учимся&nbsp;на образовательной платформе&nbsp;Геткурс</h2>
+                <p class="short-about__text">Хороший текст про нас и наше обучение</p>
+                <ul class="short-about__list">
+                  <li>какой-то поясняющий текст</li>
+                  <li>какой-то поясняющий текст</li>
+                  <li>какой-то поясняющий текст</li>
+                </ul>
+                <div class="short-about__video socials-section__video show-on-mobile">
+                  <button type="button" data-play-video>
+                    <svg class="icon icon-play">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#play"></use>
+                    </svg>
+                  </button>
+                  <video mute>
+                    <source src="./assets/images/video.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <ul class="short-about__tabs">
+                  <li class="short-about__tab short-about__tooltip">Лекции</li>
+                  <li class="short-about__tab short-about__tooltip">Практика</li>
+                  <li class="short-about__tab short-about__tooltip">Персональная обратная связь</li>
+                </ul>
+              </div>
+              <div class="short-about__right">
+                <div class="short-about__video socials-section__video hide-on-mobile">
+                  <button type="button" data-play-video>
+                    <svg class="icon icon-play">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#play"></use>
+                    </svg>
+                  </button>
+                  <video mute>
+                    <source src="./assets/images/video.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <a class="short-about__link link-icon link-icon--white">Получить доступ к курсам<svg class="icon icon-link icon-no-rotate">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section edu-section">
+          <div class="edu-section__site-container">
+            <div class="edu-section__body">
+              <div class="edu-section__tags">
+                <div class="edu-section__tag short-about__tooltip">16 курсов</div>
+                <div class="edu-section__tag short-about__tooltip">345 часов практики</div>
+              </div>
+              <div class="edu-section__row">
+                <h2 class="edu-section__title">Программы обучения</h2>
+                <ul class="edu-section__list">
+                  <li class="edu-section__dropdown acco-section__item acco-section__item--bigger" id="acco-id-1">
+                    <button class="acco-section__button js-faq-btn" type="button"><span class="acco-section__question">Курс для Франчайзи</span><i class="acco-section__arrow"></i>
+                    </button>
+                    <div class="acco-section__dropdown">
+                      <p class="acco-section__text">Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки</p>
+                    </div>
+                  </li>
+                  <li class="edu-section__dropdown acco-section__item acco-section__item--bigger" id="acco-id-2">
+                    <button class="acco-section__button js-faq-btn" type="button"><span class="acco-section__question">Курс для Управляющего</span><i class="acco-section__arrow"></i>
+                    </button>
+                    <div class="acco-section__dropdown">
+                      <p class="acco-section__text">Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки</p>
+                    </div>
+                  </li>
+                  <li class="edu-section__dropdown acco-section__item acco-section__item--bigger" id="acco-id-3">
+                    <button class="acco-section__button js-faq-btn" type="button"><span class="acco-section__question">Курс для Продавца-кассира</span><i class="acco-section__arrow"></i>
+                    </button>
+                    <div class="acco-section__dropdown">
+                      <p class="acco-section__text">Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки</p>
+                    </div>
+                  </li>
+                  <li class="edu-section__dropdown acco-section__item acco-section__item--bigger" id="acco-id-4">
+                    <button class="acco-section__button js-faq-btn" type="button"><span class="acco-section__question">Курс для Пекарей</span><i class="acco-section__arrow"></i>
+                    </button>
+                    <div class="acco-section__dropdown">
+                      <p class="acco-section__text">Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки</p>
+                    </div>
+                  </li>
+                </ul>
+                <a class="edu-section__add link-icon link-icon--outlined">Еще<svg class="icon icon-link">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="edu-section__row">
+                <h2 class="edu-section__title">Дополнительное обучение</h2>
+                <ul class="edu-section__list">
+                  <li class="edu-section__dropdown acco-section__item acco-section__item--bigger acco-section__item--orange" id="acco-id-7">
+                    <button class="acco-section__button js-faq-btn" type="button"><span class="acco-section__question">Курс по эффективным переговорам</span><i class="acco-section__arrow"></i>
+                    </button>
+                    <div class="acco-section__dropdown">
+                      <p class="acco-section__text">Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки</p>
+                    </div>
+                  </li>
+                  <li class="edu-section__dropdown acco-section__item acco-section__item--bigger acco-section__item--orange" id="acco-id-6">
+                    <button class="acco-section__button js-faq-btn" type="button"><span class="acco-section__question">Курс поиск и привлечение инвестиций</span><i class="acco-section__arrow"></i>
+                    </button>
+                    <div class="acco-section__dropdown">
+                      <p class="acco-section__text">Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки</p>
+                    </div>
+                  </li>
+                </ul>
+                <a class="edu-section__add link-icon link-icon--outlined">Еще<svg class="icon icon-link">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section edu-projects">
+          <div class="edu-projects__site-container">
+            <div class="section__heading section__heading--mbM">
+              <h2 class="section__title">Дипломные проекты наших учеников</h2>
+            </div>
+            <div class="edu-projects__body">
+              <div class="edu-projects__item edu-projects__item--no-image">
+                <div class="edu-projects__image">
+                  <picture>
+                    <source type="image/webp" srcset="assets/images/edu.webp">
+                    <img src="assets/images/edu.jpg">
+                  </picture>
+                </div>
+                <div class="edu-projects__text">Как&nbsp;увеличить показатели&nbsp;пекарни за&nbsp;счет&nbsp;обучения сотрудников</div>
+                <a class="edu-projects__link link-icon link-icon--grey" href="#">Изучить проект<svg class="icon icon-link icon-no-rotate">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="edu-projects__item">
+                <div class="edu-projects__image">
+                  <picture>
+                    <source type="image/webp" srcset="assets/images/edu.webp">
+                    <img src="assets/images/edu.jpg">
+                  </picture>
+                </div>
+                <div class="edu-projects__text">В&nbsp;какую&nbsp;сторону месить&nbsp;тесто</div>
+                <a class="edu-projects__link link-icon link-icon--grey" href="#">Изучить проект<svg class="icon icon-link icon-no-rotate">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section edu-section">
+          <div class="edu-section__site-container">
+            <div class="edu-section__body">
+              <div class="edu-section__row">
+                <h2 class="edu-section__title">Бонусный курс</h2>
+                <ul class="edu-section__list">
+                  <li class="edu-section__dropdown acco-section__item acco-section__item--bigger acco-section__item--orange" id="acco-id-8">
+                    <button class="acco-section__button js-faq-btn" type="button"><span class="acco-section__question">Курс поиск и привлечение инвестиций</span><i class="acco-section__arrow"></i>
+                    </button>
+                    <div class="acco-section__dropdown">
+                      <p class="acco-section__text">Ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки ответ на вопрос в одну или даже две строки</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section edu-section">
+          <div class="edu-section__site-container">
+            <div class="edu-section__body">
+              <div class="edu-section__row">
+                <h2 class="edu-section__title">Выберите формат обучения</h2>
+                <div class="edu-section__dropdown-wrapper">
+                  <div class="edu-section__dropdown acco-section__item acco-section__item--bigger acco-section__item--black">
+                    <button class="acco-section__button acco-section__button--active js-faq-btn" type="button"><span class="acco-section__question">Курс для Франчайзи</span><i class="acco-section__arrow"></i>
+                    </button>
+                    <div class="acco-section__dropdown"></div>
+                  </div>
+                  <div class="edu-section__formats">
+                    <div class="edu-section__format acco-format acco-format--grey">
+                      <div class="acco-format__body">
+                        <div class="acco-format__title">Что входит в обучении на таком формате:</div>
+                        <ul class="acco-format__list short-about__list">
+                          <li>какой-то поясняющий текст</li>
+                          <li>какой-то поясняющий текст</li>
+                          <li>какой-то поясняющий текст</li>
+                        </ul>
+                      </div>
+                      <a class="acco-format__link link-icon link-icon--white">Учусь сам<svg class="icon icon-link icon-no-rotate">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="edu-section__format acco-format acco-format--orange">
+                      <div class="acco-format__body">
+                        <div class="acco-format__title">Что входит в обучении на таком формате:</div>
+                        <ul class="acco-format__list short-about__list">
+                          <li>какой-то поясняющий текст</li>
+                          <li>какой-то поясняющий текст</li>
+                          <li>какой-то поясняющий текст</li>
+                        </ul>
+                      </div>
+                      <a class="acco-format__link link-icon link-icon--white">Учимся с сопровождением<svg class="icon icon-link icon-no-rotate">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section simple-section">
+          <div class="simple-section__site-container">
+            <div class="page-header__promo">
+              <p class="page-header__promo-text page-header__promo-title">При покупке курса сегодня бонусный курс в подарок</p>
+            </div>
+          </div>
+        </section>
+        <section class="section franchise-form">
+          <div class="franchise-form__site-container">
+            <div class="franchise-form__body">
+              <div class="franchise-form__left">
+                <h2 class="franchise-form__title section__title">Закажите консультацию и&nbsp;получите промокод на&nbsp;скидку</h2>
+              </div>
+              <form class="franchise-form__right" action="">
                 <div class="franchise-form__top">
                   <div class="franchise-form__inputs">
                     <div class="input-holder input-holder--with-label franchise-form__input">
-                      <input class="input-holder__input" type="text" name="franchise-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+                      <input class="input-holder__input" type="text" name="contacts-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
                     </div>
                     <div class="input-holder input-holder--with-label franchise-form__input">
-                      <input class="input-holder__input" type="text" name="franchise-city" required="required" placeholder="Город" value=""><span class="input-holder__label">Город</span><i class="input-holder__error"></i>
+                      <input class="input-holder__input" type="text" name="contacts-city" required="required" placeholder="Город" value=""><span class="input-holder__label">Город</span><i class="input-holder__error"></i>
                     </div>
                     <div class="input-holder input-holder--with-label franchise-form__input">
-                      <input class="input-holder__input" type="tel" name="franchise-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+                      <input class="input-holder__input" type="tel" name="contacts-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
                     </div>
                     <div class="input-holder input-holder--with-label franchise-form__input">
-                      <input class="input-holder__input" type="email" name="franchise-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+                      <input class="input-holder__input" type="email" name="contacts-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+                    </div>
+                    <div class="input-holder franchise-form__input franchise-form__textarea">
+                      <textarea class="input-holder__input" name="contacts-comment" placeholder="Задайте ваш вопрос"></textarea><i class="input-holder__error"></i>
                     </div>
                   </div>
                   <div class="franchise-form__center">
                     <div class="franchise-form__submit">
-                      <button class="franchise-form__button link-icon" type="submit">Записаться на вебинар<svg class="icon icon-link">
+                      <button class="franchise-form__button link-icon" type="submit">Заказать консультацию<svg class="icon icon-link">
                           <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
                         </svg>
                       </button>
@@ -302,6 +965,252 @@
                   </div>
                 </div>
               </form>
+            </div>
+          </div>
+        </section>
+        <section class="section cities">
+          <div class="cities__site-container">
+            <div class="cities__heading section__heading section__heading--mbM">
+              <h2 class="cities__title section__title">Присоединяйся к&nbsp;Дому&nbsp;Хлеба</h2>
+            </div>
+            <div class="cities__scrolling-wrapper">
+              <div class="cities__scrolling-item cities__scrolling-item--big">
+                <div class="cities__scrolling-inner">
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cities__scrolling-item cities__scrolling-item--middle">
+                <div class="cities__scrolling-inner">
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cities__scrolling-item cities__scrolling-item--small">
+                <div class="cities__scrolling-inner">
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Алматы</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                  <div class="cities__scrolling-point"><span>Санкт-Петербург</span>
+                    <svg class="icon icon-dot">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#dot"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

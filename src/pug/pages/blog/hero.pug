@@ -1,0 +1,173 @@
+-
+  const navItems = [
+    {
+      data: "devel-001",
+      text: "Производство",
+    },
+    {
+      data: "serv-001",
+      text: "Сервис в пекарне",
+    },
+    {
+      data: "opening-001",
+      text: "Открытие точек",
+    },
+    {
+      data: "exp-001",
+      text: "Наши эксперты",
+    },
+    {
+      data: "career-001",
+      text: "Карьера у нас",
+    },
+  ];
+
+section.section.section--promo-offset.hero
+  .hero__slider-wrapper
+    .hero__swiper.swiper
+      ul.hero__swipper-wrapper.swiper-wrapper
+        li.hero__swiper-slide.swiper-slide.hero-slide.hero-slide--low
+          .hero-slide__image
+            +picture('hero/blog.jpg')
+
+          .hero-slide__body
+            .hero-slide__article.hero-slide__article--mw
+              h1.hero-slide__title
+                | Блог
+
+  .hero__contacts-section.contacts-section
+    .contacts-section__site-container
+      .contacts-section__nav.chronology__nav
+        each item, index in navItems
+          if index == 0
+            button.chronology__nav-btn.chronology__nav-btn--active.tab-btn.js-tab-btn(type="button", data-chrono=item.data)=item.text
+          else
+            button.chronology__nav-btn.tab-btn.js-tab-btn(type="button", data-chrono=item.data)=item.text
+
+      .contacts-section__blogs-list.blogs-list
+        .blogs-list__item.blog-compound
+          .blog-compound__cell
+            .blog-compound__big-image
+              +picture('cert/img.png')
+          .blog-compound__cell
+            .blog-compound__article
+              article.blog-article
+                .blog-article__date
+                  | 13.06.2024 в 10:00
+                h4.blog-article__title
+                  | Как развить свою сеть пекарен в малых городах
+                p.blog-article__text
+                  | Производство и продажа хлебобулочных изделий и хлеба – одна из самых надежных и перспективных
+                  | сфер бизнеса, вероятность потерпеть неудачу значительно меньше по сравнению с другими видами
+                  | бизнеса. Данная отрасль успешно ...
+
+            .blog-compound__small-image
+              +picture('qr-back.png')
+          .blog-compound__cell
+            .blog-compound__index
+              | Индекс качества
+              br
+              | продукциии - Хорошо 72
+
+            .blog-compound__article
+              article.blog-article
+                .blog-article__date
+                  | 13.06.2024 в 10:00
+                h4.blog-article__title
+                  | Как развить свою сеть пекарен в малых городах
+                p.blog-article__text
+                  | Производство и продажа хлебобулочных изделий и хлеба – одна из самых надежных и перспективных
+                  | сфер бизнеса, вероятность потерпеть неудачу значительно меньше по сравнению с другими видами
+                  | бизнеса. Данная отрасль успешно ...
+
+            a.blog-compound__link.link-icon.link-icon--outlined.hide-on-mobile
+              | Как мы праздновали День торговли
+              +icon-multi('link')
+
+            a.blog-compound__link.link-icon.link-icon--outlined.show-on-mobile
+              | Как мы праздновали
+              br
+              | День торговли
+              +icon-multi('link')
+
+        .blogs-list__item.blog-double
+          .blog-double__cell.blog-double__image
+            +picture('franchise-carousel/slide.png')
+          .blog-double__cell.blog-double__nav
+            h6.blog-double__title
+              | События
+            ul.blog-double__list
+              li
+                a.blog-double__link(href="#")
+                  | Как мы праздновали День Торговли
+              li
+                a.blog-double__link(href="#")
+                  | Сплав с партнерами
+              li
+                a.blog-double__link(href="#")
+                  | Арбузник
+              li
+                a.blog-double__link(href="#")
+                  | Как мы праздновали День Торговли
+              li
+                a.blog-double__link(href="#")
+                  | Сплав с партнерами
+
+        .blogs-list__item.blog-compound
+
+          .blog-compound__cell.blog-compound__cell--bigger
+            .blog-compound__article
+              article.blog-article
+                .blog-article__date
+                  | 13.06.2024 в 10:00
+                h4.blog-article__title
+                  | Управленец будущего. Лучшие стратегии и тренды
+                  | для вашего бизнеса
+                .blog-article__text
+                  p
+                    | Dom Hleba Day – это ежегодное событие, где партнеры и эксперты обсуждают
+                    | актуальные вопросы бизнеса и жизни. Мы тщательно подбираем спикеров и локации,
+                    | чтобы сделать ваше участие максимально полезным и приятным.
+                  p
+                    | Dom Hleba Day — это уникальная площадка для обмена опытом, вдохновения и
+                    | установления новых партнёрских связей.
+
+            .blog-compound__middle-image
+              +picture('blog.jpg')
+
+          .blog-compound__cell.blog-compound__cell--bigger.blog-compound__cell--reverse
+            .blog-compound__article
+              article.blog-article
+                .blog-article__date
+                  | 13.06.2024 в 10:00
+                h4.blog-article__title
+                  | Управленец будущего. Лучшие стратегии и тренды
+                  | для вашего бизнеса
+                .blog-article__text
+                  p
+                    | Dom Hleba Day – это ежегодное событие, где партнеры и эксперты обсуждают
+                    | актуальные вопросы бизнеса и жизни. Мы тщательно подбираем спикеров и локации,
+                    | чтобы сделать ваше участие максимально полезным и приятным.
+                  p
+                    | Dom Hleba Day — это уникальная площадка для обмена опытом, вдохновения и
+                    | установления новых партнёрских связей.
+
+            .blog-compound__middle-image
+              +picture('blog.jpg')
+
+          .blog-compound__cell
+            .link-section__body.link-section__body--column
+              .link-section__info
+                p.link-section__text
+                  | Подписывайся
+                  br
+                  | на&nbsp;наш Telegram-канал
+                  | и&nbsp;узнавай все самое
+                  | интересное
+
+                a.link-section__link.link-section__link--bottom.link-icon.link-icon--white(href="#")
+                  | Подписаться
+                  +icon-multi('tg')(class="icon-tg-small")
+
+              .link-section__image
+                +picture('phone-dark', '')
