@@ -2,7 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 3000;
+
   width: 100%;
   height: 100%;
   background-color: rgba($color: #1e1e1e, $alpha: 60%);
@@ -20,14 +21,24 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 1000;
+
     display: none;
     width: 100%;
     max-width: 50rem;
     height: auto;
-    background-color: var(--color-white);
-    border-radius: 1.6rem;
+
+    color: var(--Grafiit-main, #303030);
+
+    background-color: var(--color-bg-2, #F5F5F7);
+    border-radius: 3.5rem;
     box-shadow: 0 0 1rem rgba($color: #000, $alpha: 10%);
     transform: translate(-50%, -50%);
+
+    @include breakpoint(tablet) {
+      max-width: calc(100% - (2 * var(--content-padding)));
+      border-radius: 1.8rem;
+    }
 
     &.modal-open {
       display: block;
@@ -36,21 +47,39 @@
 
   &__content {
     position: relative;
-    padding: 3.4rem 4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.5rem;
+
+    width: 100%;
+    padding: 5rem 6rem;
+
+    @include breakpoint(tablet) {
+      padding: 3rem 2rem;
+    }
   }
 
   &__close-btn {
     position: absolute;
     top: 0;
     right: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5.4rem;
-    height: 5.4rem;
+
+    width: 8rem;
+    height: 8rem;
     background-color: transparent;
     border-radius: 50%;
     cursor: pointer;
+
+    @include breakpoint(tablet) {
+      width: 5rem;
+      height: 5rem;
+    }
 
     &:hover {
       /** span {
@@ -63,6 +92,13 @@
       /**  span {
         background-color: var(--color-dark-green);
       } **/
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+
+      stroke: #303030;
     }
 
     span {
@@ -86,7 +122,60 @@
     }
   }
 
-  &__legend {
-    text-align: center;
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    &>* {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @include font(4rem, 100%, 500);
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      @include font(4rem, 100%, 500);
+    }
+  }
+
+  &__subtitle {
+    @include font(1.6rem, 125%, 400);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+
+    @include breakpoint(tablet) {
+      @include font(1.6rem, 125%, 400);
+    }
+  }
+
+  &__form,
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  &__link-wrappper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  &__link {
+    color: #DE7D57;
+    @include font(1.6rem, 125%, 400);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+
+    @include breakpoint(tablet) {
+      @include font(1.6rem, 125%, 400);
+    }
   }
 }

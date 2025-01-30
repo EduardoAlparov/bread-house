@@ -1,0 +1,30 @@
+.modal
+  .modal__container(data-target="modal-schedule")
+    .modal__content
+      button.button-reset.modal__close-btn.modal-close.js-form-modal(type="button")
+        +icon-multi('close')
+
+      .modal__heading
+        h6.modal__title
+          | Скачать&nbsp;график
+
+        p.modal__subtitle
+          | Заполните форму и мы отправим вам ссылку
+          br
+          | на график в ближайшее время
+
+      form.modal__form(action="" data-need-validation)
+        .modal__inputs
+          +Input-holder('text','Имя','shedule-name',true,true,'Имя')(class="modal__input")
+          +Input-holder('tel','Телефон','shedule-phone',true,true,'Телефон')(class="modal__input")
+          +Input-holder('email','Электронная почта','shedule-email',true,true,'Электронная почта')(class="modal__input")
+
+        .modal__submit.franchise-form__submit
+          button.modal__button.franchise-form__button.link-icon(type="submit")
+            | Скачать график
+            +icon-multi('link')
+          p.modal__agreement.franchise-form__agreement
+            | Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;
+            a(href="http://" target="_blank" rel="noopener noreferrer")
+            br
+            | Платформой

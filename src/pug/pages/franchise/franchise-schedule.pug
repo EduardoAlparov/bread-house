@@ -7,7 +7,10 @@ section.section.franchise-schedule
           br
           | открытия одной пекарни
 
-        a.franchise-schedule__link.link-icon.link-icon--download.link-icon--white(href="", download)
+        button.franchise-schedule__link.link-icon.link-icon--download.link-icon--white(
+          type="button"
+          data-path="modal-schedule"
+        )
           | Скачать график
           +icon-multi('link')
 

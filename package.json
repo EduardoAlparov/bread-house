@@ -89,6 +89,8 @@
 	},
 	"dependencies": {
 		"gsap": "3.12.5",
+		"inputmask": "5.0.9",
+		"jquery": "3.7.1",
 		"reset-css": "^5.0.1",
 		"swiper": "11.1.9",
 		"vanilla-lazyload": "^17.6.1"

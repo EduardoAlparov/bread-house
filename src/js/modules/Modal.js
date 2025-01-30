@@ -28,6 +28,7 @@ export class Modal {
     if (this.modals.length) {
       document.addEventListener('click', function (e) {
         const clickedElement = e.target.closest('[data-path]');
+
         if (clickedElement) {
           let target = clickedElement.dataset.path;
           let animation = clickedElement.dataset.animation;
@@ -148,10 +149,17 @@ export class Modal {
 
   enableScroll() {
     let pagePosition = parseInt(document.body.dataset.position, 10);
+
     this.unlockPadding();
+
     document.body.style.top = 'auto';
     document.body.classList.remove('disable-scroll');
-    window.scroll({ top: pagePosition, left: 0 });
+
+    window.scrollTo({
+      top: pagePosition,
+      behavior: 'instant'
+    });
+
     document.body.removeAttribute('data-position');
   }
 

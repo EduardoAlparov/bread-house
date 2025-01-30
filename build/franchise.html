@@ -559,10 +559,10 @@
             <div class="franchise-schedule__body">
               <div class="franchise-schedule__heading">
                 <h2 class="franchise-schedule__title section__title">Узнайте реальный срок<br>открытия одной пекарни</h2>
-                <a class="franchise-schedule__link link-icon link-icon--download link-icon--white" href="" download>Скачать график<svg class="icon icon-link">
+                <button class="franchise-schedule__link link-icon link-icon--download link-icon--white" type="button" data-path="modal-schedule">Скачать график<svg class="icon icon-link">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
                   </svg>
-                </a>
+                </button>
               </div>
               <div class="franchise-schedule__image">
                 <picture>
@@ -579,10 +579,10 @@
               <div class="online-tour__info">
                 <h2 class="online-tour__title section__title">Запишитесь&nbsp;на онлайн-экскурсию прямо&nbsp;сейчас</h2>
                 <p class="online-tour__text">Возможность побывать на производстве. Заглянуть в&nbsp;торговый зал и разобрать все процессы от запуска пекарни до стабильного заработка.</p>
-                <a class="online-tour__link link-icon link-icon--grey hide-on-mobile" href="#">Записаться на онлайн экскурсию<svg class="icon icon-online">
+                <button class="online-tour__link link-icon link-icon--grey hide-on-mobile" type="button" data-path="modal-online">Записаться на онлайн экскурсию<svg class="icon icon-online">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#online"></use>
                   </svg>
-                </a>
+                </button>
               </div>
               <div class="online-tour__videos">
                 <div class="online-tour__big-videos">
@@ -601,10 +601,10 @@
                   </picture>
                 </div>
               </div>
-              <a class="online-tour__link link-icon link-icon--grey show-on-mobile" href="#">Записаться на<br>онлайн экскурсию<svg class="icon icon-online">
+              <button class="online-tour__link link-icon link-icon--grey show-on-mobile" type="button" data-path="modal-online">Записаться на<br>онлайн экскурсию<svg class="icon icon-online">
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#online"></use>
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -1027,10 +1027,10 @@
                     <p class="support-promo__list-text">Помогают менеджеры поддержки</p>
                   </div>
                 </div>
-                <a class="support-promo__link link-icon link-icon--white" href="#">Получить демо-день<svg class="icon icon-link">
+                <button class="support-promo__link link-icon link-icon--white" type="button" data-path="modal-demo">Получить демо-день<svg class="icon icon-link">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
                   </svg>
-                </a>
+                </button>
               </div>
               <div class="support-promo__image hide-on-mobile">
                 <picture>
@@ -1517,13 +1517,127 @@
           </div>
         </div>
       </footer>
-    </div>
-    <div class="modal">
-      <div class="modal__container" data-target="modal">
-        <div class="modal__content">
-          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
-          </button>
-          <div class="modal__legend">Поздравляем вы открыли модалку!</div>
+      <div class="modal">
+        <div class="modal__container" data-target="modal-schedule">
+          <div class="modal__content">
+            <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+              <svg class="icon icon-close">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+              </svg>
+            </button>
+            <div class="modal__heading">
+              <h6 class="modal__title">Скачать&nbsp;график</h6>
+              <p class="modal__subtitle">Заполните форму и мы отправим вам ссылку<br>на график в ближайшее время</p>
+            </div>
+            <form class="modal__form" action="" data-need-validation>
+              <div class="modal__inputs">
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="text" name="shedule-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+                </div>
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="tel" name="shedule-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+                </div>
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="email" name="shedule-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+                </div>
+              </div>
+              <div class="modal__submit franchise-form__submit">
+                <button class="modal__button franchise-form__button link-icon" type="submit">Скачать график<svg class="icon icon-link">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </button>
+                <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__container" data-target="modal-demo">
+          <div class="modal__content">
+            <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+              <svg class="icon icon-close">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+              </svg>
+            </button>
+            <div class="modal__heading">
+              <h6 class="modal__title">Получить&nbsp;демо-день</h6>
+              <p class="modal__subtitle">Заполните форму и мы запишем<br>вас на ближайшее время</p>
+            </div>
+            <form class="modal__form" action="" data-need-validation>
+              <div class="modal__inputs">
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="text" name="demo-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+                </div>
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="tel" name="demo-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+                </div>
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="email" name="demo-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+                </div>
+              </div>
+              <div class="modal__submit franchise-form__submit">
+                <button class="modal__button franchise-form__button link-icon" type="submit">Получить демо-день<svg class="icon icon-link">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </button>
+                <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__container" data-target="modal-online">
+          <div class="modal__content">
+            <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+              <svg class="icon icon-close">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+              </svg>
+            </button>
+            <div class="modal__heading">
+              <h6 class="modal__title">Записаться&nbsp;на<br>онлайн-экскурсию</h6>
+              <p class="modal__subtitle">Заполните форму и мы запишем<br>вас на ближайшее время</p>
+            </div>
+            <form class="modal__form" action="" data-need-validation>
+              <div class="modal__inputs">
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="text" name="tour-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+                </div>
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="tel" name="tour-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+                </div>
+                <div class="input-holder input-holder--with-label modal__input">
+                  <input class="input-holder__input" type="email" name="tour-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+                </div>
+              </div>
+              <div class="modal__submit franchise-form__submit">
+                <button class="modal__button franchise-form__button link-icon" type="submit">Записаться<svg class="icon icon-link">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                  </svg>
+                </button>
+                <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__container" data-target="modal-success">
+          <div class="modal__content">
+            <button class="button-reset modal__close-btn modal-close" type="button">
+              <svg class="icon icon-close">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+              </svg>
+            </button>
+            <div class="modal__heading">
+              <h6 class="modal__title">Спасибо!</h6>
+              <div class="modal__link-wrappper">
+                <p>Ссылка на скачивание:</p>
+                <a class="modal__link" href="http://" target="_blank" rel="noopener noreferrer">https://photo-screen.ru/i/iKefeKviy!</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

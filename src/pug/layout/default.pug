@@ -17,8 +17,11 @@ html(lang=siteLang)
       block footer
         include ../parts/layout/footer.pug
 
-    .modal
-      include ../parts/modals/modal.pug
+      block modals
+        include ../parts/modals/shedule.pug
+        include ../parts/modals/demo.pug
+        include ../parts/modals/online.pug
+        include ../parts/modals/success.pug
 
   block scripts
     script(src="assets/js/main.js?v=" + siteVersion)

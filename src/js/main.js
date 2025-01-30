@@ -3,6 +3,8 @@ import 'focus-visible';
 import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
+import masks from './modules/masks';
+import validation from './modules/validation';
 
 import playVideo from './modules/playVideo';
 import setPromoHeight from './modules/setPromoHeight';
@@ -29,6 +31,8 @@ documenReady(() => {
 
   lazyIMages();
   initModal();
+  masks();
+  validation();
 
   playVideo();
   setPromoHeight();

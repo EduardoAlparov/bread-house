@@ -1,0 +1,32 @@
+.modal
+  .modal__container(data-target="modal-online")
+    .modal__content
+      button.button-reset.modal__close-btn.modal-close.js-form-modal(type="button")
+        +icon-multi('close')
+
+      .modal__heading
+        h6.modal__title
+          | Записаться&nbsp;на
+          br
+          | онлайн-экскурсию
+
+        p.modal__subtitle
+          | Заполните форму и мы запишем
+          br
+          | вас на ближайшее время
+
+      form.modal__form(action="" data-need-validation)
+        .modal__inputs
+          +Input-holder('text','Имя','tour-name',true,true,'Имя')(class="modal__input")
+          +Input-holder('tel','Телефон','tour-phone',true,true,'Телефон')(class="modal__input")
+          +Input-holder('email','Электронная почта','tour-email',true,true,'Электронная почта')(class="modal__input")
+
+        .modal__submit.franchise-form__submit
+          button.modal__button.franchise-form__button.link-icon(type="submit")
+            | Записаться
+            +icon-multi('link')
+          p.modal__agreement.franchise-form__agreement
+            | Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;
+            a(href="http://" target="_blank" rel="noopener noreferrer")
+            br
+            | Платформой
