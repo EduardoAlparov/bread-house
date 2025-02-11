@@ -9,11 +9,17 @@
 
   color: var(--White, #fff);
   letter-spacing: -0.04em;
+  text-align: center;
   white-space: nowrap;
 
-  background: var(--Grafiit-main, #303030);
+  background-color: var(--Grafiit-main, #303030);
+  border: 1px solid transparent;
   border-radius: 2.5rem;
-  text-align: center;
+
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-property: color, background, border;
+
   cursor: pointer;
 
   @include font(2.4rem, 100%, 500);
@@ -27,7 +33,11 @@
     @include font(1.5rem, 160%, 500);
   }
 
-  .icon {}
+  .icon {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: fill, stroke;
+  }
 
   .icon-event {
     width: 2rem;
@@ -121,10 +131,14 @@
   }
 
   &.link-icon--dark-blue {
-    background-color: transparent;
-    border: 1px solid var(--Grafiit-main, #303030);
+    background-color: var(--Blue, #4888F7);
+    border: 1px solid transparent;
 
-    color: #606060;
+    color: #FFF;
+
+    .icon-vk-big {
+      fill: #FFF;
+    }
   }
 
   &.link-icon--dark-red {
@@ -165,6 +179,86 @@
     .icon-link {
       transform: translateY(10%);
       stroke: var(--Grafiit-main, #303030);
+    }
+  }
+}
+
+.link-icon {
+  &:not(.link-icon--grey, .link-icon--white, .link-icon--dark-blue) {
+    @include hoverActive() {
+      color: var(--Grafiit-main, #303030);
+
+      background-color: transparent;
+      border-color: var(--Grafiit-main, #303030);
+
+      .icon-link {
+        stroke: var(--Grafiit-main, #303030);
+      }
+
+      .icon-calc {
+        fill: var(--Grafiit-main, #303030);
+      }
+    }
+  }
+
+  &.link-icon--grey {
+    @include hoverActive() {
+      background-color: var(--Grafiit-main, #303030);
+
+      color: var(--White, #fff);
+
+      .icon-link {
+        stroke: var(--White, #fff);
+      }
+
+      .icon-online {
+        fill: var(--White, #fff);
+      }
+    }
+  }
+
+  &.link-icon--outlined {
+    @include hoverActive() {
+      background-color: var(--Grafiit-main, #303030);
+      border-color: transparent;
+
+      color: var(--White, #fff);
+
+      .icon-link {
+        stroke: var(--White, #fff);
+      }
+    }
+  }
+
+
+  &.link-icon--white {
+    @include hoverActive() {
+      background-color: var(--Grafiit-main, #303030);
+      border-color: transparent;
+
+      color: var(--White, #fff);
+
+      .icon-link {
+        stroke: var(--White, #fff);
+      }
+
+      .icon-event {
+        fill: var(--White, #fff);
+      }
+    }
+  }
+
+  &.link-icon--dark-blue {
+
+    @include hoverActive() {
+      background-color: #4075D0;
+      border: 1px solid transparent;
+
+      color: #FFF;
+
+      .icon-vk-big {
+        fill: #FFF;
+      }
     }
   }
 }

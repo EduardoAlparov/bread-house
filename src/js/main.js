@@ -5,6 +5,7 @@ import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 import masks from './modules/masks';
 import validation from './modules/validation';
+import detectTouch from './modules/detectTouch';
 
 import playVideo from './modules/playVideo';
 import setPromoHeight from './modules/setPromoHeight';
@@ -31,6 +32,7 @@ documenReady(() => {
 
   lazyIMages();
   initModal();
+  detectTouch();
   masks();
   validation();
 
