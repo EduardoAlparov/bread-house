@@ -457,7 +457,7 @@
       </footer>
     </div>
     <div class="modal">
-      <div class="modal__container" data-target="modal-schedule">
+      <div class="modal__container" data-target="modal-schedule" data-download="true">
         <div class="modal__content">
           <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
             <svg class="icon icon-close">
@@ -562,7 +562,199 @@
       </div>
     </div>
     <div class="modal">
+      <div class="modal__container" data-target="modal-partner">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Стать&nbsp;партнером</h6>
+            <p class="modal__subtitle">Заполните форму и мы свяжемся<br>с вами в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="partner-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="partner-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="partner-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Стать партнером<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-calculation">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Заказать&nbsp;расчет</h6>
+            <p class="modal__subtitle">Заполните форму и мы свяжемся<br>с вами в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="calculation-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="calculation-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="calculation-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Заказать расчет<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-leasing">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Узнать про лизинг</h6>
+            <p class="modal__subtitle">Заполните форму и мы свяжемся<br>с вами в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="leasing-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="leasing-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="leasing-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Узнать про лизинг<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-event">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Зарегистрироваться<br>на событие</h6>
+            <p class="modal__subtitle">Заполните форму и мы свяжемся<br>с вами в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="event-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="event-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="event-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Зарегистрироваться<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-package" data-download="true">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Скачать&nbsp;пакет<br>материалов</h6>
+            <p class="modal__subtitle">Заполните форму и мы отправим вам ссылку<br>на график в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="shedule-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="shedule-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="shedule-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Скачать<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
       <div class="modal__container" data-target="modal-success">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Спасибо!</h6>
+            <div class="modal__link-wrappper">
+              <p>Ваша заявка принята!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-download">
         <div class="modal__content">
           <button class="button-reset modal__close-btn modal-close" type="button">
             <svg class="icon icon-close">

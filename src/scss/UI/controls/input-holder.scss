@@ -11,9 +11,13 @@
     &.filled {
       position: absolute;
       bottom: 4px;
-      left: 5px;
+      right: 4rem;
 
       color: var(--Red, #891C22);
+
+      @include breakpoint(tablet) {
+        right: 2.4rem;
+      }
     }
   }
 

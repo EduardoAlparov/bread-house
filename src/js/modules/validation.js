@@ -103,9 +103,16 @@ export default function validation() {
 
         const button = document.createElement("button");
         button.classList.add('visually-hidden');
-        button.dataset.path = 'modal-success';
-        $("body").append(button);
-        button.click();
+
+        if(form.closest('[data-download]')) {
+          button.dataset.path = 'modal-download';
+          $("body").append(button);
+          button.click();
+        } else {
+          button.dataset.path = 'modal-success';
+          $("body").append(button);
+          button.click();
+        }
     });
   });
 }

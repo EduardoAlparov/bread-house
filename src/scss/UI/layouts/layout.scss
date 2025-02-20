@@ -28,10 +28,6 @@ html {
     font-size: clamp(4.2px, 0.52vw, 10px);
   }
 
-  @include breakpointHeightSmallMobile() {
-    font-size: 8px;
-  }
-
   @include breakpoint(supersmall-mobile) {
     font-size: 8px;
   }

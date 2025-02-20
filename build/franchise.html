@@ -68,7 +68,7 @@
               <div class="intro__info">
                 <div class="intro__tooltip">С франшизой</div>
                 <h1 class="intro__title">Откройте пекарню<br>по нашему рецепту</h1>
-                <a class="intro__link link-icon" href="#">Стать партнером<svg class="icon icon-link">
+                <a class="intro__link link-icon" href="#" data-path="modal-partner">Стать партнером<svg class="icon icon-link">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
                   </svg>
                 </a>
@@ -447,7 +447,7 @@
                 <div class="franchise-formats__left">
                   <h2 class="franchise-formats__title section__title">Форматы сотрудничества по&nbsp;франшизе</h2>
                   <p class="franchise-formats__text">3 бизнеса в одной франшизе:<br>пекарня, кулинария, кофейня</p>
-                  <a class="franchise-formats__link franchise-formats__link--mta link-icon hide-on-mobile" href="#">Рассчитать доходность будущей пекарни<svg class="icon icon-calc">
+                  <a class="franchise-formats__link franchise-formats__link--mta link-icon hide-on-mobile" href="#" data-path="modal-calculation">Рассчитать доходность будущей пекарни<svg class="icon icon-calc">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#calc"></use>
                     </svg>
                   </a>
@@ -547,7 +547,7 @@
                   </div>
                 </div>
               </div>
-              <a class="franchise-formats__link franchise-formats__link--mobile link-icon show-on-mobile" href="#">Рассчитать доходность<br>будущей пекарни<svg class="icon icon-calc">
+              <a class="franchise-formats__link franchise-formats__link--mobile link-icon show-on-mobile" href="#" data-path="modal-calculation">Рассчитать доходность<br>будущей пекарни<svg class="icon icon-calc">
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#calc"></use>
                 </svg>
               </a>
@@ -669,7 +669,7 @@
             </ul>
             <button class="stats-section__expand show-on-mobile" type="button">Показать еще</button>
             <div class="stats-section__bottom elements-section__bottom">
-              <a class="link-icon link-icon--outlined" href="#">Узнать про лизинг<svg class="icon icon-link">
+              <a class="link-icon link-icon--outlined" href="#" data-path="modal-leasing">Узнать про лизинг<svg class="icon icon-link">
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
                 </svg>
               </a>
@@ -686,7 +686,7 @@
                     <p class="format-quotation__text">С 2017 года развиваем собственную и франчайзинговую сеть с помощью С 2017 года развиваем собственную и франчайзинговую сеть с помощью 2017 года развиваем собственную и франчайзинговую сеть с помощью</p>
                     <div class="format-quotation__border"></div>
                   </div>
-                  <a class="franchise-formats__link franchise-formats__link--mta link-icon hide-on-mobile" href="#">Стать партнером<svg class="icon icon-calc">
+                  <a class="franchise-formats__link franchise-formats__link--mta link-icon hide-on-mobile" href="#" data-path="modal-partner">Стать партнером<svg class="icon icon-calc">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#calc"></use>
                     </svg>
                   </a>
@@ -921,7 +921,7 @@
                   </button>
                 </div>
               </div>
-              <a class="elements-section__download" href="#" download><span>Скачать&nbsp;пакет&nbsp;материалов<br>для&nbsp;открытия&nbsp;франшизы</span>
+              <a class="elements-section__download" href="#" data-path="modal-package"><span>Скачать&nbsp;пакет&nbsp;материалов<br>для&nbsp;открытия&nbsp;франшизы</span>
                 <svg class="icon icon-download">
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#download"></use>
                 </svg>
@@ -1143,7 +1143,7 @@
                         <div class="event-slide__date">13.06.2024 в 10:00</div>
                         <h3 class="event-slide__text">Бизнес-завтрак с Андреем Герасимовым в Самаре</h3>
                       </div>
-                      <a class="event-slide__link link-icon link-icon--white" href="#">Зарегистрироваться на событие<svg class="icon icon-event">
+                      <a class="event-slide__link link-icon link-icon--white" href="#" data-path="modal-event">Зарегистрироваться на событие<svg class="icon icon-event">
                           <use xlink:href="assets/images/sprites/sprite-multi.svg#event"></use>
                         </svg>
                       </a>
@@ -1160,7 +1160,7 @@
                         <div class="event-slide__date">13.06.2024 в 10:00</div>
                         <h3 class="event-slide__text">Бизнес-завтрак с Андреем Герасимовым в Самаре</h3>
                       </div>
-                      <a class="event-slide__link link-icon link-icon--white" href="#">Зарегистрироваться на событие<svg class="icon icon-event">
+                      <a class="event-slide__link link-icon link-icon--white" href="#" data-path="modal-event">Зарегистрироваться на событие<svg class="icon icon-event">
                           <use xlink:href="assets/images/sprites/sprite-multi.svg#event"></use>
                         </svg>
                       </a>
@@ -1519,7 +1519,7 @@
       </footer>
     </div>
     <div class="modal">
-      <div class="modal__container" data-target="modal-schedule">
+      <div class="modal__container" data-target="modal-schedule" data-download="true">
         <div class="modal__content">
           <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
             <svg class="icon icon-close">
@@ -1624,7 +1624,199 @@
       </div>
     </div>
     <div class="modal">
+      <div class="modal__container" data-target="modal-partner">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Стать&nbsp;партнером</h6>
+            <p class="modal__subtitle">Заполните форму и мы свяжемся<br>с вами в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="partner-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="partner-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="partner-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Стать партнером<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-calculation">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Заказать&nbsp;расчет</h6>
+            <p class="modal__subtitle">Заполните форму и мы свяжемся<br>с вами в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="calculation-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="calculation-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="calculation-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Заказать расчет<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-leasing">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Узнать про лизинг</h6>
+            <p class="modal__subtitle">Заполните форму и мы свяжемся<br>с вами в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="leasing-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="leasing-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="leasing-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Узнать про лизинг<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-event">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Зарегистрироваться<br>на событие</h6>
+            <p class="modal__subtitle">Заполните форму и мы свяжемся<br>с вами в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="event-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="event-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="event-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Зарегистрироваться<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-package" data-download="true">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close js-form-modal" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Скачать&nbsp;пакет<br>материалов</h6>
+            <p class="modal__subtitle">Заполните форму и мы отправим вам ссылку<br>на график в ближайшее время</p>
+          </div>
+          <form class="modal__form" action="" data-need-validation>
+            <div class="modal__inputs">
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="text" name="shedule-name" required="required" placeholder="Имя" value=""><span class="input-holder__label">Имя</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="tel" name="shedule-phone" required="required" placeholder="Телефон" value=""><span class="input-holder__label">Телефон</span><i class="input-holder__error"></i>
+              </div>
+              <div class="input-holder input-holder--with-label modal__input">
+                <input class="input-holder__input" type="email" name="shedule-email" required="required" placeholder="Электронная почта" value=""><span class="input-holder__label">Электронная почта</span><i class="input-holder__error"></i>
+              </div>
+            </div>
+            <div class="modal__submit franchise-form__submit">
+              <button class="modal__button franchise-form__button link-icon" type="submit">Скачать<svg class="icon icon-link">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#link"></use>
+                </svg>
+              </button>
+              <p class="modal__agreement franchise-form__agreement">Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования&nbsp;<a href="http://" target="_blank" rel="noopener noreferrer"></a><br>Платформой</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
       <div class="modal__container" data-target="modal-success">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close" type="button">
+            <svg class="icon icon-close">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__heading">
+            <h6 class="modal__title">Спасибо!</h6>
+            <div class="modal__link-wrappper">
+              <p>Ваша заявка принята!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal-download">
         <div class="modal__content">
           <button class="button-reset modal__close-btn modal-close" type="button">
             <svg class="icon icon-close">

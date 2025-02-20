@@ -1,8 +1,12 @@
 export class Modal {
   constructor(options) {
     let defaultOptions = {
-      isOpen: () => { },
-      isClose: () => { },
+      isOpen: () => {
+
+      },
+      isClose: () => {
+
+      },
     }
     this.options = Object.assign(defaultOptions, options);
     this.modals = Array.from(document.querySelectorAll('.modal'));
@@ -22,7 +26,6 @@ export class Modal {
     ];
     this.events();
   }
-
 
   events() {
     if (this.modals.length) {

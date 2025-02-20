@@ -17,10 +17,18 @@ html(lang=siteLang)
       block footer
         include ../parts/layout/footer.pug
 
-    include ../parts/modals/shedule.pug
-    include ../parts/modals/demo.pug
-    include ../parts/modals/online.pug
-    include ../parts/modals/success.pug
+    block modals
+      include ../parts/modals/schedule.pug
+      include ../parts/modals/demo.pug
+      include ../parts/modals/online.pug
+      include ../parts/modals/partners.pug
+      include ../parts/modals/calculation.pug
+      include ../parts/modals/leasing.pug
+      include ../parts/modals/event.pug
+      include ../parts/modals/package.pug
+
+      include ../parts/modals/success.pug
+      include ../parts/modals/download.pug
 
   block scripts
     script(src="assets/js/main.js?v=" + siteVersion)
