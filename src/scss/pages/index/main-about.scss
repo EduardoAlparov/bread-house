@@ -104,7 +104,7 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-columns: repeat(2, calc(50% - (3rem / 2)));
     grid-template-rows: repeat(2, auto);
     gap: 3rem;
 
