@@ -226,6 +226,14 @@
       min-width: 100%;
       padding: 1.6rem 2.5rem;
     }
+
+    &.main-about__link--mra {
+      margin-right: auto;
+
+      @include breakpoint(tablet) {
+        margin-right: unset;
+      }
+    }
   }
 
   &__novelty {

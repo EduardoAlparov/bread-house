@@ -1,20 +1,16 @@
 -
   const shorts = [
     {
-      id: "franchise-short-01",
-      src: "https://vk.com/video_ext.php?oid=-20629724&id=456241973&hash=5c19eb857534cea1"
+      id: "franchise-short-001",
     },
     {
-      id: "franchise-short-02",
-      src: "https://vk.com/video_ext.php?oid=-46638176&id=456239522&hash=f90b58fe7e1c5134"
+      id: "franchise-short-002",
     },
     {
-      id: "franchise-short-03",
-      src: "https://vk.com/video_ext.php?oid=-20629724&id=456241973&hash=5c19eb857534cea1"
+      id: "franchise-short-003",
     },
     {
-      id: "franchise-short-04",
-      src: "https://vk.com/video_ext.php?oid=-46638176&id=456239522&hash=f90b58fe7e1c5134"
+      id: "franchise-short-004",
     },
   ]
 
@@ -39,7 +35,7 @@ section.section.franchise-formats
               | с помощью С 2017 года развиваем собственную и франчайзинговую
               | сеть с помощью  2017 года развиваем собственную и франчайзинговую сеть с помощью
 
-          a.franchise-formats__link.franchise-formats__link--mobile.link-icon.hide-on-mobile(href="#")
+          a.franchise-formats__link.franchise-formats__link--mobile.link-icon.hide-on-mobile(href="#" data-path="modal-demo")
             | Получить демо-день
             +icon-multi('calc')
 
@@ -49,16 +45,10 @@ section.section.franchise-formats
               each short in shorts
                 li.franchise-formats__swiper-slide.swiper-slide.franchise-short(id=short.id)
                   .franchise-short__body
-                    .franchise-short__embed-video
-                      iframe(
-                        width="100%"
-                        height="100%"
-                        frameborder="0"
-                        allowfullscreen="1"
-                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                        src=short.src
-                      )
-                    button.franchise-short__button(type="button")
+                    .franchise-short__simple-video
+                      video(controls mute src="./assets/images/video.mp4" type="video/mp4")
+
+                    button.franchise-short__button.franchise-short__button--active(type="button" data-play-video)
                       +icon-multi('play-big')
 
       .franchise-formats__grid.franchise-formats__grid--no-gap
@@ -71,6 +61,6 @@ section.section.franchise-formats
               button.double-btns__btn.double-btns__btn--next(type="button")
                 +icon-multi('prev')
 
-      a.franchise-formats__link.franchise-formats__link--mobile.link-icon.show-on-mobile(href="#")
+      a.franchise-formats__link.franchise-formats__link--mobile.link-icon.show-on-mobile(href="#" data-path="modal-partner")
         | Получить демо-день
         +icon-multi('calc')

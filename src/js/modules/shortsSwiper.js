@@ -30,7 +30,17 @@ export default () => {
                   spaceBetween: 25,
                   slidesPerView: 5
                 }
-              }
+              },
+              on: {
+                activeIndexChange: function () {
+                  const previousSlide = this.slides[this.previousIndex];
+                  const video = previousSlide.querySelector('video');
+
+                  if(previousSlide && video) {
+                    video.pause();
+                  }
+                },
+              },
           })
         }
 
@@ -51,7 +61,18 @@ export default () => {
               width: '38rem',
               spaceBetween: 25,
             }
-          }
+          },
+
+          on: {
+            activeIndexChange: function () {
+              const previousSlide = this.slides[this.previousIndex];
+              const video = previousSlide.querySelector('video');
+
+              if(previousSlide && video) {
+                video.pause();
+              }
+            },
+          },
       })
     })
 }
