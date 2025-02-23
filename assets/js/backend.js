@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     button.click();
     button.remove();
   }
+
+  window.openModal = openModal;
 });
 
 // openModal("modal-schedule") - открывается попап "Скачать график"
