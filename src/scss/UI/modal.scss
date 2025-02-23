@@ -40,6 +40,10 @@
       border-radius: 1.8rem;
     }
 
+    &:has(.modal__content--review) {
+      background-color: var(--Pale-yellow, #F5E8CE);
+    }
+
     &.modal-open {
       display: block;
     }
@@ -55,9 +59,18 @@
 
     width: 100%;
     padding: 5rem 6rem;
+    overflow: hidden;
 
     @include breakpoint(tablet) {
       padding: 3rem 2rem;
+    }
+
+    &.modal__content--low {
+      padding: 4.7rem 5rem 3rem;
+
+      @include breakpoint(tablet) {
+        padding: 3rem 2rem;
+      }
     }
   }
 
@@ -131,6 +144,10 @@
     &>* {
       text-align: center;
     }
+
+    &.modal__review-wrapper {
+      gap: 2.5rem;
+    }
   }
 
   &__title {
@@ -138,7 +155,7 @@
     letter-spacing: -0.02em;
 
     @include breakpoint(tablet) {
-      @include font(4rem, 100%, 500);
+      @include font(2.4rem, 100%, 500);
     }
   }
 
@@ -166,6 +183,10 @@
     align-items: stretch;
     gap: 0.5rem;
     margin-top: 1rem;
+
+    &:has(.modal__button--close) {
+      margin-top: 2rem;
+    }
   }
 
   &__link {
@@ -176,6 +197,17 @@
 
     @include breakpoint(tablet) {
       @include font(1.6rem, 125%, 400);
+    }
+  }
+
+  &__button {
+    &.modal__button--close {
+      min-width: 38rem;
+      margin-top: 2.5rem;
+
+      @include breakpoint(tablet) {
+        min-width: 28rem;
+      }
     }
   }
 }

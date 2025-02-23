@@ -1,6 +1,6 @@
 .modal
   .modal__container(data-target="modal-success")
-    .modal__content
+    .modal__content.modal__content--low
       button.button-reset.modal__close-btn.modal-close(type="button")
         +icon-multi('close')
 
@@ -9,4 +9,8 @@
           | Спасибо!
 
         .modal__link-wrappper
-          p Ваша заявка принята!
+          p В ближайшее время наш менеджер свяжется с вами!
+
+          button.modal__button.modal__button--close.modal-close.franchise-form__button.link-icon(type="button")
+            | Закрыть
+            +icon-multi('link')

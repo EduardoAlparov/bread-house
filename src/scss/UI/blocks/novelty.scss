@@ -92,4 +92,40 @@
       }
     }
   }
+
+  &__quotes {
+    margin-bottom: 1.5rem;
+
+    .icon {
+      width: 3rem;
+      height: 2.3rem;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  &__text {
+    text-align: left;
+    @include font(2.4rem, 120%, 400);
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      @include font(1.6rem, 125%, 400);
+    }
+  }
+
+  &.novelty--modal {
+    gap: 0rem;
+
+    max-width: unset;
+    padding: 0;
+    aspect-ratio: unset;
+
+    border-radius: unset;
+  }
 }

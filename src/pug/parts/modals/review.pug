@@ -1,0 +1,28 @@
+.modal
+  .modal__container(data-target="modal-review")
+    .modal__content.modal__content--review
+      button.button-reset.modal__close-btn.modal-close(type="button")
+        +icon-multi('close')
+
+      .modal__review-wrapper.modal__heading
+        h6.modal__title.modal__review-title
+          | Пирог песочный
+          br
+          | с вишней
+
+        .modal__novetly.novelty.novelty--modal(id="")
+          .novelty__image
+            +picture('novetly/img-1.png')
+          .novelty__text-col
+            .novelty__quotes
+              +icon-multi('quotes')
+
+            .novelty__text-wrapper
+              p.novelty__text
+                | Очень вкусная начинка. Не джем,
+                | а настоящие вишни. Тесто - выше
+                | всех похвал.
+              p.novelty__text
+                | Очень вкусная начинка. Не джем,
+                | а настоящие вишни. Тесто - выше
+                | всех похвал.
