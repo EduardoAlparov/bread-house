@@ -26,7 +26,9 @@
     display: none;
     width: 100%;
     max-width: 50rem;
-    height: auto;
+    max-height: max-content;
+    height: 100%;
+    overflow: hidden;
 
     color: var(--Grafiit-main, #303030);
 
@@ -59,7 +61,11 @@
 
     width: 100%;
     padding: 5rem 6rem;
-    overflow: hidden;
+    height: auto;
+    max-height: 100%;
+    overflow: auto;
+
+    @include customScrollbar();
 
     @include breakpoint(tablet) {
       padding: 3rem 2rem;
