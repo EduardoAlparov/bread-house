@@ -1,6 +1,19 @@
 import $ from "jquery";
 import '../libs/parsley/parsley.min.js';
 
+
+window.Parsley.addValidator('email', {
+  requirementType: 'string',
+  validateString: function(value) {
+    if (typeof value !== 'string') return false;
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value.toLowerCase());
+  },
+  messages: {
+    en: 'Enter a valid email address.',
+    ru: 'В данном поле может быть только E-mail'
+  }
+});
+
 window.Parsley.addValidator('requiredIfChecked', {
   requirementType: 'string',
   validateString: function (value, requirement) {
@@ -10,53 +23,50 @@ window.Parsley.addValidator('requiredIfChecked', {
       return false;
     }
 
-    if (checkbox.checked && !value.trim()) {
-      return false;
-    }
+    return !(checkbox.checked && !value.trim());
 
-    return true;
   },
   messages: {
     en: 'Required field',
-    ru: 'Обязательное поле',
+    ru: 'Обязательное поле'
   },
-  priority: 33,
+  priority: 33
 });
 
 window.Parsley.addValidator('phone', {
   requirementType: 'string',
   validateString: function (value) {
-    if (value.trim() === '') return true;
-    return /^(\+7|7|8)?[\s\-]?\(?[1-9][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(value);
+    if (typeof value !== 'string') return false;
+    return /^(\+7|7|8)?[\s\-]?\(?[1-9]\d{2}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/.test(value);
   },
   messages: {
     en: 'Number field +7(9XX)XXX-XX-XX',
-    ru: 'Формат 8(9XX)XXX-XX-XX',
-  },
+    ru: 'Формат 8(9XX)XXX-XX-XX'
+  }
 });
 
 window.Parsley.addValidator('reqtext', {
   requirementType: 'string',
   validateString: function (value) {
-    if (value.trim() === '') return true;
+    if (typeof value !== 'string') return false;
     return /^[А-Яа-яЁёA-Za-z]+$/.test(value);
   },
   messages: {
     en: 'Required field.',
-    ru: 'Введите буквенное значение.',
-  },
+    ru: 'Введите буквенное значение.'
+  }
 });
 
 window.Parsley.addValidator('date', {
   requirementType: 'string',
   validateString: function (value) {
-    if (value.trim() === '') return true;
+    if (typeof value !== 'string' || value.trim() === '') return false;
     return dayjs(value, 'DD.MM.YYYY', true).isValid();
   },
   messages: {
     en: 'Enter correct date',
-    ru: 'Введите правильно дату',
-  },
+    ru: 'Введите правильно дату'
+  }
 });
 
 Parsley.addMessages('ru', {
@@ -67,7 +77,7 @@ Parsley.addMessages('ru', {
     number: 'Введите число.',
     integer: 'Введите целое число.',
     digits: 'Введите только цифры.',
-    alphanum: 'Введите буквенно-цифровое значение.',
+    alphanum: 'Введите буквенно-цифровое значение.'
   },
   notblank: 'Это поле должно быть заполнено.',
   required: 'Поле не заполнено',
@@ -81,38 +91,20 @@ Parsley.addMessages('ru', {
   mincheck: 'Выберите не менее %s значений.',
   maxcheck: 'Выберите не более %s значений.',
   check: 'Выберите от %s до %s значений.',
-  equalto: 'Это значение должно совпадать.',
+  equalto: 'Это значение должно совпадать.'
 });
 
 Parsley.setLocale('ru');
 
-window.Parsley.on('form:success', function() {
-
-});
-
 export default function validation() {
-  const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
-
+  const formsToValidate = document.querySelectorAll('form[data-need-validation]');
   formsToValidate.forEach((form) => {
-    $(form).parsley();
-
-    $(form).submit((e) => {
+    const parsleyInstance = $(form).parsley();
+    form.addEventListener("submit", (e) => {
+      if (!parsleyInstance.isValid()) {
         e.preventDefault();
-
-        $('.js-form-modal').click();
-
-        const button = document.createElement("button");
-        button.classList.add('visually-hidden');
-
-        if(form.closest('[data-download]')) {
-          button.dataset.path = 'modal-download';
-          $("body").append(button);
-          button.click();
-        } else {
-          button.dataset.path = 'modal-success';
-          $("body").append(button);
-          button.click();
-        }
+        parsleyInstance.validate();
+      }
     });
   });
 }

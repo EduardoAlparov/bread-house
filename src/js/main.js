@@ -7,6 +7,7 @@ import masks from './modules/masks';
 import validation from './modules/validation';
 import detectTouch from './modules/detectTouch';
 
+import openMobileMenu from './modules/openMobileMenu';
 import playVideo from './modules/playVideo';
 import setPromoHeight from './modules/setPromoHeight';
 import animationsTriggers from './modules/animationsTriggers';
@@ -38,6 +39,7 @@ documenReady(() => {
   masks();
   validation();
 
+  openMobileMenu();
   playVideo();
   setPromoHeight();
   animationsTriggers();

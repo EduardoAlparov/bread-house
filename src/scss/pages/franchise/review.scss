@@ -109,6 +109,11 @@
 
     align-items: center;
 
+    img,
+    picture {
+      flex-shrink: 0;
+    }
+
     img {
       display: block;
 

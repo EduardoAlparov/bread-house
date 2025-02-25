@@ -41,5 +41,16 @@ header.page-header
     .page-header__mobile-buttons
       a.page-header__phone.simple-btn(href="#")
         +icon-multi('phone')
-      a.page-header__burger.simple-btn(href="#")
+      a.page-header__burger.simple-btn.js-mobile-menu-open(href="#")
         +icon-multi('burger')
+        +icon-multi('burger-close')
+
+    ul.page-header__mobile-menu.show-on-mobile
+      li.page-header__link-item
+        a.page-header__mobile-link(href="#") Инвестиции
+      li.page-header__link-item
+        a.page-header__mobile-link(href="#") Онлайн экскурсия
+      li.page-header__link-item
+        a.page-header__mobile-link(href="#") Партнеры
+      li.page-header__link-item
+        a.page-header__mobile-link(href="#") Блог

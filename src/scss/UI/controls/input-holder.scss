@@ -36,7 +36,7 @@
     @include font(2rem, 125%, 400);
 
     @include breakpoint(tablet) {
-      padding: 1.6rem 2.4rem;
+      padding: 1.6rem 2.4rem 1.5rem;
 
       border-radius: 1rem;
 
@@ -107,8 +107,10 @@
     transition-timing-function: ease-out;
 
     @include breakpoint(laptop) {
-      top: 0.6rem;
-      left: var(--gap-xxl, 2.4rem);
+      top: 0.4rem;
+      left: 2.4rem;
+
+      @include font(1.2rem, 120%, 500);
     }
   }
 

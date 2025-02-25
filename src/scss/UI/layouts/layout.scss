@@ -39,6 +39,10 @@ body {
   color: var(--Text, #1A1B1C);
   background: var(--White, #FFF);
   font: var(--font-body);
+
+  &.mobile-menu-open {
+    @extend .no-scroll;
+  }
 }
 
 .section {
