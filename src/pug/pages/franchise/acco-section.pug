@@ -52,7 +52,7 @@
   ];
 
 section.section.acco-section
-  .acco-section__site-container
+  .acco-section__site-container._collapsed-parent
     .acco-section__body
       .acco-section__left
         h2.acco-section__title.section__title
@@ -68,7 +68,7 @@ section.section.acco-section
               | создатель международной франшизы пекарен «Дом Хлеба»
 
       .acco-section__right
-        ul.acco-section__list.acco-section__list--collapsed
+        ul.acco-section__list._collapsed-list
           for faq in faqS
             li.acco-section__item(id=faq.id)
               button.acco-section__button.js-faq-btn(type="button")
@@ -77,4 +77,4 @@ section.section.acco-section
               .acco-section__dropdown
                 p.acco-section__text=faq.text
 
-        button.acco-section__expand.stats-section__expand.show-on-mobile(type="button") Показать еще
+        button.acco-section__expand.stats-section__expand.show-on-mobile.js-expand-btn(type="button") Показать еще

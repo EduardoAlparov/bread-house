@@ -23,7 +23,7 @@
       gap: 1rem;
     }
 
-    &.stats-section__body--collapse {
+    &._collapsed-list {
       .stats-section__item {
         &:nth-child(1n + 5) {
 

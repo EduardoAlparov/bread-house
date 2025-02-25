@@ -10,6 +10,8 @@ import detectTouch from './modules/detectTouch';
 import playVideo from './modules/playVideo';
 import setPromoHeight from './modules/setPromoHeight';
 import animationsTriggers from './modules/animationsTriggers';
+import expandElements from './modules/expandElements';
+import scrollingText from './modules/scrollingText';
 
 import reviewsSwiper from './modules/reviewsSwiper';
 import franchiseCarousel from './modules/franchiseCarousel';
@@ -39,6 +41,8 @@ documenReady(() => {
   playVideo();
   setPromoHeight();
   animationsTriggers();
+  expandElements();
+  scrollingText();
 
   reviewsSwiper();
   franchiseCarousel();

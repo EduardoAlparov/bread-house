@@ -115,7 +115,7 @@
       gap: 1rem;
     }
 
-    &.acco-section__list--collapsed {
+    &._collapsed-list {
       .acco-section__item {
         &:nth-child(1n + 5) {
           @include breakpoint(tablet) {
@@ -225,7 +225,7 @@
   }
 
   &__expand {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     margin-inline: auto;
   }
 }

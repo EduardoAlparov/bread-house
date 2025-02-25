@@ -74,14 +74,14 @@
   ];
 
 section.section.stats-section
-  .stats-section__site-container
+  .stats-section__site-container._collapsed-parent
     .stats-section__heading
       h2.events-section__title.section__title
         | 300 000 руб средняя прибыль
         br
         | пекарни ежемесячно
 
-    ul.stats-section__body.stats-section__body--collapse
+    ul.stats-section__body._collapsed-list
       each stat in stats
         if stat.image
           li.stats-section__item(class=stat.class)
@@ -106,7 +106,7 @@ section.section.stats-section
             p.stats-section__numbers=stat.numbers
             p.stats-section__text=stat.text
 
-    button.stats-section__expand.show-on-mobile(type="button") Показать еще
+    button.stats-section__expand.show-on-mobile.js-expand-btn(type="button") Показать еще
 
     .stats-section__bottom.elements-section__bottom
       a.link-icon.link-icon--outlined(href="#" data-path="modal-leasing")

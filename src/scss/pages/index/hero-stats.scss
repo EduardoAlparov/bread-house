@@ -22,13 +22,15 @@
 
   &__list {
     --gp: 6.4rem;
-    --scroll-time: 40s;
+    --scroll-time: 20s;
 
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: var(--gp);
 
-    animation: scrollText var(--scroll-time) infinite linear;
+    will-change: transform;
+    // animation: scrollText var(--scroll-time) infinite linear;
 
     @include breakpoint(tablet) {
       --gp: 1rem;
@@ -82,7 +84,7 @@
 
 @keyframes scrollText {
   from {
-    transform: translateX(0%);
+    transform: translateX(50%);
   }
 
   to {
