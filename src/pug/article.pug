@@ -1,0 +1,10 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "no-touch page-home page-promo page-article"
+  - const pageTitle = "Блог-новость"
+  - const siteLang = "ru"
+  - const greyHeader = true
+
+block content
+  include pages/article/main.pug

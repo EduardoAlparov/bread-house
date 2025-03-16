@@ -189,3 +189,32 @@
     display: flex;
   }
 }
+
+.page-header {
+  &.page-header--grey {
+    .page-header__site-container {
+      width: calc(100% - 3rem);
+      padding-block: 4.7rem;
+
+      background-color: #F5F5F7;
+      border-radius: 3.5rem;
+
+      @include breakpoint(tablet) {
+        width: calc(100% - 1rem);
+        padding-block: 2rem;
+
+        background-color: #F5F5F7;
+        border-radius: 1.6rem;
+      }
+    }
+
+    .page-header__menu {
+      margin-inline: auto;
+      transform: translateX(-7rem);
+    }
+
+    .page-header__logo {
+      margin-right: unset;
+    }
+  }
+}

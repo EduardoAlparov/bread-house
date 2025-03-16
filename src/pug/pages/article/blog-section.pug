@@ -1,0 +1,61 @@
+-
+  const blogs = [
+    {
+      id: 'blog-001',
+      date: '13.06.2024 в 10:00',
+      text: `Как развить свою сеть пекарен в малых городах`,
+      img: 'franchise-carousel/card-4.jpg',
+      class: 'blog-section__item--small'
+    },
+    {
+      id: 'blog-002',
+      date: '13.06.2024 в 10:00',
+      text: `Как развить свою сеть пекарен в малых городах`,
+      img: 'franchise-carousel/card-2.jpg',
+      class: 'blog-section__item--small'
+    },
+    {
+      id: 'blog-003',
+      date: '13.06.2024 в 10:00',
+      text: `Как развить свою сеть пекарен в малых городах`,
+      img: 'franchise-carousel/card-7.jpg',
+      class: 'blog-section__item--higher'
+    },
+    {
+      id: 'blog-004',
+      date: '13.06.2024 в 10:00',
+      text: `Как развить свою сеть пекарен в малых городах`,
+      img: 'franchise-carousel/card-9.jpg',
+      class: 'blog-section__item--smallest'
+    },
+    {
+      id: 'blog-005',
+      date: '13.06.2024 в 10:00',
+      text: `Как развить свою сеть пекарен в малых городах`,
+      img: 'franchise-carousel/card-8.jpg',
+      class: 'blog-section__item--wider'
+    },
+    {
+      id: 'blog-006',
+      date: '13.06.2024 в 10:00',
+      text: `Как развить свою сеть пекарен в малых городах`,
+      img: 'franchise-carousel/card-1.jpg',
+      class: 'blog-section__item--last'
+    }
+  ];
+
+section.section.blog-section
+  .blog-section__site-container
+    .blog-section__heading
+      h2.blog-section__title.section__title Другие статьи
+
+    ul.blog-section__list
+      each blog in blogs
+        li.blog-section__item(class=blog.class)
+          a.blog-section__blog-link.blog-link(href="#", id=blog.id)
+            .blog-link__body
+              p.blog-link__date=blog.date
+              p.blog-link__text=blog.text
+              .blog-link__btn Читать подробнее
+            .blog-link__image
+              +picture(blog.img, '')

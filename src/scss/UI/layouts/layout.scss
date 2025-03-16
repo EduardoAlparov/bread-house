@@ -43,6 +43,12 @@ body {
   &.mobile-menu-open {
     @extend .no-scroll;
   }
+
+  &.page-article {
+    .page-wrapper {
+      overflow: unset;
+    }
+  }
 }
 
 .section {
