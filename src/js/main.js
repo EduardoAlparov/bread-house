@@ -29,6 +29,7 @@ import eventsSwiper from './modules/eventsSwiper';
 import footerMenuExpand from './modules/footerMenuExpand';
 import mobileSwipers from './modules/mobileSwipers';
 import locationMap from './modules/locationMap';
+import paginationToggle from './modules/paginationToggle';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -61,4 +62,5 @@ documenReady(() => {
   footerMenuExpand();
   mobileSwipers();
   locationMap();
+  paginationToggle();
 });

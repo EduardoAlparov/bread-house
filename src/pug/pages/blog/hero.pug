@@ -171,3 +171,32 @@ section.section.section--promo-offset.hero
 
               .link-section__image
                 +picture('phone-dark', '')
+
+
+      .contacts-section__pagination.hide-on-mobile
+        ul.contacts-section__pagination-list.contacts-section__pagination-list-start
+          li.contacts-section__pagination-list-item
+            a.contacts-section__pagination-list-link.js-pag-item(href="#")
+              | 1
+          li.contacts-section__pagination-list-item
+            a.contacts-section__pagination-list-link.contacts-section__pagination-list-link--active.js-pag-item(href="#")
+              | 2
+          li.contacts-section__pagination-list-item
+            a.contacts-section__pagination-list-link.js-pag-item(href="#")
+              | 3
+          li.contacts-section__pagination-list-item
+            a.contacts-section__pagination-list-link.js-pag-item(href="#")
+              | 4
+
+        .contacts-section__pagination-dots
+          .contacts-section__pagination-list-item
+            a.contacts-section__pagination-list-link(href="#")
+              | ...
+
+        ul.contacts-section__pagination-list.contacts-section__pagination-list-end
+          li.contacts-section__pagination-list-item
+            a.contacts-section__pagination-list-link.js-pag-item(href="#")
+              | 130
+          li.contacts-section__pagination-list-item
+            a.contacts-section__pagination-list-link.js-pag-item(href="#")
+              | 131

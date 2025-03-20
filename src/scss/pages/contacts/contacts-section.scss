@@ -99,4 +99,53 @@
       gap: 5rem;
     }
   }
+
+  &__pagination,
+  &__pagination-list {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+  }
+
+  &__pagination {
+    justify-content: center;
+
+    width: max-content;
+    margin-block: 10rem 0;
+    margin-inline: auto;
+    padding: 0.8rem;
+
+    @include breakpoint(tablet) {
+      margin-block: 5rem 0;
+    }
+  }
+
+  &__pagination-list-item {
+    flex-shrink: 0;
+  }
+
+  &__pagination-list-link {
+    display: grid;
+    place-content: center;
+    place-items: center;
+
+    width: 6rem;
+    height: 6rem;
+
+    cursor: pointer;
+    letter-spacing: -0.04em;
+    @include font(2.6rem, 162.5%, 500);
+
+    &.contacts-section__pagination-list-link--active {
+      color: var(--Orange, #DE7D57);
+    }
+  }
+
+  &__pagination-dots {
+    .contacts-section__pagination-list-link {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
 }
